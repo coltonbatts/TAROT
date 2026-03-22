@@ -21,6 +21,7 @@ export function FilterTabs({ tabs, active, onChange }: FilterTabsProps) {
     >
       {tabs.map((tab) => {
         const isActive = tab.id === active;
+
         return (
           <button
             key={tab.id}
@@ -28,14 +29,14 @@ export function FilterTabs({ tabs, active, onChange }: FilterTabsProps) {
             aria-pressed={isActive}
             onClick={() => onChange(tab.id)}
             className={[
-              "shrink-0 rounded-full border px-4 py-2 text-sm transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-300/40",
+              "shrink-0 border px-3 py-2 text-[0.68rem] uppercase tracking-[0.26em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30",
               isActive
-                ? "border-gold-200/40 bg-gold-300 text-charcoal-950 shadow-glow"
-                : "border-white/10 bg-white/5 text-smoke-100/80 hover:border-gold-200/20 hover:bg-white/[0.08] hover:text-bone-50",
+                ? "border-white bg-white text-charcoal-950"
+                : "border-white/10 bg-transparent text-white/60 hover:border-white/20 hover:bg-white/[0.03] hover:text-bone-50",
             ].join(" ")}
           >
-            {tab.label}
-            <span className="ml-2 text-xs opacity-70">{tab.count}</span>
+            <span>{tab.label}</span>
+            <span className="ml-2 text-white/42">{tab.count}</span>
           </button>
         );
       })}

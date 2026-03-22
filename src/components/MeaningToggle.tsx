@@ -8,14 +8,14 @@ type MeaningToggleProps = {
 export function MeaningToggle({ value, onChange }: MeaningToggleProps) {
   const buttonClass = (active: boolean) =>
     [
-      "flex-1 rounded-full px-4 py-2 text-sm font-medium transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-300/40",
+      "flex-1 px-4 py-2.5 text-[0.72rem] uppercase tracking-[0.3em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30",
       active
-        ? "bg-gold-300 text-charcoal-950 shadow-glow"
-        : "text-smoke-100/80 hover:bg-white/5 hover:text-bone-50",
+        ? "bg-white text-charcoal-950"
+        : "text-white/65 hover:bg-white/[0.04] hover:text-bone-50",
     ].join(" ");
 
   return (
-    <div className="inline-flex w-full rounded-full border border-white/10 bg-white/5 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+    <div className="grid w-full grid-cols-2 border border-white/10 bg-white/[0.02]">
       <button
         type="button"
         onClick={() => onChange("upright")}
