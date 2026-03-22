@@ -1,3 +1,9 @@
+/**
+ * Deck data loads from `src/data/cards.json` (regenerated via `npm run generate:data`
+ * from files in `data/source/`). Replace meanings, keywords, or metadata there and
+ * re-run the script, or hand-edit `cards.json` while preserving the `TarotCard` shape.
+ * Card art: point `imagePath` at files in `public/card-images/` (or any URL Vite can serve).
+ */
 import cards from "../data/cards.json";
 
 export type TarotArcana = "major" | "minor";

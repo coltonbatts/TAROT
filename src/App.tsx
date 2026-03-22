@@ -1,6 +1,28 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { CardDetailPage } from "./pages/CardDetailPage";
 import { LibraryPage } from "./pages/LibraryPage";
+
+function AppMain() {
+  const location = useLocation();
+  const isLibrary = location.pathname === "/";
+
+  return (
+    <main
+      id="main"
+      className={
+        isLibrary
+          ? "min-h-screen"
+          : "mx-auto flex min-h-screen w-full max-w-[1760px] flex-1 flex-col px-4 py-4 sm:px-6 lg:px-8 lg:py-6"
+      }
+    >
+      <Routes>
+        <Route path="/" element={<LibraryPage />} />
+        <Route path="/cards/:slug" element={<CardDetailPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </main>
+  );
+}
 
 export default function App() {
   return (
@@ -12,16 +34,7 @@ export default function App() {
         Skip to content
       </a>
 
-      <main
-        id="main"
-        className="mx-auto flex min-h-screen w-full max-w-[1760px] flex-1 flex-col px-4 py-4 sm:px-6 lg:px-8 lg:py-6"
-      >
-        <Routes>
-          <Route path="/" element={<LibraryPage />} />
-          <Route path="/cards/:slug" element={<CardDetailPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
+      <AppMain />
     </div>
   );
 }
