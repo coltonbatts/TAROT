@@ -1,96 +1,83 @@
-import { MeaningToggle, type Orientation } from "./MeaningToggle";
 import type { TarotCard } from "../lib/tarot";
+
+function capitalize(value: string) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function metaLine(card: TarotCard) {
+  const parts = [
+    card.arcana === "major" ? "Major arcana" : "Minor arcana",
+    card.suit ? capitalize(card.suit) : null,
+    card.number != null ? `No. ${card.number}` : card.rank ? capitalize(card.rank) : null,
+  ].filter(Boolean);
+  return parts.join(" · ");
+}
 
 type CardReferenceBodyProps = {
   card: TarotCard;
-  orientation: Orientation;
-  onOrientationChange: (value: Orientation) => void;
-  /** Tighter typography for overlay drawer */
-  variant?: "page" | "drawer";
 };
 
-export function CardReferenceBody({
-  card,
-  orientation,
-  onOrientationChange,
-  variant = "page",
-}: CardReferenceBodyProps) {
-  const meaning = orientation === "upright" ? card.uprightMeaning : card.reversedMeaning;
-  const imageLeft = card.arcana === "major";
-  const gridClass = imageLeft
-    ? "xl:grid-cols-[minmax(240px,0.82fr)_minmax(0,1.18fr)]"
-    : "xl:grid-cols-[minmax(0,1.18fr)_minmax(240px,0.82fr)]";
-  const proseClass =
-    variant === "drawer"
-      ? "max-w-[48ch] whitespace-pre-line text-[clamp(0.98rem,0.9vw+0.78rem,1.22rem)] leading-[1.82] text-bone-50/92"
-      : "max-w-[52ch] whitespace-pre-line text-[clamp(1.05rem,1vw+0.82rem,1.5rem)] leading-[1.9] text-bone-50/92";
-
+/**
+ * Study layout: artifact image, keywords, upright and reversed as separate panels.
+ */
+export function CardReferenceBody({ card }: CardReferenceBodyProps) {
   return (
-    <section className={`grid gap-6 xl:items-start ${gridClass}`}>
-      <aside
-        className={
-          imageLeft ? "space-y-2 xl:sticky xl:top-6 xl:order-1" : "space-y-2 xl:sticky xl:top-6 xl:order-2"
-        }
-      >
-        <div className="border border-white/10 bg-white/[0.02] p-2.5">
-          <img
-            src={card.imagePath}
-            alt={`${card.name} tarot card scan`}
-            className="aspect-[5/8] w-full object-cover contrast-[1.05] grayscale-[0.08]"
-            loading="eager"
-          />
-        </div>
-        <div className="flex items-center justify-between text-[0.62rem] uppercase tracking-[0.28em] text-white/32">
-          <span>Scan</span>
-          <span className="truncate">{card.slug.replaceAll("-", " ")}</span>
-        </div>
-      </aside>
-
-      <div className={imageLeft ? "space-y-6 xl:order-2" : "space-y-6 xl:order-1"}>
-        <section className="space-y-3">
-          <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-[0.64rem] uppercase tracking-[0.3em] text-white/34">Meaning</p>
-            <div className="w-full sm:max-w-[16rem]">
-              <MeaningToggle value={orientation} onChange={onOrientationChange} />
-            </div>
+    <div className="grid gap-10 lg:grid-cols-[minmax(220px,320px)_1fr] lg:gap-14 lg:items-start">
+      <figure className="space-y-3 lg:sticky lg:top-8">
+        <div className="rounded-2xl border border-line bg-void p-2 sm:p-2.5">
+          <div className="overflow-hidden rounded-xl bg-void">
+            <img
+              src={card.imagePath}
+              alt={card.name}
+              className="aspect-[2/3] w-full object-contain object-center contrast-[1.02]"
+              loading="eager"
+            />
           </div>
+        </div>
+        <figcaption className="font-mono text-[10px] tracking-wide text-faint">
+          <span className="truncate block">{metaLine(card)}</span>
+        </figcaption>
+      </figure>
 
-          <div className="border-y border-white/10 py-5">
-            <p className={proseClass}>{meaning}</p>
-          </div>
+      <div className="min-w-0 space-y-10">
+        {card.keywords?.length ? (
+          <section>
+            <h2 className="mb-4 font-mono text-[10px] uppercase tracking-label text-muted">Keywords</h2>
+            <p className="font-mono text-sm leading-snug text-bone">{card.keywords.join(" · ")}</p>
+          </section>
+        ) : null}
 
-          {card.keywords?.length ? (
-            <div className="flex flex-wrap gap-1.5">
-              {card.keywords.map((keyword) => (
-                <span
-                  key={keyword}
-                  className="border border-white/10 px-2.5 py-1 text-[0.62rem] uppercase tracking-[0.22em] text-white/56"
-                >
-                  {keyword}
-                </span>
-              ))}
-            </div>
-          ) : null}
+        <section className="border-t border-line pt-8">
+          <h2 className="mb-4 font-mono text-[10px] uppercase tracking-label text-muted">Upright</h2>
+          <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/95">
+            {card.uprightMeaning}
+          </p>
+        </section>
+
+        <section className="border-t border-line pt-8">
+          <h2 className="mb-4 font-mono text-[10px] uppercase tracking-label text-muted">Reversed</h2>
+          <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/95">
+            {card.reversedMeaning}
+          </p>
         </section>
 
         {card.description || card.symbolism ? (
-          <section className="grid gap-6 border-t border-white/10 pt-5 md:grid-cols-2">
+          <div className="grid gap-10 border-t border-line pt-10 md:grid-cols-2 md:gap-12">
             {card.description ? (
-              <div className="space-y-2">
-                <p className="text-[0.62rem] uppercase tracking-[0.3em] text-white/34">Description</p>
-                <p className="max-w-[38ch] text-sm leading-6 text-smoke-100/64">{card.description}</p>
-              </div>
+              <section>
+                <h2 className="mb-3 font-mono text-[10px] uppercase tracking-label text-muted">Notes</h2>
+                <p className="max-w-prose text-sm leading-relaxed text-muted">{card.description}</p>
+              </section>
             ) : null}
-
             {card.symbolism ? (
-              <div className="space-y-2">
-                <p className="text-[0.62rem] uppercase tracking-[0.3em] text-white/34">Symbolism</p>
-                <p className="max-w-[38ch] text-sm leading-6 text-smoke-100/64">{card.symbolism}</p>
-              </div>
+              <section>
+                <h2 className="mb-3 font-mono text-[10px] uppercase tracking-label text-ochre/90">Symbolism</h2>
+                <p className="max-w-prose text-sm leading-relaxed text-muted">{card.symbolism}</p>
+              </section>
             ) : null}
-          </section>
+          </div>
         ) : null}
       </div>
-    </section>
+    </div>
   );
 }

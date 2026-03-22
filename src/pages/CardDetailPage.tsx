@@ -1,13 +1,22 @@
 import { useEffect, useMemo } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { CardReferenceBody } from "../components/CardReferenceBody";
-import { MeaningToggle, type Orientation } from "../components/MeaningToggle";
 import { getCardBySlug } from "../lib/tarot";
+
+function capitalize(value: string) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function arcanaHeading(card: NonNullable<ReturnType<typeof getCardBySlug>>) {
+  if (card.arcana === "major") {
+    return "Major";
+  }
+  return card.suit ? capitalize(card.suit) : "Minor";
+}
 
 export function CardDetailPage() {
   const { slug } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const orientation = (searchParams.get("orientation") ?? "upright") as Orientation;
+  const [searchParams] = useSearchParams();
   const card = useMemo(() => (slug ? getCardBySlug(slug) : undefined), [slug]);
   const librarySearch = useMemo(() => {
     const next = new URLSearchParams(searchParams);
@@ -20,31 +29,24 @@ export function CardDetailPage() {
   };
 
   useEffect(() => {
-    document.title = card ? `${card.name} · Tarot` : "Card not found · Tarot";
+    document.title = card ? `${card.name} · Tarot` : "Tarot";
   }, [card]);
-
-  const onOrientationChange = (value: Orientation) => {
-    const next = new URLSearchParams(searchParams);
-    next.set("orientation", value);
-    setSearchParams(next, { replace: true });
-  };
 
   if (!card) {
     return (
-      <div className="flex min-h-[70vh] items-center justify-center py-8">
-        <div className="w-full max-w-xl space-y-4">
-          <p className="text-[0.66rem] uppercase tracking-[0.36em] text-white/34">Card not found</p>
-          <h1 className="font-display text-[clamp(2.75rem,5vw,4.5rem)] leading-[0.9] tracking-[-0.08em] text-bone-50">
-            That card is not in this deck.
+      <div className="flex min-h-[70vh] flex-col justify-center px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-xl space-y-6 border border-line bg-panel p-8 sm:p-10">
+          <p className="font-mono text-[10px] uppercase tracking-label text-muted">404</p>
+          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] font-medium leading-tight tracking-tight">
+            Record not found
           </h1>
-          <p className="max-w-lg text-sm leading-7 text-smoke-100/64">
-            The slug in the URL does not match a local tarot card.
-          </p>
+          <p className="text-sm text-muted">Unknown card.</p>
           <Link
             to={backToLibrary}
-            className="inline-flex border border-white/12 px-4 py-2 text-[0.68rem] uppercase tracking-[0.28em] text-white/70 transition hover:border-white/30 hover:text-bone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+            aria-label="Back"
+            className="inline-flex border border-line px-4 py-2.5 font-mono text-sm text-bone transition duration-300 hover:border-line-strong hover:bg-blood/20 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
           >
-            Return to archive
+            ←
           </Link>
         </div>
       </div>
@@ -52,42 +54,27 @@ export function CardDetailPage() {
   }
 
   return (
-    <article className="space-y-10 pb-16 pt-1 lg:pt-4">
-      <header className="space-y-6">
-        <div className="flex items-center justify-between gap-4 text-[0.66rem] uppercase tracking-[0.34em] text-white/36">
-          <Link
-            to={backToLibrary}
-            className="transition hover:text-bone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-          >
-            Back to archive
-          </Link>
-          <span>{card.arcana === "major" ? "Major arcana" : capitalize(card.suit ?? "Minor")}</span>
-        </div>
+    <article className="mx-auto w-full max-w-[1200px] px-4 pb-24 pt-6 sm:px-6 lg:px-8 lg:pt-10">
+      <header className="mb-12 space-y-8 border-b border-line pb-10 lg:mb-16 lg:pb-12">
+        <Link
+          to={backToLibrary}
+          aria-label="Back"
+          className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+        >
+          ←
+        </Link>
 
-        <div className="max-w-5xl space-y-4">
-          <h1 className="font-display text-[clamp(3.8rem,9vw,7.75rem)] leading-[0.86] tracking-[-0.08em] text-bone-50">
+        <div className="space-y-3">
+          <p className="font-display text-sm font-normal italic tracking-wide text-muted/90">
+            {arcanaHeading(card)}
+          </p>
+          <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] font-medium leading-[0.92] tracking-tight text-balance">
             {card.name}
           </h1>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-[0.72rem] uppercase tracking-[0.28em] text-white/42">
-            <span>{card.arcana === "major" ? "Major arcana" : "Minor arcana"}</span>
-            <span>{card.suit ? capitalize(card.suit) : "No suit"}</span>
-            <span>
-              {card.number != null ? `No. ${card.number}` : card.rank ? capitalize(card.rank) : "—"}
-            </span>
-          </div>
         </div>
       </header>
 
-      <CardReferenceBody
-        card={card}
-        orientation={orientation}
-        onOrientationChange={onOrientationChange}
-        variant="page"
-      />
+      <CardReferenceBody card={card} />
     </article>
   );
-}
-
-function capitalize(value: string) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
 }

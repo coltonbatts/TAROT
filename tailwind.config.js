@@ -4,12 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
+        void: "#000000",
+        panel: "#000000",
+        inset: "#000000",
+        bone: {
+          DEFAULT: "#e2ddd4",
+          50: "#f0ebe3",
+          100: "#e2ddd4",
+          200: "#c9c2b6",
+        },
+        muted: "#8f8a82",
+        faint: "#524e48",
+        line: "rgba(226, 221, 212, 0.16)",
+        "line-strong": "rgba(226, 221, 212, 0.26)",
+        blood: "#5a1a1a",
+        ochre: "#7a6b48",
+        mist: "#4c4258",
         charcoal: {
           950: "#000000",
-          900: "#050505",
-          800: "#101010",
-          700: "#1b1b1b",
-          600: "#272727",
+          900: "#000000",
+          800: "#0a0a0a",
+          700: "#141414",
+          600: "#1f1f1f",
         },
         smoke: {
           50: "#f4f2ed",
@@ -18,31 +34,30 @@ export default {
           300: "#7e7973",
           400: "#595550",
         },
-        bone: {
-          50: "#faf7f2",
-          100: "#eee8dd",
-          200: "#d7d0c4",
-        },
-        gold: {
-          50: "#f2f1ed",
-          100: "#d7d4ce",
-          200: "#b7b2ab",
-          300: "#96908a",
-          400: "#76706b",
-          500: "#5a5652",
-        },
-      },
-      boxShadow: {
-        panel: "0 30px 90px rgba(0, 0, 0, 0.42)",
-        card: "0 18px 45px rgba(0, 0, 0, 0.28)",
-        glow: "0 0 0 1px rgba(209, 174, 108, 0.18), 0 18px 40px rgba(0, 0, 0, 0.28)",
       },
       fontFamily: {
-        display: ["Cormorant Garamond", "Georgia", "serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
+        /** Soft, variable-heritage serif — titles, card names */
+        display: ["Fraunces", "Georgia", "serif"],
+        /** Transcript / longform — newsprint séance */
+        body: ["Newsreader", "Georgia", "serif"],
+        /** Sigils, coordinates, UI chrome */
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       letterSpacing: {
-        widest: "0.22em",
+        archive: "0.2em",
+        label: "0.24em",
+      },
+      transitionDuration: {
+        reveal: "600ms",
+      },
+      keyframes: {
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 640ms cubic-bezier(0.2, 0.8, 0.2, 1) both",
       },
     },
   },

@@ -11,8 +11,8 @@ function AppMain() {
       id="main"
       className={
         isLibrary
-          ? "min-h-screen"
-          : "mx-auto flex min-h-screen w-full max-w-[1760px] flex-1 flex-col px-4 py-4 sm:px-6 lg:px-8 lg:py-6"
+          ? "min-h-screen flex-1"
+          : "mx-auto flex min-h-screen w-full max-w-[1400px] flex-1 flex-col"
       }
     >
       <Routes>
@@ -26,10 +26,10 @@ function AppMain() {
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-hidden bg-charcoal-950 text-bone-50">
+    <div className="min-h-screen bg-void text-bone">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-white/15 focus:bg-charcoal-950 focus:px-4 focus:py-2 focus:text-bone-50"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-line focus:bg-panel focus:px-4 focus:py-2 focus:text-bone"
       >
         Skip to content
       </a>

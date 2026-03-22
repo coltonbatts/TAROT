@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { getCardRankLabel, type TarotCard } from "../lib/tarot";
+import { type TarotCard } from "../lib/tarot";
 
 type CardTileProps = {
   card: TarotCard;
@@ -7,14 +7,16 @@ type CardTileProps = {
   search: string;
 };
 
-function categoryLabel(card: TarotCard) {
+function compactMeta(card: TarotCard) {
   if (card.arcana === "major") {
-    return "Major Arcana";
+    return "Major";
   }
-
-  return card.suit ? card.suit.charAt(0).toUpperCase() + card.suit.slice(1) : "Minor Arcana";
+  const suit = card.suit ? card.suit.charAt(0).toUpperCase() + card.suit.slice(1) : "";
+  const rank = card.rank ? card.rank.charAt(0).toUpperCase() + card.rank.slice(1) : "";
+  return [suit, rank].filter(Boolean).join(" · ");
 }
 
+/** Portrait tarot proportion (~2:3 width:height), rounded like a physical card. */
 export function CardTile({ card, index, search }: CardTileProps) {
   return (
     <Link
@@ -22,42 +24,35 @@ export function CardTile({ card, index, search }: CardTileProps) {
         pathname: `/cards/${card.slug}`,
         search: search ? `?${search}` : "",
       }}
-      aria-label={`Open ${card.name}`}
-      className="group block outline-none focus-visible:ring-2 focus-visible:ring-white/35 focus-visible:ring-offset-0"
-      style={{ animationDelay: `${index * 24}ms` }}
+      aria-label={card.name}
+      className="group block outline-none transition-opacity duration-300 focus-visible:ring-1 focus-visible:ring-line-strong focus-visible:ring-offset-2 focus-visible:ring-offset-void"
+      style={{ animationDelay: `${index * 20}ms` }}
     >
-      <article className="animate-enter flex flex-col gap-4 py-4 transition duration-300 hover:bg-white/[0.02] sm:flex-row sm:items-center sm:gap-6 sm:py-5">
-        <div className="w-full max-w-[7.25rem] shrink-0 sm:max-w-[8.5rem]">
-          <div className="overflow-hidden border border-white/10 bg-white/[0.02]">
-            <img
-              src={card.imagePath}
-              alt={`${card.name} tarot card scan`}
-              className="aspect-[4/5] w-full object-cover contrast-[1.04] grayscale-[0.08] transition duration-700 group-hover:scale-[1.03]"
-              loading="lazy"
-            />
+      <article className="animate-fade-up flex flex-col gap-4 border-b border-line py-5 transition-colors duration-300 last:border-b-0 hover:bg-white/[0.035] sm:flex-row sm:items-center sm:gap-8 sm:py-6">
+        <div className="w-[5.75rem] shrink-0 sm:w-[6.75rem]">
+          <div className="rounded-xl border border-line bg-void p-1 shadow-none">
+            <div className="overflow-hidden rounded-lg bg-void">
+              <img
+                src={card.imagePath}
+                alt=""
+                className="aspect-[2/3] w-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="min-w-0 flex-1 space-y-2">
-          <p className="text-[0.64rem] uppercase tracking-[0.34em] text-white/36">
-            {categoryLabel(card)}
+        <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
+          <p className="font-display text-[12px] font-normal italic tracking-wide text-muted">
+            {compactMeta(card)}
           </p>
-          <h2 className="truncate font-display text-[clamp(1.7rem,2vw,2.5rem)] leading-[0.9] tracking-[-0.06em] text-bone-50">
+          <h2 className="font-display text-[clamp(1.45rem,2vw,2.1rem)] font-medium leading-tight tracking-tight">
             {card.name}
           </h2>
-          <p className="max-w-3xl text-[0.95rem] leading-6 text-smoke-100/66">
-            {getCardRankLabel(card)}
-          </p>
-          {card.keywords?.length ? (
-            <p className="line-clamp-2 text-[0.86rem] leading-6 text-smoke-100/52">
-              {card.keywords.slice(0, 4).join(" · ")}
-            </p>
-          ) : null}
         </div>
 
-        <div className="flex items-center justify-between gap-4 text-[0.66rem] uppercase tracking-[0.3em] text-white/36 sm:min-w-[7rem] sm:flex-col sm:items-end sm:justify-center sm:text-right">
-          <span>{card.number ?? card.rank?.toUpperCase() ?? "ARC"}</span>
-          <span className="text-white/52 transition group-hover:text-bone-50">Open</span>
+        <div className="hidden font-mono text-[10px] tabular-nums text-faint sm:block sm:w-12 sm:text-right">
+          {card.number ?? card.rank?.toUpperCase() ?? ""}
         </div>
       </article>
     </Link>

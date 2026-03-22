@@ -59,19 +59,19 @@ export function CardMesh({
 
     if (selected) {
       const toCam = camera.position.clone().sub(mesh.position).normalize();
-      mesh.position.addScaledVector(toCam, reducedMotion ? 0.26 : 0.24);
+      mesh.position.addScaledVector(toCam, reducedMotion ? 0.22 : 0.2);
     }
 
     const aimHover = hovered || selected ? 1 : 0;
-    const baseScale = 1 + aimHover * 0.045 + (selected ? 0.07 : 0);
+    const baseScale = 1 + aimHover * 0.032 + (selected ? 0.05 : 0);
     const pulse =
-      selected && !reducedMotion ? Math.sin(performance.now() * 0.0022) * 0.014 : 0;
+      selected && !reducedMotion ? Math.sin(performance.now() * 0.0022) * 0.01 : 0;
     mesh.scale.setScalar(baseScale + pulse);
 
-    const targetEmissive = aimHover * 0.055 + (selected ? 0.05 : 0);
+    const targetEmissive = aimHover * 0.022 + (selected ? 0.018 : 0);
     mat.emissiveIntensity = THREE.MathUtils.lerp(mat.emissiveIntensity, targetEmissive, 1 - Math.exp(-12 * dt));
-    const warmth = Math.min(1, mat.emissiveIntensity * 7);
-    mat.emissive.setRGB(0.76 * warmth, 0.72 * warmth, 0.66 * warmth);
+    const warmth = Math.min(1, mat.emissiveIntensity * 6);
+    mat.emissive.setRGB(0.55 * warmth, 0.52 * warmth, 0.48 * warmth);
   });
 
   return (

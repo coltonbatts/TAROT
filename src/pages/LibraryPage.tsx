@@ -7,19 +7,19 @@ import {
   useMemo,
   useState,
 } from "react";
-import { useSearchParams } from "react-router-dom";
-import { CardDetailDrawer } from "../components/CardDetailDrawer";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { CardTile } from "../components/CardTile";
 import { FilterTabs } from "../components/FilterTabs";
+import { LibraryViewToggle } from "../components/LibraryViewToggle";
+import { ViewportChamber } from "../components/ViewportChamber";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 import {
   filterCards,
-  getCardBySlug,
   tarotCards,
   tarotCategories,
+  type TarotCard,
   type TarotCategory,
 } from "../lib/tarot";
-import type { Orientation } from "../components/MeaningToggle";
 
 const TarotCanvasLazy = lazy(() =>
   import("../scene/TarotCanvas").then((module) => ({ default: module.TarotCanvas })),
@@ -27,16 +27,22 @@ const TarotCanvasLazy = lazy(() =>
 
 type LibraryView = "spatial" | "index";
 
+function librarySearchString(searchParams: URLSearchParams) {
+  const next = new URLSearchParams(searchParams);
+  next.delete("orientation");
+  next.delete("card");
+  next.delete("view");
+  return next.toString();
+}
+
 export function LibraryPage() {
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get("q") ?? "";
   const activeCategory = (searchParams.get("category") ?? "all") as TarotCategory;
-  const viewParam = (searchParams.get("view") ?? "spatial") as LibraryView;
-  const view: LibraryView = viewParam === "index" ? "index" : "spatial";
-  const selectedSlug = searchParams.get("card");
+  const view: LibraryView = searchParams.get("view") === "spatial" ? "spatial" : "index";
   const [searchInput, setSearchInput] = useState(queryParam);
   const deferredQuery = useDeferredValue(searchInput);
-  const [drawerOrientation, setDrawerOrientation] = useState<Orientation>("upright");
   const reducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -44,7 +50,7 @@ export function LibraryPage() {
   }, [queryParam]);
 
   useEffect(() => {
-    document.title = "Tarot · Library";
+    document.title = "Tarot";
   }, []);
 
   const filteredCards = useMemo(
@@ -68,39 +74,22 @@ export function LibraryPage() {
     [],
   );
 
-  const listSearch = useMemo(() => {
-    const next = new URLSearchParams(searchParams);
-    next.delete("orientation");
-    next.delete("card");
-    return next.toString();
-  }, [searchParams]);
+  const listSearch = useMemo(() => librarySearchString(searchParams), [searchParams]);
 
-  const selectedCard = useMemo(
-    () => (selectedSlug ? getCardBySlug(selectedSlug) : undefined),
-    [selectedSlug],
-  );
+  const openCard = (card: TarotCard) => {
+    const qs = listSearch ? `?${listSearch}` : "";
+    navigate(`/cards/${card.slug}${qs}`);
+  };
 
   const setView = (next: LibraryView) => {
     startTransition(() => {
       const nextParams = new URLSearchParams(searchParams);
       if (next === "spatial") {
-        nextParams.delete("view");
+        nextParams.set("view", "spatial");
       } else {
-        nextParams.set("view", "index");
+        nextParams.delete("view");
       }
       setSearchParams(nextParams, { replace: true });
-    });
-  };
-
-  const setSelectedSlug = (slug: string | null) => {
-    startTransition(() => {
-      const next = new URLSearchParams(searchParams);
-      if (slug) {
-        next.set("card", slug);
-      } else {
-        next.delete("card");
-      }
-      setSearchParams(next, { replace: true });
     });
   };
 
@@ -138,169 +127,136 @@ export function LibraryPage() {
 
   const clearSearch = () => onQueryChange("");
 
-  const closeDrawer = () => {
-    setSelectedSlug(null);
-  };
+  const categoryLabel = (c: TarotCategory) =>
+    tarotCategories.find((t) => t.id === c)?.label ?? c;
 
   return (
-    <div className="fixed inset-0 flex flex-col bg-charcoal-950">
-      {view === "spatial" ? (
-        <div className="absolute inset-0">
-          {filteredCards.length ? (
-            <Suspense
-              fallback={
-                <div className="flex h-full items-center justify-center bg-charcoal-950 text-[0.68rem] uppercase tracking-[0.28em] text-white/40">
-                  Loading spatial library…
-                </div>
-              }
-            >
-              <TarotCanvasLazy
-                cards={filteredCards}
-                selectedSlug={selectedSlug}
-                onSelectCard={(card) => {
-                  setDrawerOrientation("upright");
-                  setSelectedSlug(card.slug);
-                }}
-                controlsEnabled={!selectedSlug}
-                reducedMotion={reducedMotion}
-              />
-            </Suspense>
-          ) : (
-            <div className="flex h-full items-center justify-center bg-charcoal-950 px-6 text-center text-sm text-smoke-100/58">
-              No cards match this search in the spatial view. Switch to index or clear filters.
-            </div>
-          )}
-        </div>
-      ) : null}
-
-      <div
-        className={[
-          "pointer-events-none relative z-10 flex min-h-0 flex-1 flex-col",
-          view === "spatial" ? "" : "overflow-y-auto",
-        ].join(" ")}
-      >
-        <header className="pointer-events-auto shrink-0 border-b border-white/10 bg-charcoal-950/78 px-4 py-4 backdrop-blur-md sm:px-6 lg:px-8">
-          <div className="mx-auto flex w-full max-w-[1760px] flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-3xl space-y-4">
-              <div className="flex flex-wrap items-end justify-between gap-4">
-                <h1 className="font-display text-[clamp(3rem,8vw,6rem)] leading-[0.86] tracking-[-0.08em] text-bone-50">
-                  Tarot
-                </h1>
-                <div
-                  role="group"
-                  aria-label="Library view mode"
-                  className="flex gap-1 border border-white/10 bg-white/[0.02] p-1"
-                >
-                  <button
-                    type="button"
-                    aria-pressed={view === "spatial"}
-                    onClick={() => setView("spatial")}
-                    className={[
-                      "px-3 py-2 text-[0.62rem] uppercase tracking-[0.26em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30",
-                      view === "spatial"
-                        ? "bg-white text-charcoal-950"
-                        : "text-white/55 hover:text-bone-50",
-                    ].join(" ")}
-                  >
-                    Spatial
-                  </button>
-                  <button
-                    type="button"
-                    aria-pressed={view === "index"}
-                    onClick={() => setView("index")}
-                    className={[
-                      "px-3 py-2 text-[0.62rem] uppercase tracking-[0.26em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30",
-                      view === "index"
-                        ? "bg-white text-charcoal-950"
-                        : "text-white/55 hover:text-bone-50",
-                    ].join(" ")}
-                  >
-                    Index
-                  </button>
-                </div>
+    <div className="flex min-h-screen flex-col bg-void text-bone">
+      <div className="relative z-10 flex min-h-0 flex-1 flex-col">
+        <header className="shrink-0 border-b border-line bg-void/95 px-4 backdrop-blur-[2px] sm:px-6 lg:px-8">
+          <div className="mx-auto w-full max-w-[1920px]">
+            <div className="flex flex-col items-center gap-5 py-8 sm:py-10 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-3">
+              <div className="hidden min-w-0 lg:block" aria-hidden />
+              <h1 className="text-center font-display text-[clamp(2.75rem,12vw,5.5rem)] font-medium leading-none tracking-tight lg:justify-self-center">
+                Tarot
+              </h1>
+              <div className="flex justify-center lg:justify-end">
+                <LibraryViewToggle view={view} onChange={setView} />
               </div>
+            </div>
 
-              <div className="space-y-2">
-                <label
-                  htmlFor="tarot-search"
-                  className="text-[0.64rem] uppercase tracking-[0.32em] text-white/34"
-                >
-                  Search
-                </label>
-                <div className="flex items-end gap-3 border-b border-white/10 pb-2.5">
+            <div className="mx-auto max-w-2xl space-y-5 pb-8">
+              <label className="block">
+                <span className="sr-only">Search</span>
+                <div className="flex items-end gap-2 border-b border-line pb-2">
                   <input
-                    id="tarot-search"
                     type="search"
                     value={searchInput}
                     onChange={(event) => onQueryChange(event.target.value)}
-                    placeholder="Card, keyword, meaning"
-                    aria-label="Search tarot cards"
-                    className="min-w-0 flex-1 bg-transparent text-[0.98rem] text-bone-50 outline-none placeholder:text-white/26 sm:text-[1.05rem]"
+                    placeholder="Search"
+                    className="min-w-0 flex-1 bg-transparent font-body text-base text-bone outline-none placeholder:text-faint/70"
                   />
                   {searchInput ? (
                     <button
                       type="button"
                       onClick={clearSearch}
-                      className="pointer-events-auto shrink-0 text-[0.64rem] uppercase tracking-[0.24em] text-white/42 transition hover:text-bone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                      aria-label="Clear search"
+                      className="flex h-8 w-8 shrink-0 items-center justify-center text-muted transition hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
                     >
-                      Clear
+                      <span className="text-lg leading-none" aria-hidden>
+                        ×
+                      </span>
                     </button>
                   ) : null}
                 </div>
-              </div>
+              </label>
 
-              <div className="space-y-2">
-                <FilterTabs tabs={counts} active={activeCategory} onChange={onCategoryChange} />
-                <p
-                  aria-live="polite"
-                  className="text-[0.64rem] uppercase tracking-[0.26em] text-white/34"
-                >
-                  {filteredCards.length
-                    ? `${filteredCards.length} card${filteredCards.length === 1 ? "" : "s"} visible`
-                    : "No cards match this search."}
-                </p>
-              </div>
-
-              {view === "spatial" ? (
-                <p className="max-w-xl text-[0.72rem] leading-5 text-white/38">
-                  Drag to orbit · scroll to zoom · click a card to read. Filters shrink the cluster.
-                </p>
-              ) : null}
+              <FilterTabs tabs={counts} active={activeCategory} onChange={onCategoryChange} />
+              <p className="sr-only" aria-live="polite">
+                {filteredCards.length} cards
+              </p>
             </div>
           </div>
         </header>
 
         {view === "index" ? (
           <section
-            aria-label="Tarot deck index"
-            className="pointer-events-auto mx-auto w-full max-w-[1760px] flex-1 px-4 pb-20 pt-2 sm:px-6 lg:px-8"
+            aria-label="Deck"
+            className="mx-auto w-full max-w-[1920px] flex-1 px-4 pb-24 pt-2 sm:px-6 lg:px-8"
           >
             {filteredCards.length ? (
-              <div className="divide-y divide-white/10 border-y border-white/10">
+              <div className="border-t border-line">
                 {filteredCards.map((card, index) => (
                   <CardTile key={card.id} card={card} index={index} search={listSearch} />
                 ))}
               </div>
             ) : (
-              <div className="border-y border-white/10 py-16 text-center text-smoke-100/60">
-                Clear the search field or switch categories to bring the deck back.
-              </div>
+              <div className="border border-line py-16 text-center text-sm text-muted">No matches.</div>
             )}
           </section>
         ) : (
-          <div className="pointer-events-none flex-1" aria-hidden />
+          <div className="mx-auto grid min-h-0 w-full max-w-[1920px] flex-1 grid-cols-1 gap-0 lg:grid-cols-[minmax(180px,220px)_1fr_minmax(140px,180px)] lg:min-h-0 lg:flex-1 lg:px-6 lg:pb-6">
+            <aside className="hidden min-h-0 flex-col border-line lg:flex lg:border-r">
+              <nav
+                className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-3"
+                aria-label="Cards"
+              >
+                <ul className="space-y-0.5">
+                  {filteredCards.map((card) => (
+                    <li key={card.id}>
+                      <Link
+                        to={{ pathname: `/cards/${card.slug}`, search: listSearch ? `?${listSearch}` : "" }}
+                        className="block truncate border-l-2 border-transparent py-1.5 pl-2 font-mono text-[11px] text-muted transition duration-300 hover:border-line-strong hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+                      >
+                        {card.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </aside>
+
+            <div className="flex min-h-[min(72vh,680px)] flex-1 flex-col p-3 sm:p-4 lg:min-h-[560px] lg:p-4">
+              {filteredCards.length ? (
+                <ViewportChamber
+                  footer={
+                    <p className="text-center font-mono text-[10px] tabular-nums tracking-wider text-muted">
+                      {filteredCards.length}/{tarotCards.length}
+                    </p>
+                  }
+                >
+                  <Suspense
+                    fallback={
+                      <div className="flex h-64 w-full items-center justify-center font-mono text-[10px] text-muted lg:h-full">
+                        …
+                      </div>
+                    }
+                  >
+                    <TarotCanvasLazy
+                      cards={filteredCards}
+                      onSelectCard={openCard}
+                      reducedMotion={reducedMotion}
+                    />
+                  </Suspense>
+                </ViewportChamber>
+              ) : (
+                <div className="flex flex-1 items-center justify-center border border-line bg-inset px-6 py-20 text-sm text-muted">
+                  No matches.
+                </div>
+              )}
+            </div>
+
+            <aside className="hidden items-start justify-end border-line pt-4 lg:flex lg:border-l lg:px-3">
+              <p className="max-w-full text-right font-mono text-[10px] leading-relaxed text-muted">
+                <span className="block truncate text-bone/80">{categoryLabel(activeCategory)}</span>
+                {deferredQuery.trim() ? (
+                  <span className="mt-2 block truncate opacity-80">{deferredQuery.trim()}</span>
+                ) : null}
+              </p>
+            </aside>
+          </div>
         )}
       </div>
-
-      {selectedCard ? (
-        <CardDetailDrawer
-          card={selectedCard}
-          orientation={drawerOrientation}
-          onOrientationChange={setDrawerOrientation}
-          onClose={closeDrawer}
-          librarySearch={listSearch}
-        />
-      ) : null}
     </div>
   );
 }

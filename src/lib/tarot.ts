@@ -30,7 +30,7 @@ export const tarotCards = cards as TarotCard[];
 
 export const tarotCategories: Array<{ id: TarotCategory; label: string }> = [
   { id: "all", label: "All" },
-  { id: "major", label: "Major Arcana" },
+  { id: "major", label: "Major" },
   { id: "cups", label: "Cups" },
   { id: "swords", label: "Swords" },
   { id: "wands", label: "Wands" },
