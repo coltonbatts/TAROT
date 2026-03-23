@@ -28,7 +28,7 @@ export function DeckSurface({
   let globalIndex = 0;
 
   return (
-    <div className="relative min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-28 pt-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-0 flex-1 overflow-y-auto px-4 pb-28 pt-4 sm:px-6 lg:px-8">
       <div
         className="pointer-events-none fixed inset-0 -z-10 opacity-90"
         aria-hidden

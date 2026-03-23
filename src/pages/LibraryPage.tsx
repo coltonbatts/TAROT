@@ -228,7 +228,13 @@ export function LibraryPage() {
   );
 
   return (
-    <div className="flex min-h-screen flex-col bg-void text-bone">
+    <div
+      className={[
+        "flex flex-col bg-void text-bone",
+        /* Deck view: pin layout to the viewport so flex + overflow-y-auto on DeckSurface forms one reliable scroll container (avoids split/window vs. pane scroll on trackpads). */
+        view === "deck" ? "h-dvh max-h-dvh min-h-0 overflow-hidden" : "min-h-screen",
+      ].join(" ")}
+    >
       <div className="relative z-10 flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 border-b border-line bg-void/95 px-4 backdrop-blur-[2px] sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[1920px]">
@@ -257,7 +263,7 @@ export function LibraryPage() {
         </header>
 
         {view === "deck" ? (
-          <section aria-label="Cards" className="flex min-h-0 flex-1 flex-col">
+          <section aria-label="Cards" className="flex min-h-0 flex-1 flex-col overflow-hidden">
             <div className="shrink-0 px-4 py-6 sm:px-6 lg:px-8">{toolbar}</div>
             {compareMode ? (
               <p className="px-4 pb-2 font-mono text-[10px] text-muted sm:px-6 lg:px-8">
