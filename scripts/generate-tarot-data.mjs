@@ -1,3 +1,8 @@
+/**
+ * Legacy maintenance script (optional). Runtime data lives in `tarot_dataset_simple.json`
+ * at the repo root; the UI does not import `src/data/cards.json`.
+ * Use this only if you still want to regenerate that JSON and sync images from `data/source/`.
+ */
 import { mkdir, readFile, writeFile, copyFile, access, readdir } from "node:fs/promises";
 import path from "node:path";
 

@@ -1,0 +1,1823 @@
+{
+  "system": {
+    "description": "Simplified tarot dataset"
+  },
+  "cards": [
+    {
+      "name": "The Fool",
+      "arcana": "Major",
+      "suit": null,
+      "number": 0,
+      "core_meaning": "Core meaning of The Fool",
+      "upright": "Upright meaning of The Fool",
+      "reversed": "Reversed meaning of The Fool",
+      "keywords": [
+        "the fool",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Fool",
+      "numerology": 0,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Magician",
+      "arcana": "Major",
+      "suit": null,
+      "number": 1,
+      "core_meaning": "Core meaning of The Magician",
+      "upright": "Upright meaning of The Magician",
+      "reversed": "Reversed meaning of The Magician",
+      "keywords": [
+        "the magician",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Magician",
+      "numerology": 1,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The High Priestess",
+      "arcana": "Major",
+      "suit": null,
+      "number": 2,
+      "core_meaning": "Core meaning of The High Priestess",
+      "upright": "Upright meaning of The High Priestess",
+      "reversed": "Reversed meaning of The High Priestess",
+      "keywords": [
+        "the high priestess",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The High Priestess",
+      "numerology": 2,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Empress",
+      "arcana": "Major",
+      "suit": null,
+      "number": 3,
+      "core_meaning": "Core meaning of The Empress",
+      "upright": "Upright meaning of The Empress",
+      "reversed": "Reversed meaning of The Empress",
+      "keywords": [
+        "the empress",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Empress",
+      "numerology": 3,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Emperor",
+      "arcana": "Major",
+      "suit": null,
+      "number": 4,
+      "core_meaning": "Core meaning of The Emperor",
+      "upright": "Upright meaning of The Emperor",
+      "reversed": "Reversed meaning of The Emperor",
+      "keywords": [
+        "the emperor",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Emperor",
+      "numerology": 4,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Hierophant",
+      "arcana": "Major",
+      "suit": null,
+      "number": 5,
+      "core_meaning": "Core meaning of The Hierophant",
+      "upright": "Upright meaning of The Hierophant",
+      "reversed": "Reversed meaning of The Hierophant",
+      "keywords": [
+        "the hierophant",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Hierophant",
+      "numerology": 5,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Lovers",
+      "arcana": "Major",
+      "suit": null,
+      "number": 6,
+      "core_meaning": "Core meaning of The Lovers",
+      "upright": "Upright meaning of The Lovers",
+      "reversed": "Reversed meaning of The Lovers",
+      "keywords": [
+        "the lovers",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Lovers",
+      "numerology": 6,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Chariot",
+      "arcana": "Major",
+      "suit": null,
+      "number": 7,
+      "core_meaning": "Core meaning of The Chariot",
+      "upright": "Upright meaning of The Chariot",
+      "reversed": "Reversed meaning of The Chariot",
+      "keywords": [
+        "the chariot",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Chariot",
+      "numerology": 7,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Strength",
+      "arcana": "Major",
+      "suit": null,
+      "number": 8,
+      "core_meaning": "Core meaning of Strength",
+      "upright": "Upright meaning of Strength",
+      "reversed": "Reversed meaning of Strength",
+      "keywords": [
+        "strength",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Strength",
+      "numerology": 8,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Hermit",
+      "arcana": "Major",
+      "suit": null,
+      "number": 9,
+      "core_meaning": "Core meaning of The Hermit",
+      "upright": "Upright meaning of The Hermit",
+      "reversed": "Reversed meaning of The Hermit",
+      "keywords": [
+        "the hermit",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Hermit",
+      "numerology": 9,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Wheel of Fortune",
+      "arcana": "Major",
+      "suit": null,
+      "number": 10,
+      "core_meaning": "Core meaning of Wheel of Fortune",
+      "upright": "Upright meaning of Wheel of Fortune",
+      "reversed": "Reversed meaning of Wheel of Fortune",
+      "keywords": [
+        "wheel of fortune",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Wheel of Fortune",
+      "numerology": 10,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Justice",
+      "arcana": "Major",
+      "suit": null,
+      "number": 11,
+      "core_meaning": "Core meaning of Justice",
+      "upright": "Upright meaning of Justice",
+      "reversed": "Reversed meaning of Justice",
+      "keywords": [
+        "justice",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Justice",
+      "numerology": 11,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Hanged Man",
+      "arcana": "Major",
+      "suit": null,
+      "number": 12,
+      "core_meaning": "Core meaning of The Hanged Man",
+      "upright": "Upright meaning of The Hanged Man",
+      "reversed": "Reversed meaning of The Hanged Man",
+      "keywords": [
+        "the hanged man",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Hanged Man",
+      "numerology": 12,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Death",
+      "arcana": "Major",
+      "suit": null,
+      "number": 13,
+      "core_meaning": "Core meaning of Death",
+      "upright": "Upright meaning of Death",
+      "reversed": "Reversed meaning of Death",
+      "keywords": [
+        "death",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Death",
+      "numerology": 13,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Temperance",
+      "arcana": "Major",
+      "suit": null,
+      "number": 14,
+      "core_meaning": "Core meaning of Temperance",
+      "upright": "Upright meaning of Temperance",
+      "reversed": "Reversed meaning of Temperance",
+      "keywords": [
+        "temperance",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Temperance",
+      "numerology": 14,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Devil",
+      "arcana": "Major",
+      "suit": null,
+      "number": 15,
+      "core_meaning": "Core meaning of The Devil",
+      "upright": "Upright meaning of The Devil",
+      "reversed": "Reversed meaning of The Devil",
+      "keywords": [
+        "the devil",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Devil",
+      "numerology": 15,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Tower",
+      "arcana": "Major",
+      "suit": null,
+      "number": 16,
+      "core_meaning": "Core meaning of The Tower",
+      "upright": "Upright meaning of The Tower",
+      "reversed": "Reversed meaning of The Tower",
+      "keywords": [
+        "the tower",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Tower",
+      "numerology": 16,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Star",
+      "arcana": "Major",
+      "suit": null,
+      "number": 17,
+      "core_meaning": "Core meaning of The Star",
+      "upright": "Upright meaning of The Star",
+      "reversed": "Reversed meaning of The Star",
+      "keywords": [
+        "the star",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Star",
+      "numerology": 17,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Moon",
+      "arcana": "Major",
+      "suit": null,
+      "number": 18,
+      "core_meaning": "Core meaning of The Moon",
+      "upright": "Upright meaning of The Moon",
+      "reversed": "Reversed meaning of The Moon",
+      "keywords": [
+        "the moon",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Moon",
+      "numerology": 18,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The Sun",
+      "arcana": "Major",
+      "suit": null,
+      "number": 19,
+      "core_meaning": "Core meaning of The Sun",
+      "upright": "Upright meaning of The Sun",
+      "reversed": "Reversed meaning of The Sun",
+      "keywords": [
+        "the sun",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The Sun",
+      "numerology": 19,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Judgement",
+      "arcana": "Major",
+      "suit": null,
+      "number": 20,
+      "core_meaning": "Core meaning of Judgement",
+      "upright": "Upright meaning of Judgement",
+      "reversed": "Reversed meaning of Judgement",
+      "keywords": [
+        "judgement",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Judgement",
+      "numerology": 20,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "The World",
+      "arcana": "Major",
+      "suit": null,
+      "number": 21,
+      "core_meaning": "Core meaning of The World",
+      "upright": "Upright meaning of The World",
+      "reversed": "Reversed meaning of The World",
+      "keywords": [
+        "the world",
+        "archetype",
+        "symbolism"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "The World",
+      "numerology": 21,
+      "suit_meaning": null,
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ace of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Ace",
+      "core_meaning": "Core meaning of Ace of Wands",
+      "upright": "Upright meaning of Ace of Wands",
+      "reversed": "Reversed meaning of Ace of Wands",
+      "keywords": [
+        "ace",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ace",
+      "numerology": 1,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Two of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Two",
+      "core_meaning": "Core meaning of Two of Wands",
+      "upright": "Upright meaning of Two of Wands",
+      "reversed": "Reversed meaning of Two of Wands",
+      "keywords": [
+        "two",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Two",
+      "numerology": 2,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Three of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Three",
+      "core_meaning": "Core meaning of Three of Wands",
+      "upright": "Upright meaning of Three of Wands",
+      "reversed": "Reversed meaning of Three of Wands",
+      "keywords": [
+        "three",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Three",
+      "numerology": 3,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Four of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Four",
+      "core_meaning": "Core meaning of Four of Wands",
+      "upright": "Upright meaning of Four of Wands",
+      "reversed": "Reversed meaning of Four of Wands",
+      "keywords": [
+        "four",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Four",
+      "numerology": 4,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Five of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Five",
+      "core_meaning": "Core meaning of Five of Wands",
+      "upright": "Upright meaning of Five of Wands",
+      "reversed": "Reversed meaning of Five of Wands",
+      "keywords": [
+        "five",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Five",
+      "numerology": 5,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Six of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Six",
+      "core_meaning": "Core meaning of Six of Wands",
+      "upright": "Upright meaning of Six of Wands",
+      "reversed": "Reversed meaning of Six of Wands",
+      "keywords": [
+        "six",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Six",
+      "numerology": 6,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Seven of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Seven",
+      "core_meaning": "Core meaning of Seven of Wands",
+      "upright": "Upright meaning of Seven of Wands",
+      "reversed": "Reversed meaning of Seven of Wands",
+      "keywords": [
+        "seven",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Seven",
+      "numerology": 7,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Eight of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Eight",
+      "core_meaning": "Core meaning of Eight of Wands",
+      "upright": "Upright meaning of Eight of Wands",
+      "reversed": "Reversed meaning of Eight of Wands",
+      "keywords": [
+        "eight",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Eight",
+      "numerology": 8,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Nine of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Nine",
+      "core_meaning": "Core meaning of Nine of Wands",
+      "upright": "Upright meaning of Nine of Wands",
+      "reversed": "Reversed meaning of Nine of Wands",
+      "keywords": [
+        "nine",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Nine",
+      "numerology": 9,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ten of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Ten",
+      "core_meaning": "Core meaning of Ten of Wands",
+      "upright": "Upright meaning of Ten of Wands",
+      "reversed": "Reversed meaning of Ten of Wands",
+      "keywords": [
+        "ten",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ten",
+      "numerology": 10,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Page of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Page",
+      "core_meaning": "Core meaning of Page of Wands",
+      "upright": "Upright meaning of Page of Wands",
+      "reversed": "Reversed meaning of Page of Wands",
+      "keywords": [
+        "page",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Page",
+      "numerology": 11,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Knight of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Knight",
+      "core_meaning": "Core meaning of Knight of Wands",
+      "upright": "Upright meaning of Knight of Wands",
+      "reversed": "Reversed meaning of Knight of Wands",
+      "keywords": [
+        "knight",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Knight",
+      "numerology": 12,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Queen of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "Queen",
+      "core_meaning": "Core meaning of Queen of Wands",
+      "upright": "Upright meaning of Queen of Wands",
+      "reversed": "Reversed meaning of Queen of Wands",
+      "keywords": [
+        "queen",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Queen",
+      "numerology": 13,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "King of Wands",
+      "arcana": "Minor",
+      "suit": "Wands",
+      "number": "King",
+      "core_meaning": "Core meaning of King of Wands",
+      "upright": "Upright meaning of King of Wands",
+      "reversed": "Reversed meaning of King of Wands",
+      "keywords": [
+        "king",
+        "wands"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "King",
+      "numerology": 14,
+      "suit_meaning": "Wands",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ace of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Ace",
+      "core_meaning": "Core meaning of Ace of Cups",
+      "upright": "Upright meaning of Ace of Cups",
+      "reversed": "Reversed meaning of Ace of Cups",
+      "keywords": [
+        "ace",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ace",
+      "numerology": 1,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Two of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Two",
+      "core_meaning": "Core meaning of Two of Cups",
+      "upright": "Upright meaning of Two of Cups",
+      "reversed": "Reversed meaning of Two of Cups",
+      "keywords": [
+        "two",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Two",
+      "numerology": 2,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Three of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Three",
+      "core_meaning": "Core meaning of Three of Cups",
+      "upright": "Upright meaning of Three of Cups",
+      "reversed": "Reversed meaning of Three of Cups",
+      "keywords": [
+        "three",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Three",
+      "numerology": 3,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Four of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Four",
+      "core_meaning": "Core meaning of Four of Cups",
+      "upright": "Upright meaning of Four of Cups",
+      "reversed": "Reversed meaning of Four of Cups",
+      "keywords": [
+        "four",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Four",
+      "numerology": 4,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Five of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Five",
+      "core_meaning": "Core meaning of Five of Cups",
+      "upright": "Upright meaning of Five of Cups",
+      "reversed": "Reversed meaning of Five of Cups",
+      "keywords": [
+        "five",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Five",
+      "numerology": 5,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Six of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Six",
+      "core_meaning": "Core meaning of Six of Cups",
+      "upright": "Upright meaning of Six of Cups",
+      "reversed": "Reversed meaning of Six of Cups",
+      "keywords": [
+        "six",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Six",
+      "numerology": 6,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Seven of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Seven",
+      "core_meaning": "Core meaning of Seven of Cups",
+      "upright": "Upright meaning of Seven of Cups",
+      "reversed": "Reversed meaning of Seven of Cups",
+      "keywords": [
+        "seven",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Seven",
+      "numerology": 7,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Eight of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Eight",
+      "core_meaning": "Core meaning of Eight of Cups",
+      "upright": "Upright meaning of Eight of Cups",
+      "reversed": "Reversed meaning of Eight of Cups",
+      "keywords": [
+        "eight",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Eight",
+      "numerology": 8,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Nine of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Nine",
+      "core_meaning": "Core meaning of Nine of Cups",
+      "upright": "Upright meaning of Nine of Cups",
+      "reversed": "Reversed meaning of Nine of Cups",
+      "keywords": [
+        "nine",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Nine",
+      "numerology": 9,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ten of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Ten",
+      "core_meaning": "Core meaning of Ten of Cups",
+      "upright": "Upright meaning of Ten of Cups",
+      "reversed": "Reversed meaning of Ten of Cups",
+      "keywords": [
+        "ten",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ten",
+      "numerology": 10,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Page of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Page",
+      "core_meaning": "Core meaning of Page of Cups",
+      "upright": "Upright meaning of Page of Cups",
+      "reversed": "Reversed meaning of Page of Cups",
+      "keywords": [
+        "page",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Page",
+      "numerology": 11,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Knight of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Knight",
+      "core_meaning": "Core meaning of Knight of Cups",
+      "upright": "Upright meaning of Knight of Cups",
+      "reversed": "Reversed meaning of Knight of Cups",
+      "keywords": [
+        "knight",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Knight",
+      "numerology": 12,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Queen of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "Queen",
+      "core_meaning": "Core meaning of Queen of Cups",
+      "upright": "Upright meaning of Queen of Cups",
+      "reversed": "Reversed meaning of Queen of Cups",
+      "keywords": [
+        "queen",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Queen",
+      "numerology": 13,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "King of Cups",
+      "arcana": "Minor",
+      "suit": "Cups",
+      "number": "King",
+      "core_meaning": "Core meaning of King of Cups",
+      "upright": "Upright meaning of King of Cups",
+      "reversed": "Reversed meaning of King of Cups",
+      "keywords": [
+        "king",
+        "cups"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "King",
+      "numerology": 14,
+      "suit_meaning": "Cups",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ace of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Ace",
+      "core_meaning": "Core meaning of Ace of Swords",
+      "upright": "Upright meaning of Ace of Swords",
+      "reversed": "Reversed meaning of Ace of Swords",
+      "keywords": [
+        "ace",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ace",
+      "numerology": 1,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Two of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Two",
+      "core_meaning": "Core meaning of Two of Swords",
+      "upright": "Upright meaning of Two of Swords",
+      "reversed": "Reversed meaning of Two of Swords",
+      "keywords": [
+        "two",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Two",
+      "numerology": 2,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Three of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Three",
+      "core_meaning": "Core meaning of Three of Swords",
+      "upright": "Upright meaning of Three of Swords",
+      "reversed": "Reversed meaning of Three of Swords",
+      "keywords": [
+        "three",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Three",
+      "numerology": 3,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Four of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Four",
+      "core_meaning": "Core meaning of Four of Swords",
+      "upright": "Upright meaning of Four of Swords",
+      "reversed": "Reversed meaning of Four of Swords",
+      "keywords": [
+        "four",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Four",
+      "numerology": 4,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Five of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Five",
+      "core_meaning": "Core meaning of Five of Swords",
+      "upright": "Upright meaning of Five of Swords",
+      "reversed": "Reversed meaning of Five of Swords",
+      "keywords": [
+        "five",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Five",
+      "numerology": 5,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Six of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Six",
+      "core_meaning": "Core meaning of Six of Swords",
+      "upright": "Upright meaning of Six of Swords",
+      "reversed": "Reversed meaning of Six of Swords",
+      "keywords": [
+        "six",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Six",
+      "numerology": 6,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Seven of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Seven",
+      "core_meaning": "Core meaning of Seven of Swords",
+      "upright": "Upright meaning of Seven of Swords",
+      "reversed": "Reversed meaning of Seven of Swords",
+      "keywords": [
+        "seven",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Seven",
+      "numerology": 7,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Eight of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Eight",
+      "core_meaning": "Core meaning of Eight of Swords",
+      "upright": "Upright meaning of Eight of Swords",
+      "reversed": "Reversed meaning of Eight of Swords",
+      "keywords": [
+        "eight",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Eight",
+      "numerology": 8,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Nine of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Nine",
+      "core_meaning": "Core meaning of Nine of Swords",
+      "upright": "Upright meaning of Nine of Swords",
+      "reversed": "Reversed meaning of Nine of Swords",
+      "keywords": [
+        "nine",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Nine",
+      "numerology": 9,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ten of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Ten",
+      "core_meaning": "Core meaning of Ten of Swords",
+      "upright": "Upright meaning of Ten of Swords",
+      "reversed": "Reversed meaning of Ten of Swords",
+      "keywords": [
+        "ten",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ten",
+      "numerology": 10,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Page of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Page",
+      "core_meaning": "Core meaning of Page of Swords",
+      "upright": "Upright meaning of Page of Swords",
+      "reversed": "Reversed meaning of Page of Swords",
+      "keywords": [
+        "page",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Page",
+      "numerology": 11,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Knight of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Knight",
+      "core_meaning": "Core meaning of Knight of Swords",
+      "upright": "Upright meaning of Knight of Swords",
+      "reversed": "Reversed meaning of Knight of Swords",
+      "keywords": [
+        "knight",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Knight",
+      "numerology": 12,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Queen of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "Queen",
+      "core_meaning": "Core meaning of Queen of Swords",
+      "upright": "Upright meaning of Queen of Swords",
+      "reversed": "Reversed meaning of Queen of Swords",
+      "keywords": [
+        "queen",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Queen",
+      "numerology": 13,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "King of Swords",
+      "arcana": "Minor",
+      "suit": "Swords",
+      "number": "King",
+      "core_meaning": "Core meaning of King of Swords",
+      "upright": "Upright meaning of King of Swords",
+      "reversed": "Reversed meaning of King of Swords",
+      "keywords": [
+        "king",
+        "swords"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "King",
+      "numerology": 14,
+      "suit_meaning": "Swords",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ace of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Ace",
+      "core_meaning": "Core meaning of Ace of Pentacles",
+      "upright": "Upright meaning of Ace of Pentacles",
+      "reversed": "Reversed meaning of Ace of Pentacles",
+      "keywords": [
+        "ace",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ace",
+      "numerology": 1,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Two of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Two",
+      "core_meaning": "Core meaning of Two of Pentacles",
+      "upright": "Upright meaning of Two of Pentacles",
+      "reversed": "Reversed meaning of Two of Pentacles",
+      "keywords": [
+        "two",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Two",
+      "numerology": 2,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Three of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Three",
+      "core_meaning": "Core meaning of Three of Pentacles",
+      "upright": "Upright meaning of Three of Pentacles",
+      "reversed": "Reversed meaning of Three of Pentacles",
+      "keywords": [
+        "three",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Three",
+      "numerology": 3,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Four of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Four",
+      "core_meaning": "Core meaning of Four of Pentacles",
+      "upright": "Upright meaning of Four of Pentacles",
+      "reversed": "Reversed meaning of Four of Pentacles",
+      "keywords": [
+        "four",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Four",
+      "numerology": 4,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Five of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Five",
+      "core_meaning": "Core meaning of Five of Pentacles",
+      "upright": "Upright meaning of Five of Pentacles",
+      "reversed": "Reversed meaning of Five of Pentacles",
+      "keywords": [
+        "five",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Five",
+      "numerology": 5,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Six of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Six",
+      "core_meaning": "Core meaning of Six of Pentacles",
+      "upright": "Upright meaning of Six of Pentacles",
+      "reversed": "Reversed meaning of Six of Pentacles",
+      "keywords": [
+        "six",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Six",
+      "numerology": 6,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Seven of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Seven",
+      "core_meaning": "Core meaning of Seven of Pentacles",
+      "upright": "Upright meaning of Seven of Pentacles",
+      "reversed": "Reversed meaning of Seven of Pentacles",
+      "keywords": [
+        "seven",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Seven",
+      "numerology": 7,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Eight of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Eight",
+      "core_meaning": "Core meaning of Eight of Pentacles",
+      "upright": "Upright meaning of Eight of Pentacles",
+      "reversed": "Reversed meaning of Eight of Pentacles",
+      "keywords": [
+        "eight",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Eight",
+      "numerology": 8,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Nine of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Nine",
+      "core_meaning": "Core meaning of Nine of Pentacles",
+      "upright": "Upright meaning of Nine of Pentacles",
+      "reversed": "Reversed meaning of Nine of Pentacles",
+      "keywords": [
+        "nine",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Nine",
+      "numerology": 9,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Ten of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Ten",
+      "core_meaning": "Core meaning of Ten of Pentacles",
+      "upright": "Upright meaning of Ten of Pentacles",
+      "reversed": "Reversed meaning of Ten of Pentacles",
+      "keywords": [
+        "ten",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Ten",
+      "numerology": 10,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Page of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Page",
+      "core_meaning": "Core meaning of Page of Pentacles",
+      "upright": "Upright meaning of Page of Pentacles",
+      "reversed": "Reversed meaning of Page of Pentacles",
+      "keywords": [
+        "page",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Page",
+      "numerology": 11,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Knight of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Knight",
+      "core_meaning": "Core meaning of Knight of Pentacles",
+      "upright": "Upright meaning of Knight of Pentacles",
+      "reversed": "Reversed meaning of Knight of Pentacles",
+      "keywords": [
+        "knight",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Knight",
+      "numerology": 12,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "Queen of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "Queen",
+      "core_meaning": "Core meaning of Queen of Pentacles",
+      "upright": "Upright meaning of Queen of Pentacles",
+      "reversed": "Reversed meaning of Queen of Pentacles",
+      "keywords": [
+        "queen",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "Queen",
+      "numerology": 13,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    },
+    {
+      "name": "King of Pentacles",
+      "arcana": "Minor",
+      "suit": "Pentacles",
+      "number": "King",
+      "core_meaning": "Core meaning of King of Pentacles",
+      "upright": "Upright meaning of King of Pentacles",
+      "reversed": "Reversed meaning of King of Pentacles",
+      "keywords": [
+        "king",
+        "pentacles"
+      ],
+      "symbolism": {
+        "objects": [],
+        "colors": [],
+        "direction": ""
+      },
+      "archetype": "King",
+      "numerology": 14,
+      "suit_meaning": "Pentacles",
+      "interpretation_patterns": [],
+      "relationships": []
+    }
+  ]
+}

@@ -1,20 +1,12 @@
 import { Link } from "react-router-dom";
-import { type TarotCard } from "../lib/tarot";
+import { formatCardMetaShort, formatCardOrdinalLabel, type TarotCard } from "../lib/tarot";
+import { TarotCardImage } from "./TarotCardImage";
 
 type CardTileProps = {
   card: TarotCard;
   index: number;
   search: string;
 };
-
-function compactMeta(card: TarotCard) {
-  if (card.arcana === "major") {
-    return "Major";
-  }
-  const suit = card.suit ? card.suit.charAt(0).toUpperCase() + card.suit.slice(1) : "";
-  const rank = card.rank ? card.rank.charAt(0).toUpperCase() + card.rank.slice(1) : "";
-  return [suit, rank].filter(Boolean).join(" · ");
-}
 
 /** Portrait tarot proportion (~2:3 width:height), rounded like a physical card. */
 export function CardTile({ card, index, search }: CardTileProps) {
@@ -32,7 +24,7 @@ export function CardTile({ card, index, search }: CardTileProps) {
         <div className="w-[5.75rem] shrink-0 sm:w-[6.75rem]">
           <div className="rounded-xl border border-line bg-void p-1 shadow-none">
             <div className="overflow-hidden rounded-lg bg-void">
-              <img
+              <TarotCardImage
                 src={card.imagePath}
                 alt=""
                 className="aspect-[2/3] w-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -44,7 +36,7 @@ export function CardTile({ card, index, search }: CardTileProps) {
 
         <div className="flex min-w-0 flex-1 flex-col justify-center gap-1">
           <p className="font-display text-[12px] font-normal italic tracking-wide text-muted">
-            {compactMeta(card)}
+            {formatCardMetaShort(card)}
           </p>
           <h2 className="font-display text-[clamp(1.45rem,2vw,2.1rem)] font-medium leading-tight tracking-tight">
             {card.name}
@@ -52,7 +44,7 @@ export function CardTile({ card, index, search }: CardTileProps) {
         </div>
 
         <div className="hidden font-mono text-[10px] tabular-nums text-faint sm:block sm:w-12 sm:text-right">
-          {card.number ?? card.rank?.toUpperCase() ?? ""}
+          {formatCardOrdinalLabel(card)}
         </div>
       </article>
     </Link>

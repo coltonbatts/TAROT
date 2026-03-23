@@ -1,14 +1,10 @@
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, useTexture } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { Suspense, useMemo } from "react";
 import * as THREE from "three";
-import { tarotCards } from "../lib/tarot";
 import type { TarotCard } from "../lib/tarot";
 import { DeckScene } from "./DeckScene";
-
-const TEXTURE_URLS: Record<string, string> = Object.fromEntries(
-  tarotCards.map((card) => [card.id, card.imagePath]),
-);
+import { useDeckTextures } from "./useDeckTextures";
 
 type TarotCanvasProps = {
   cards: TarotCard[];
@@ -17,7 +13,8 @@ type TarotCanvasProps = {
 };
 
 function DeckWithTextures(props: TarotCanvasProps) {
-  const textures = useTexture(TEXTURE_URLS);
+  const textures = useDeckTextures();
+  if (!textures) return null;
   return <DeckScene textures={textures} {...props} />;
 }
 

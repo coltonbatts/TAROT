@@ -1,18 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { CardReferenceBody } from "../components/CardReferenceBody";
-import { getCardBySlug } from "../lib/tarot";
-
-function capitalize(value: string) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
-}
-
-function arcanaHeading(card: NonNullable<ReturnType<typeof getCardBySlug>>) {
-  if (card.arcana === "major") {
-    return "Major";
-  }
-  return card.suit ? capitalize(card.suit) : "Minor";
-}
+import { formatArcanaHeading, getCardBySlug } from "../lib/tarot";
 
 export function CardDetailPage() {
   const { slug } = useParams();
@@ -66,7 +55,7 @@ export function CardDetailPage() {
 
         <div className="space-y-3">
           <p className="font-display text-sm font-normal italic tracking-wide text-muted/90">
-            {arcanaHeading(card)}
+            {formatArcanaHeading(card)}
           </p>
           <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] font-medium leading-[0.92] tracking-tight text-balance">
             {card.name}
@@ -74,7 +63,7 @@ export function CardDetailPage() {
         </div>
       </header>
 
-      <CardReferenceBody card={card} />
+      <CardReferenceBody card={card} backSearch={librarySearch} />
     </article>
   );
 }

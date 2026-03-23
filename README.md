@@ -12,10 +12,9 @@ A simple, editorial tarot reference app built with React, TypeScript, Tailwind, 
 
 ## Architecture
 
-- `scripts/generate-tarot-data.mjs` pulls open tarot sources, normalizes the data, and copies card images into the app
-- `src/data/cards.json` is the generated local dataset imported by the UI
-- `public/card-images/` contains the renamed local scans used at runtime
-- `src/pages/` now holds the library page and the dedicated card page
+- `src/data/cards.json` is the runtime dataset (full upright / reversed / description / symbolism from the legacy generator); `src/lib/tarot/normalize.ts` loads and normalizes it into `TarotCard` (components do not import JSON directly). `tarot_dataset_simple.json` at the repo root is only an optional schema stub with placeholder copy—not used by the app unless you wire it back in
+- `public/card-images/` holds face scans as `/card-images/{slug}.jpg`, plus `back.jpg` used as an image fallback when a face file is missing
+- `src/pages/` holds the library page and the dedicated card page
 - `src/components/` contains the small presentational pieces
 
 ## Run it
@@ -26,13 +25,7 @@ A simple, editorial tarot reference app built with React, TypeScript, Tailwind, 
 npm install
 ```
 
-2. Generate data and images:
-
-```bash
-npm run generate:data
-```
-
-3. Start the app:
+2. Start the app:
 
 ```bash
 npm run dev
@@ -44,7 +37,7 @@ npm run dev
 npm run build
 ```
 
-The build script regenerates the local tarot dataset before bundling.
+`npm run build` runs Vite only; it does not regenerate tarot JSON.
 
 ## Usage
 
@@ -57,8 +50,11 @@ The build script regenerates the local tarot dataset before bundling.
 - [metabismuth/tarot-json](https://github.com/metabismuth/tarot-json)
 - [dariusk/corpora tarot interpretations](https://github.com/dariusk/corpora/blob/master/data/divination/tarot_interpretations.json)
 
+## Legacy generator (optional)
+
+`npm run generate:data` runs `scripts/generate-tarot-data.mjs`, which was written for an older pipeline (`src/data/cards.json`). The app no longer reads that file at runtime. The script can still be useful to refresh files under `public/card-images/` from `data/source/` and your local scan folder if you maintain that workflow—otherwise you can ignore it. `src/data/cards.json` is legacy output only.
+
 ## Extend it
 
-- Add a second scan set by updating `scripts/generate-tarot-data.mjs`
-- Swap the card image source by changing the canonical scan directory
-- Add more card fields by extending the generated JSON schema and the `TarotCard` type in `src/lib/tarot.ts`
+- Enrich `tarot_dataset_simple.json` (optional fields are tolerated; see `RawTarotCard` / `RawTarotRelationship` in `src/lib/tarot/types.ts`)
+- Add or replace images under `public/card-images/` to match each card’s `slug`

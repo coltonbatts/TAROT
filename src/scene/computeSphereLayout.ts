@@ -1,7 +1,7 @@
 /**
  * Fibonacci sphere (even spacing on a shell): the full deck forms one tight “orb”
  * you orbit around. Card *order* in the scene follows your filtered `cards[]` array
- * (same canonical deck order as `tarotCards`: Majors, then Wands/Cups/Swords/Pentacles
+ * (same canonical deck order as `getAllCards()` / `tarotCards`: Majors, then Wands/Cups/Swords/Pentacles
  * per your JSON)—there is no required spatial layout in tarot tradition; spreads are
  * for readings, not for a reference library.
  */
