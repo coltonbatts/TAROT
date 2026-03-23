@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { CardReferenceBody } from "../components/CardReferenceBody";
-import { formatArcanaHeading, getCardBySlug } from "../lib/tarot";
+import { getCardBySlug } from "../lib/tarot";
 
 export function CardDetailPage() {
   const { slug } = useParams();
@@ -43,33 +43,30 @@ export function CardDetailPage() {
   }
 
   return (
-    <article className="mx-auto w-full max-w-[1200px] px-4 pb-24 pt-6 sm:px-6 lg:px-8 lg:pt-10">
-      <header className="mb-12 space-y-8 border-b border-line pb-10 lg:mb-16 lg:pb-12">
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <Link
-            to={backToLibrary}
-            aria-label="Back"
-            className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
-          >
-            ←
-          </Link>
-          <Link
-            to="/system"
-            className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
-          >
-            System
-          </Link>
-        </div>
-
-        <div className="space-y-3">
-          <p className="font-display text-sm font-normal italic tracking-wide text-muted/90">
-            {formatArcanaHeading(card)}
-          </p>
-          <h1 className="font-display text-[clamp(2.75rem,8vw,5.5rem)] font-medium leading-[0.92] tracking-tight text-balance">
-            {card.name}
-          </h1>
-        </div>
-      </header>
+    <article className="relative mx-auto w-full max-w-[1180px] px-4 pb-28 pt-5 sm:px-6 lg:px-10 lg:pt-8">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40"
+        aria-hidden
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(122, 107, 72, 0.07) 0%, transparent 55%), radial-gradient(ellipse 60% 40% at 100% 30%, rgba(76, 66, 88, 0.06) 0%, transparent 50%)",
+        }}
+      />
+      <nav className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-line/60 pb-6 lg:mb-12">
+        <Link
+          to={backToLibrary}
+          aria-label="Back to library"
+          className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+        >
+          ← Library
+        </Link>
+        <Link
+          to="/system"
+          className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+        >
+          System
+        </Link>
+      </nav>
 
       <CardReferenceBody card={card} backSearch={librarySearch} syncOrientationInUrl />
     </article>

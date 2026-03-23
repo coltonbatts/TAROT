@@ -1,14 +1,15 @@
 import type { ReactNode } from "react";
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { CardStage } from "./CardStage";
 import {
+  formatArcanaHeading,
   formatReferenceMetaLine,
   getResolvedRelationshipGroups,
   type TarotCard,
   type TarotOrientation,
 } from "../lib/tarot";
 import type { FidelityMajorCard } from "../lib/tarot/fidelityTypes";
-import { TarotCardImage } from "./TarotCardImage";
 
 const AttributedMajorDetailLazy = lazy(() =>
   import("./AttributedMajorDetail").then((m) => ({ default: m.AttributedMajorDetail })),
@@ -18,25 +19,37 @@ function hasText(value: string | undefined | null): boolean {
   return Boolean(value && value.trim());
 }
 
-type SectionProps = {
+type StudyDisclosureProps = {
   title: string;
-  titleClassName?: string;
+  subtitle?: string;
   children: ReactNode;
+  defaultOpen?: boolean;
 };
 
-function Section({ title, titleClassName, children }: SectionProps) {
+function StudyDisclosure({ title, subtitle, children, defaultOpen = false }: StudyDisclosureProps) {
   return (
-    <section className="border-t border-line pt-8 first:border-t-0 first:pt-0">
-      <h2
-        className={
-          titleClassName ??
-          "mb-4 font-mono text-[10px] uppercase tracking-label text-muted"
-        }
-      >
-        {title}
-      </h2>
-      {children}
-    </section>
+    <details
+      open={defaultOpen}
+      className="group border border-line bg-[#030303] text-left motion-safe:transition-colors motion-safe:duration-300 hover:border-line-strong"
+    >
+      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-4 py-4 [&::-webkit-details-marker]:hidden">
+        <span className="min-w-0 space-y-1">
+          <span className="block font-mono text-[10px] uppercase tracking-label text-muted motion-safe:transition-colors motion-safe:duration-300 group-hover:text-bone/75 group-open:text-bone/85">
+            {title}
+          </span>
+          {subtitle ? (
+            <span className="block font-body text-sm leading-snug text-bone/55">{subtitle}</span>
+          ) : null}
+        </span>
+        <span
+          className="mt-0.5 shrink-0 font-mono text-[10px] text-faint motion-safe:transition-transform motion-safe:duration-300 group-open:rotate-180"
+          aria-hidden
+        >
+          ↓
+        </span>
+      </summary>
+      <div className="border-t border-line px-4 pb-5 pt-1">{children}</div>
+    </details>
   );
 }
 
@@ -67,6 +80,41 @@ function CardLinkList({ cards, backSearch }: CardLinkListProps) {
 }
 
 const ORIENTATION_PARAM = "orientation";
+
+type OrientationToggleProps = {
+  value: TarotOrientation;
+  onChange: (next: TarotOrientation) => void;
+};
+
+function OrientationToggle({ value, onChange }: OrientationToggleProps) {
+  return (
+    <div
+      className="inline-flex w-full max-w-[17rem] border border-line bg-[#020202] p-1 sm:w-auto sm:max-w-none"
+      role="group"
+      aria-label="Reading orientation"
+    >
+      {(["upright", "reversed"] as const).map((o) => {
+        const isActive = value === o;
+        const label = o === "upright" ? "Upright" : "Reversed";
+        return (
+          <button
+            key={o}
+            type="button"
+            onClick={() => onChange(o)}
+            className={[
+              "min-w-0 flex-1 px-4 py-2.5 font-mono text-[10px] uppercase tracking-label motion-safe:transition motion-safe:duration-300 sm:min-w-[6.5rem]",
+              isActive
+                ? "bg-blood/30 text-bone shadow-[inset_0_0_0_1px_rgba(226,221,212,0.12)]"
+                : "text-muted hover:text-bone/85",
+            ].join(" ")}
+          >
+            {label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
 type CardReferenceBodyProps = {
   card: TarotCard;
@@ -162,178 +210,137 @@ export function CardReferenceBody({
     hasText(activeMeaning.detailed) &&
     activeMeaning.detailed.trim() !== activeMeaning.summary.trim();
 
+  const hasGrammarSection =
+    hasText(card.archetype) ||
+    hasText(card.numerology) ||
+    hasText(card.suitMeaning) ||
+    hasSuitPhilosophy;
+
+  const grammarSubtitleParts: string[] = [];
+  if (hasText(card.archetype)) grammarSubtitleParts.push("Archetype");
+  if (hasText(card.numerology)) grammarSubtitleParts.push("Numerology");
+  if (hasText(card.suitMeaning) || hasSuitPhilosophy) grammarSubtitleParts.push("Suit");
+
+  const hasStudyDisclosures =
+    hasCorrespondences ||
+    hasGrammarSection ||
+    hasText(card.description) ||
+    hasPatterns ||
+    hasRelationshipGroups ||
+    fidelityMajor ||
+    (card.arcana === "major" && fidelityLoading);
+
+  function cycleOrientation() {
+    setOrientation(activeOrientation === "upright" ? "reversed" : "upright");
+  }
+
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(220px,320px)_1fr] lg:gap-14 lg:items-start">
-      <figure className="space-y-3 lg:sticky lg:top-8">
-        <div className="rounded-2xl border border-line bg-void p-2 sm:p-2.5">
-          <div className="overflow-hidden rounded-xl bg-void">
-            <TarotCardImage
-              src={card.imagePath}
-              alt={card.name}
-              className="aspect-[2/3] w-full object-contain object-center contrast-[1.02]"
-              loading="eager"
-            />
+    <div className="flex flex-col gap-14 lg:gap-20">
+      <section
+        className="relative border-b border-line/60 pb-14 pt-2 lg:pb-20 lg:pt-4"
+        aria-labelledby="card-hero-title"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.85]"
+          aria-hidden
+          style={{
+            background:
+              "radial-gradient(ellipse 65% 55% at 50% 38%, rgba(122, 107, 72, 0.14) 0%, transparent 58%), radial-gradient(ellipse 50% 40% at 70% 80%, rgba(76, 66, 88, 0.1) 0%, transparent 55%)",
+          }}
+        />
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-10 lg:gap-12">
+          <CardStage
+            src={card.imagePath}
+            alt={card.name}
+            orientation={activeOrientation}
+            metaLine={formatReferenceMetaLine(card)}
+            onOrientationCycle={syncOrientationInUrl ? cycleOrientation : undefined}
+          />
+          <div id="card-hero-title" className="max-w-2xl space-y-3 text-center">
+            <p className="font-display text-sm font-normal italic tracking-wide text-muted/90">
+              {formatArcanaHeading(card)}
+            </p>
+            <h1 className="font-display text-[clamp(2.5rem,6.5vw,4.25rem)] font-medium leading-[0.92] tracking-tight text-balance">
+              {card.name}
+            </h1>
           </div>
         </div>
-        <figcaption className="font-mono text-[10px] tracking-wide text-faint">
-          <span className="block truncate">{formatReferenceMetaLine(card)}</span>
-        </figcaption>
-      </figure>
+      </section>
 
-      <div className="min-w-0 space-y-10">
-        <section className="space-y-6">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <h2 className="font-mono text-[10px] uppercase tracking-label text-muted">Reading</h2>
-            {syncOrientationInUrl ? (
-              <div
-                className="inline-flex border border-line p-0.5"
-                role="group"
-                aria-label="Card orientation"
-              >
-                {(["upright", "reversed"] as const).map((o) => {
-                  const isActive = activeOrientation === o;
-                  const label = o === "upright" ? "Upright" : "Reversed";
-                  return (
-                    <button
-                      key={o}
-                      type="button"
-                      onClick={() => setOrientation(o)}
-                      className={[
-                        "min-w-[5.5rem] px-3 py-1.5 font-mono text-[11px] uppercase tracking-label transition duration-300",
-                        isActive
-                          ? "bg-blood/25 text-bone"
-                          : "text-muted hover:text-bone/90",
-                      ].join(" ")}
-                    >
-                      {label}
-                    </button>
-                  );
-                })}
+      <div className="mx-auto min-w-0 w-full max-w-2xl space-y-10 lg:max-w-3xl">
+        <header className="space-y-6 border-b border-line pb-10">
+          <div className="border border-line bg-[#030303] p-5 sm:p-6">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+              <div className="min-w-0 flex-1 space-y-1">
+                <p className="font-mono text-[10px] uppercase tracking-label text-muted">Reading</p>
+                <p className="font-body text-sm leading-relaxed text-bone/55">
+                  {activeOrientation === "upright"
+                    ? "Face of the card toward the reader."
+                    : "Inverted axis — shadow emphasis and internal pressure."}
+                </p>
               </div>
-            ) : null}
-          </div>
-
-          {activeMeaning.keywords.length > 0 ? (
-            <p className="font-mono text-sm leading-snug text-bone">
-              {activeMeaning.keywords.join(" · ")}
-            </p>
-          ) : null}
-
-          {hasText(activeMeaning.summary) ? (
-            <p className="max-w-prose font-body text-[0.9375rem] leading-[1.65] text-bone/95">
-              {activeMeaning.summary}
-            </p>
-          ) : null}
-
-          {detailedDiffersFromSummary ? (
-            <details className="group max-w-prose border border-line border-dashed bg-void/40 px-4 py-3">
-              <summary className="cursor-pointer font-mono text-[10px] uppercase tracking-label text-muted transition group-open:text-bone/80">
-                Full meaning
-              </summary>
-              <p className="mt-4 whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/90">
-                {activeMeaning.detailed}
-              </p>
-            </details>
-          ) : hasText(activeMeaning.detailed) ? (
-            <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/90">
-              {activeMeaning.detailed}
-            </p>
-          ) : null}
-        </section>
-
-        {hasCorrespondences && km ? (
-          <Section title="Correspondences">
-            <dl className="max-w-prose grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 font-mono text-xs leading-relaxed text-muted">
-              {hasText(km.element) ? (
-                <>
-                  <dt className="text-faint">Element</dt>
-                  <dd className="text-bone/85">{km.element}</dd>
-                </>
-              ) : null}
-              {hasText(km.astrology) ? (
-                <>
-                  <dt className="text-faint">Astrology</dt>
-                  <dd className="text-bone/85">{km.astrology}</dd>
-                </>
-              ) : null}
-              {hasText(km.hebrewLetter) ? (
-                <>
-                  <dt className="text-faint">Hebrew letter</dt>
-                  <dd className="text-bone/85">{km.hebrewLetter}</dd>
-                </>
-              ) : null}
-              {hasText(km.qabalisticPath) ? (
-                <>
-                  <dt className="text-faint">Path</dt>
-                  <dd className="text-bone/85">{km.qabalisticPath}</dd>
-                </>
-              ) : null}
-              {hasText(km.chakra) ? (
-                <>
-                  <dt className="text-faint">Chakra</dt>
-                  <dd className="text-bone/85">{km.chakra}</dd>
-                </>
-              ) : null}
-              {hasText(km.elementalComposite) ? (
-                <>
-                  <dt className="text-faint">Court composite</dt>
-                  <dd className="text-bone/85">{km.elementalComposite}</dd>
-                </>
-              ) : null}
-            </dl>
-          </Section>
-        ) : null}
-
-        {hasText(card.archetype) ? (
-          <Section title="Archetype">
-            <p className="max-w-prose text-sm leading-relaxed text-muted">{card.archetype}</p>
-          </Section>
-        ) : null}
-
-        {hasText(card.numerology) ? (
-          <Section title="Numerology">
-            <p className="max-w-prose whitespace-pre-line font-mono text-sm text-bone/90">
-              {card.numerology}
-            </p>
-          </Section>
-        ) : null}
-
-        {hasText(card.suitMeaning) || hasSuitPhilosophy ? (
-          <Section title="Suit Logic">
-            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
-              {hasText(card.suitMeaning) ? <p>{card.suitMeaning}</p> : null}
-              {hasSuitPhilosophy && card.suitPhilosophy ? (
-                <>
-                  {hasText(card.suitPhilosophy.shadow) ? (
-                    <div>
-                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Shadow</h3>
-                      <p>{card.suitPhilosophy.shadow}</p>
-                    </div>
-                  ) : null}
-                  {card.suitPhilosophy.progression.length > 0 ? (
-                    <div>
-                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Progression</h3>
-                      <ul className="list-inside list-disc space-y-1">
-                        {card.suitPhilosophy.progression.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </>
+              {syncOrientationInUrl ? (
+                <OrientationToggle value={activeOrientation} onChange={setOrientation} />
               ) : null}
             </div>
-          </Section>
-        ) : null}
+
+            <div className="mt-8 space-y-6 border-t border-line/80 pt-8">
+              {activeMeaning.keywords.length > 0 ? (
+                <p className="font-mono text-[13px] leading-relaxed text-bone/90">
+                  {activeMeaning.keywords.join(" · ")}
+                </p>
+              ) : null}
+
+              {hasText(activeMeaning.summary) ? (
+                <p className="max-w-prose font-body text-[1.0625rem] leading-[1.7] text-bone/95">
+                  {activeMeaning.summary}
+                </p>
+              ) : null}
+
+              {detailedDiffersFromSummary ? (
+                <details className="group max-w-prose border border-dashed border-line bg-black/30">
+                  <summary className="cursor-pointer px-4 py-3 font-mono text-[10px] uppercase tracking-label text-muted motion-safe:transition-colors motion-safe:duration-300 hover:text-bone/80 group-open:border-b group-open:border-line group-open:text-bone/80 [&::-webkit-details-marker]:hidden">
+                    <span className="inline-flex items-center gap-2">
+                      Deeper reading
+                      <span className="text-faint group-open:rotate-180 motion-safe:transition-transform motion-safe:duration-300">
+                        ↓
+                      </span>
+                    </span>
+                  </summary>
+                  <p className="px-4 pb-4 pt-4 whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/88">
+                    {activeMeaning.detailed}
+                  </p>
+                </details>
+              ) : hasText(activeMeaning.detailed) ? (
+                <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/90">
+                  {activeMeaning.detailed}
+                </p>
+              ) : null}
+            </div>
+          </div>
+        </header>
 
         {hasSymbolismSemantics && sem ? (
-          <Section title="Symbolism" titleClassName="mb-4 font-mono text-[10px] uppercase tracking-label text-ochre/90">
+          <section
+            className="border-l-2 border-ochre/35 pl-6 sm:pl-8"
+            aria-labelledby="symbolism-heading"
+          >
+            <h2
+              id="symbolism-heading"
+              className="mb-6 font-mono text-[10px] uppercase tracking-label text-ochre/90"
+            >
+              Symbolism
+            </h2>
             <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
-              {hasText(sem.interpretation) ? <p className="text-bone/88">{sem.interpretation}</p> : null}
+              {hasText(sem.interpretation) ? (
+                <p className="text-bone/88">{sem.interpretation}</p>
+              ) : null}
               {sem.imagery.length > 0 ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Imagery</h3>
-                  <ul className="list-inside list-disc space-y-1">
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                    Imagery
+                  </h3>
+                  <ul className="list-inside list-disc space-y-1.5 marker:text-faint">
                     {sem.imagery.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -342,25 +349,40 @@ export function CardReferenceBody({
               ) : null}
               {sym && sym.colors.length > 0 ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Colors</h3>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                    Colors
+                  </h3>
                   <p>{sym.colors.join(" · ")}</p>
                 </div>
               ) : null}
               {sym && hasText(sym.direction) ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Direction</h3>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                    Direction
+                  </h3>
                   <p className="whitespace-pre-line">{sym.direction}</p>
                 </div>
               ) : null}
             </div>
-          </Section>
+          </section>
         ) : hasSymbolismStructure && sym ? (
-          <Section title="Symbolism" titleClassName="mb-4 font-mono text-[10px] uppercase tracking-label text-ochre/90">
+          <section
+            className="border-l-2 border-ochre/35 pl-6 sm:pl-8"
+            aria-labelledby="symbolism-heading"
+          >
+            <h2
+              id="symbolism-heading"
+              className="mb-6 font-mono text-[10px] uppercase tracking-label text-ochre/90"
+            >
+              Symbolism
+            </h2>
             <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
               {sym.objects.length > 0 ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Imagery</h3>
-                  <ul className="list-inside list-disc space-y-1">
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                    Imagery
+                  </h3>
+                  <ul className="list-inside list-disc space-y-1.5 marker:text-faint">
                     {sym.objects.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -369,109 +391,254 @@ export function CardReferenceBody({
               ) : null}
               {sym.colors.length > 0 ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Colors</h3>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                    Colors
+                  </h3>
                   <p>{sym.colors.join(" · ")}</p>
                 </div>
               ) : null}
               {hasText(sym.direction) ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Direction</h3>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                    Direction
+                  </h3>
                   <p className="whitespace-pre-line">{sym.direction}</p>
                 </div>
               ) : null}
             </div>
-          </Section>
+          </section>
         ) : hasSymbolismProse ? (
-          <Section title="Symbolism" titleClassName="mb-4 font-mono text-[10px] uppercase tracking-label text-ochre/90">
-            <p className="max-w-prose whitespace-pre-line text-sm leading-relaxed text-muted">{card.symbolism}</p>
-          </Section>
-        ) : null}
-
-        {hasText(card.description) ? (
-          <Section title="Notes">
-            <p className="max-w-prose whitespace-pre-line text-sm leading-relaxed text-muted">{card.description}</p>
-          </Section>
-        ) : null}
-
-        {hasPatterns ? (
-          <Section title="Interpretation patterns">
-            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
-              {hasText(card.interpretationPatterns.developmentalRole) ? (
-                <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Development</h3>
-                  <p>{card.interpretationPatterns.developmentalRole}</p>
-                </div>
-              ) : null}
-              {card.interpretationPatterns.systemLinks.length > 0 ? (
-                <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">System Links</h3>
-                  <ul className="list-inside list-disc space-y-1">
-                    {card.interpretationPatterns.systemLinks.map((line) => (
-                      <li key={line}>{line}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-              {card.interpretationPatterns.reversalModes.length > 0 ? (
-                <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Reversal Modes</h3>
-                  <ul className="list-inside list-disc space-y-1">
-                    {card.interpretationPatterns.reversalModes.map((line) => (
-                      <li key={line}>{line}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-          </Section>
-        ) : null}
-
-        {hasRelationshipGroups ? (
-          <Section title="Relationships">
-            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
-              {relationships.similar.length > 0 ? (
-                <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Similar</h3>
-                  <CardLinkList cards={relationships.similar} backSearch={backSearch} />
-                </div>
-              ) : null}
-              {relationships.contrasting.length > 0 ? (
-                <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Contrasting</h3>
-                  <CardLinkList cards={relationships.contrasting} backSearch={backSearch} />
-                </div>
-              ) : null}
-              {relationships.previous.length > 0 || relationships.next.length > 0 ? (
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Previous</h3>
-                    <CardLinkList cards={relationships.previous} backSearch={backSearch} />
-                  </div>
-                  <div>
-                    <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Next</h3>
-                    <CardLinkList cards={relationships.next} backSearch={backSearch} />
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          </Section>
-        ) : null}
-
-        {card.arcana === "major" && fidelityLoading ? (
-          <p className="font-mono text-[10px] text-faint" aria-busy="true">
-            …
-          </p>
-        ) : null}
-        {fidelityMajor ? (
-          <Suspense
-            fallback={
-              <p className="font-mono text-[10px] text-faint" aria-busy="true">
-                …
-              </p>
-            }
+          <section
+            className="border-l-2 border-ochre/35 pl-6 sm:pl-8"
+            aria-labelledby="symbolism-heading"
           >
-            <AttributedMajorDetailLazy fidelity={fidelityMajor} backSearch={backSearch} />
-          </Suspense>
+            <h2
+              id="symbolism-heading"
+              className="mb-6 font-mono text-[10px] uppercase tracking-label text-ochre/90"
+            >
+              Symbolism
+            </h2>
+            <p className="max-w-prose whitespace-pre-line text-sm leading-relaxed text-muted">
+              {card.symbolism}
+            </p>
+          </section>
+        ) : null}
+
+        {hasStudyDisclosures ? (
+        <div className="space-y-3">
+          <h2 className="font-mono text-[10px] uppercase tracking-label text-faint">Study</h2>
+          <div className="flex flex-col gap-3">
+            {hasCorrespondences && km ? (
+              <StudyDisclosure title="Correspondences" subtitle="Elements, letters, paths">
+                <dl className="max-w-prose grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 font-mono text-xs leading-relaxed text-muted">
+                  {hasText(km.element) ? (
+                    <>
+                      <dt className="text-faint">Element</dt>
+                      <dd className="text-bone/85">{km.element}</dd>
+                    </>
+                  ) : null}
+                  {hasText(km.astrology) ? (
+                    <>
+                      <dt className="text-faint">Astrology</dt>
+                      <dd className="text-bone/85">{km.astrology}</dd>
+                    </>
+                  ) : null}
+                  {hasText(km.hebrewLetter) ? (
+                    <>
+                      <dt className="text-faint">Hebrew letter</dt>
+                      <dd className="text-bone/85">{km.hebrewLetter}</dd>
+                    </>
+                  ) : null}
+                  {hasText(km.qabalisticPath) ? (
+                    <>
+                      <dt className="text-faint">Path</dt>
+                      <dd className="text-bone/85">{km.qabalisticPath}</dd>
+                    </>
+                  ) : null}
+                  {hasText(km.chakra) ? (
+                    <>
+                      <dt className="text-faint">Chakra</dt>
+                      <dd className="text-bone/85">{km.chakra}</dd>
+                    </>
+                  ) : null}
+                  {hasText(km.elementalComposite) ? (
+                    <>
+                      <dt className="text-faint">Court composite</dt>
+                      <dd className="text-bone/85">{km.elementalComposite}</dd>
+                    </>
+                  ) : null}
+                </dl>
+              </StudyDisclosure>
+            ) : null}
+
+            {hasGrammarSection ? (
+              <StudyDisclosure
+                title="Grammar of the card"
+                subtitle={grammarSubtitleParts.join(" · ")}
+              >
+                <div className="max-w-prose space-y-8 text-sm leading-relaxed text-muted">
+                  {hasText(card.archetype) ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Archetype
+                      </h3>
+                      <p>{card.archetype}</p>
+                    </div>
+                  ) : null}
+                  {hasText(card.numerology) ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Numerology
+                      </h3>
+                      <p className="whitespace-pre-line font-mono text-sm text-bone/90">
+                        {card.numerology}
+                      </p>
+                    </div>
+                  ) : null}
+                  {hasText(card.suitMeaning) || hasSuitPhilosophy ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Suit logic
+                      </h3>
+                      <div className="space-y-6">
+                        {hasText(card.suitMeaning) ? <p>{card.suitMeaning}</p> : null}
+                        {hasSuitPhilosophy && card.suitPhilosophy ? (
+                          <>
+                            {hasText(card.suitPhilosophy.shadow) ? (
+                              <div>
+                                <h4 className="mb-2 font-mono text-[10px] uppercase tracking-label text-faint">
+                                  Shadow
+                                </h4>
+                                <p>{card.suitPhilosophy.shadow}</p>
+                              </div>
+                            ) : null}
+                            {card.suitPhilosophy.progression.length > 0 ? (
+                              <div>
+                                <h4 className="mb-2 font-mono text-[10px] uppercase tracking-label text-faint">
+                                  Progression
+                                </h4>
+                                <ul className="list-inside list-disc space-y-1 marker:text-faint">
+                                  {card.suitPhilosophy.progression.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : null}
+                          </>
+                        ) : null}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              </StudyDisclosure>
+            ) : null}
+
+            {hasText(card.description) ? (
+              <StudyDisclosure title="Notes" subtitle="Editorial and context">
+                <p className="max-w-prose whitespace-pre-line text-sm leading-relaxed text-muted">
+                  {card.description}
+                </p>
+              </StudyDisclosure>
+            ) : null}
+
+            {hasPatterns ? (
+              <StudyDisclosure title="Interpretation patterns" subtitle="Systems and reversals">
+                <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
+                  {hasText(card.interpretationPatterns.developmentalRole) ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Development
+                      </h3>
+                      <p>{card.interpretationPatterns.developmentalRole}</p>
+                    </div>
+                  ) : null}
+                  {card.interpretationPatterns.systemLinks.length > 0 ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        System links
+                      </h3>
+                      <ul className="list-inside list-disc space-y-1 marker:text-faint">
+                        {card.interpretationPatterns.systemLinks.map((line) => (
+                          <li key={line}>{line}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                  {card.interpretationPatterns.reversalModes.length > 0 ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Reversal modes
+                      </h3>
+                      <ul className="list-inside list-disc space-y-1 marker:text-faint">
+                        {card.interpretationPatterns.reversalModes.map((line) => (
+                          <li key={line}>{line}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </div>
+              </StudyDisclosure>
+            ) : null}
+
+            {hasRelationshipGroups ? (
+              <StudyDisclosure title="Relationships" subtitle="Similar, contrasting, sequence">
+                <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
+                  {relationships.similar.length > 0 ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Similar
+                      </h3>
+                      <CardLinkList cards={relationships.similar} backSearch={backSearch} />
+                    </div>
+                  ) : null}
+                  {relationships.contrasting.length > 0 ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                        Contrasting
+                      </h3>
+                      <CardLinkList cards={relationships.contrasting} backSearch={backSearch} />
+                    </div>
+                  ) : null}
+                  {relationships.previous.length > 0 || relationships.next.length > 0 ? (
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      <div>
+                        <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                          Previous
+                        </h3>
+                        <CardLinkList cards={relationships.previous} backSearch={backSearch} />
+                      </div>
+                      <div>
+                        <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">
+                          Next
+                        </h3>
+                        <CardLinkList cards={relationships.next} backSearch={backSearch} />
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              </StudyDisclosure>
+            ) : null}
+
+            {card.arcana === "major" && fidelityLoading ? (
+              <p className="border border-line border-dashed px-4 py-3 font-mono text-[10px] text-faint" aria-busy="true">
+                Loading sources…
+              </p>
+            ) : null}
+            {fidelityMajor ? (
+              <StudyDisclosure title="Sources & fidelity" subtitle="Attributed major arcana">
+                <Suspense
+                  fallback={
+                    <p className="font-mono text-[10px] text-faint" aria-busy="true">
+                      …
+                    </p>
+                  }
+                >
+                  <AttributedMajorDetailLazy fidelity={fidelityMajor} backSearch={backSearch} />
+                </Suspense>
+              </StudyDisclosure>
+            ) : null}
+          </div>
+        </div>
         ) : null}
       </div>
     </div>
