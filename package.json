@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "generate:data": "node scripts/generate-tarot-data.mjs",
+    "import:pam-b-1920": "node scripts/import-pam-b-1920.mjs",
     "generate:knowledge": "node scripts/buildTarotKnowledge.mjs"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "@fontsource/newsreader": "^5.2.10",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.17.14",
+    "framer-motion": "^11.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",

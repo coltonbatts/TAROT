@@ -222,7 +222,7 @@ export function CardStage({
                 `,
               }}
             >
-              <div className="absolute inset-[4px] overflow-hidden rounded-[11px] bg-void ring-1 ring-white/[0.04]">
+              <div className="absolute inset-[4px] overflow-hidden rounded-none bg-void ring-1 ring-white/[0.06]">
                 <div
                   className="pointer-events-none absolute inset-0 z-20 mix-blend-soft-light"
                   style={{

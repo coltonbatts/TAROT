@@ -16,7 +16,7 @@ export function FilterTabs({ tabs, active, onChange }: FilterTabsProps) {
   return (
     <div
       role="group"
-      aria-label="Suits"
+      aria-label="Filter deck"
       className="flex flex-wrap gap-x-0 gap-y-0 border-b border-line"
     >
       {tabs.map((tab) => {

@@ -8,11 +8,12 @@ import {
   useState,
 } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { CardTile } from "../components/CardTile";
+import { DeckSurface } from "../components/DeckSurface";
 import { FilterTabs } from "../components/FilterTabs";
 import { LibraryViewToggle } from "../components/LibraryViewToggle";
 import { ViewportChamber } from "../components/ViewportChamber";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
+import { seededShuffle } from "../lib/deck/shuffle";
 import {
   filterCards,
   tarotCards,
@@ -25,7 +26,7 @@ const TarotCanvasLazy = lazy(() =>
   import("../scene/TarotCanvas").then((module) => ({ default: module.TarotCanvas })),
 );
 
-type LibraryView = "spatial" | "index";
+type LibraryView = "deck" | "spatial";
 
 function librarySearchString(searchParams: URLSearchParams) {
   const next = new URLSearchParams(searchParams);
@@ -40,10 +41,11 @@ export function LibraryPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get("q") ?? "";
   const activeCategory = (searchParams.get("category") ?? "all") as TarotCategory;
-  const view: LibraryView = searchParams.get("view") === "spatial" ? "spatial" : "index";
+  const view: LibraryView = searchParams.get("view") === "spatial" ? "spatial" : "deck";
   const [searchInput, setSearchInput] = useState(queryParam);
   const deferredQuery = useDeferredValue(searchInput);
   const reducedMotion = usePrefersReducedMotion();
+  const [shuffleNonce, setShuffleNonce] = useState(0);
 
   useEffect(() => {
     setSearchInput(queryParam);
@@ -57,6 +59,30 @@ export function LibraryPage() {
     () => filterCards(tarotCards, activeCategory, deferredQuery),
     [activeCategory, deferredQuery],
   );
+
+  useEffect(() => {
+    setShuffleNonce(0);
+  }, [activeCategory, deferredQuery]);
+
+  const displayCards = useMemo(() => {
+    if (shuffleNonce === 0) return filteredCards;
+    return seededShuffle(filteredCards, shuffleNonce);
+  }, [filteredCards, shuffleNonce]);
+
+  const deckGroups = useMemo(() => {
+    if (!displayCards.length) return [];
+    const searching = Boolean(deferredQuery.trim());
+    const shuffled = shuffleNonce !== 0;
+    if (searching || shuffled || activeCategory !== "all") {
+      return [{ label: "", cards: displayCards }];
+    }
+    const majors = displayCards.filter((c) => c.arcana === "major");
+    const minors = displayCards.filter((c) => c.arcana === "minor");
+    const groups: { label: string; cards: TarotCard[] }[] = [];
+    if (majors.length) groups.push({ label: "Major arcana", cards: majors });
+    if (minors.length) groups.push({ label: "Minor arcana", cards: minors });
+    return groups.length ? groups : [{ label: "", cards: displayCards }];
+  }, [displayCards, deferredQuery, shuffleNonce, activeCategory]);
 
   const counts = useMemo(
     () =>
@@ -127,20 +153,32 @@ export function LibraryPage() {
 
   const clearSearch = () => onQueryChange("");
 
-  const categoryLabel = (c: TarotCategory) =>
-    tarotCategories.find((t) => t.id === c)?.label ?? c;
+  const shuffleDeck = () => setShuffleNonce((n) => n + 1);
+
+  const restoreOrder = () => setShuffleNonce(0);
+
+  const drawRandom = () => {
+    if (!filteredCards.length) return;
+    const pick = filteredCards[Math.floor(Math.random() * filteredCards.length)];
+    openCard(pick);
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-void text-bone">
       <div className="relative z-10 flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 border-b border-line bg-void/95 px-4 backdrop-blur-[2px] sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[1920px]">
-            <div className="flex flex-col items-center gap-5 py-8 sm:py-10 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-3">
+            <div className="flex flex-col items-center gap-6 py-8 sm:py-10 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-start lg:gap-6 lg:pt-10">
               <div className="hidden min-w-0 lg:block" aria-hidden />
-              <h1 className="text-center font-display text-[clamp(2.75rem,12vw,5.5rem)] font-medium leading-none tracking-tight lg:justify-self-center">
-                Tarot
-              </h1>
-              <div className="flex items-center justify-center gap-5 lg:justify-end">
+              <div className="max-w-xl text-center lg:justify-self-center lg:text-center">
+                <h1 className="font-display text-[clamp(2.75rem,10vw,5rem)] font-medium leading-[0.95] tracking-tight">
+                  Tarot
+                </h1>
+                <p className="mx-auto mt-3 max-w-md text-pretty font-body text-sm leading-relaxed text-muted sm:text-[15px]">
+                  A full deck, ordered and searchable. Browse the table, or open orbit to move through the sphere.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-end lg:pt-1">
                 <Link
                   to="/system"
                   className="shrink-0 font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
@@ -151,7 +189,7 @@ export function LibraryPage() {
               </div>
             </div>
 
-            <div className="mx-auto max-w-2xl space-y-5 pb-8">
+            <div className="mx-auto max-w-2xl space-y-4 pb-6 lg:pb-8">
               <label className="block">
                 <span className="sr-only">Search</span>
                 <div className="flex items-end gap-2 border-b border-line pb-2">
@@ -159,7 +197,7 @@ export function LibraryPage() {
                     type="search"
                     value={searchInput}
                     onChange={(event) => onQueryChange(event.target.value)}
-                    placeholder="Search"
+                    placeholder="Search by name"
                     className="min-w-0 flex-1 bg-transparent font-body text-base text-bone outline-none placeholder:text-faint/70"
                   />
                   {searchInput ? (
@@ -178,56 +216,61 @@ export function LibraryPage() {
               </label>
 
               <FilterTabs tabs={counts} active={activeCategory} onChange={onCategoryChange} />
-              <p className="sr-only" aria-live="polite">
-                {filteredCards.length} cards
-              </p>
+
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line/60 pb-3">
+                <p className="font-mono text-[10px] tabular-nums tracking-wider text-muted" aria-live="polite">
+                  {filteredCards.length} / {tarotCards.length}
+                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={shuffleDeck}
+                    disabled={!filteredCards.length}
+                    className="border border-transparent px-2 py-1 font-mono text-[10px] uppercase tracking-archive text-muted transition hover:border-line hover:text-bone disabled:opacity-40 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+                  >
+                    Shuffle
+                  </button>
+                  {shuffleNonce !== 0 ? (
+                    <button
+                      type="button"
+                      onClick={restoreOrder}
+                      className="border border-transparent px-2 py-1 font-mono text-[10px] uppercase tracking-archive text-muted transition hover:border-line hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+                    >
+                      Restore order
+                    </button>
+                  ) : null}
+                  <button
+                    type="button"
+                    onClick={drawRandom}
+                    disabled={!filteredCards.length}
+                    className="border border-transparent px-2 py-1 font-mono text-[10px] uppercase tracking-archive text-muted transition hover:border-line hover:text-bone disabled:opacity-40 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+                  >
+                    Draw
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </header>
 
-        {view === "index" ? (
-          <section
-            aria-label="Deck"
-            className="mx-auto w-full max-w-[1920px] flex-1 px-4 pb-24 pt-2 sm:px-6 lg:px-8"
-          >
+        {view === "deck" ? (
+          <section aria-label="Deck" className="flex min-h-0 flex-1 flex-col">
             {filteredCards.length ? (
-              <div className="border-t border-line">
-                {filteredCards.map((card, index) => (
-                  <CardTile key={card.id} card={card} index={index} search={listSearch} />
-                ))}
-              </div>
+              <DeckSurface groups={deckGroups} listSearch={listSearch} reducedMotion={reducedMotion} />
             ) : (
-              <div className="border border-line py-16 text-center text-sm text-muted">No matches.</div>
+              <div className="flex flex-1 items-center justify-center border-t border-line px-6 py-24 text-sm text-muted">
+                No matches.
+              </div>
             )}
           </section>
         ) : (
-          <div className="mx-auto grid min-h-0 w-full max-w-[1920px] flex-1 grid-cols-1 gap-0 lg:grid-cols-[minmax(180px,220px)_1fr_minmax(140px,180px)] lg:min-h-0 lg:flex-1 lg:px-6 lg:pb-6">
-            <aside className="hidden min-h-0 flex-col border-line lg:flex lg:border-r">
-              <nav
-                className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-2 py-3"
-                aria-label="Cards"
-              >
-                <ul className="space-y-0.5">
-                  {filteredCards.map((card) => (
-                    <li key={card.id}>
-                      <Link
-                        to={{ pathname: `/cards/${card.slug}`, search: listSearch ? `?${listSearch}` : "" }}
-                        className="block truncate border-l-2 border-transparent py-1.5 pl-2 font-mono text-[11px] text-muted transition duration-300 hover:border-line-strong hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
-                      >
-                        {card.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </aside>
-
-            <div className="flex min-h-[min(72vh,680px)] flex-1 flex-col p-3 sm:p-4 lg:min-h-[560px] lg:p-4">
+          <div className="mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-3 pb-8 pt-2 sm:px-5 lg:px-8">
+            <div className="flex min-h-[min(72vh,680px)] flex-1 flex-col lg:min-h-[560px]">
               {filteredCards.length ? (
                 <ViewportChamber
                   footer={
                     <p className="text-center font-mono text-[10px] tabular-nums tracking-wider text-muted">
-                      {filteredCards.length}/{tarotCards.length}
+                      {filteredCards.length} / {tarotCards.length} · orbit
                     </p>
                   }
                 >
@@ -251,15 +294,6 @@ export function LibraryPage() {
                 </div>
               )}
             </div>
-
-            <aside className="hidden items-start justify-end border-line pt-4 lg:flex lg:border-l lg:px-3">
-              <p className="max-w-full text-right font-mono text-[10px] leading-relaxed text-muted">
-                <span className="block truncate text-bone/80">{categoryLabel(activeCategory)}</span>
-                {deferredQuery.trim() ? (
-                  <span className="mt-2 block truncate opacity-80">{deferredQuery.trim()}</span>
-                ) : null}
-              </p>
-            </aside>
           </div>
         )}
       </div>

@@ -1,43 +1,27 @@
-export type LibraryViewMode = "spatial" | "index";
+export type LibraryViewMode = "deck" | "spatial";
 
 type Props = {
   view: LibraryViewMode;
   onChange: (view: LibraryViewMode) => void;
 };
 
-function IconList({ className }: { className?: string }) {
+/** Loose grid / table deck */
+function IconDeck({ className }: { className?: string }) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      aria-hidden
-    >
-      <path d="M5 7h14M5 12h14M5 17h9" strokeLinecap="round" />
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <rect x="4" y="5" width="6.5" height="9" rx="1" strokeLinejoin="round" />
+      <rect x="13.5" y="5" width="6.5" height="9" rx="1" strokeLinejoin="round" />
+      <rect x="4" y="15" width="6.5" height="5" rx="1" strokeLinejoin="round" />
+      <rect x="13.5" y="15" width="6.5" height="5" rx="1" strokeLinejoin="round" />
     </svg>
   );
 }
 
 function IconSpatial({ className }: { className?: string }) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      aria-hidden
-    >
-      <path
-        d="M12 4 18 8v8l-6 4-6-4V8l6-4z"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 12 12 4M12 12 18 8M12 12 6 8"
-        strokeLinejoin="round"
-      />
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+      <path d="M12 4 18 8v8l-6 4-6-4V8l6-4z" strokeLinejoin="round" />
+      <path d="M12 12 12 4M12 12 18 8M12 12 6 8" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -47,28 +31,25 @@ const btn =
 
 export function LibraryViewToggle({ view, onChange }: Props) {
   return (
-    <nav
-      className="flex overflow-hidden rounded-md border border-line"
-      aria-label="Library view"
-    >
+    <nav className="flex overflow-hidden rounded-md border border-line" aria-label="Library view">
       <button
         type="button"
-        aria-label="List view"
-        aria-pressed={view === "index"}
-        title="List"
-        onClick={() => onChange("index")}
+        aria-label="Deck view"
+        aria-pressed={view === "deck"}
+        title="Deck"
+        onClick={() => onChange("deck")}
         className={[
           btn,
-          view === "index" ? "bg-blood/30 text-bone" : "hover:bg-white/[0.04] hover:text-bone",
+          view === "deck" ? "bg-blood/30 text-bone" : "hover:bg-white/[0.04] hover:text-bone",
         ].join(" ")}
       >
-        <IconList className="h-5 w-5" />
+        <IconDeck className="h-5 w-5" />
       </button>
       <button
         type="button"
-        aria-label="Spatial view"
+        aria-label="Orbit view"
         aria-pressed={view === "spatial"}
-        title="Spatial"
+        title="Orbit"
         onClick={() => onChange("spatial")}
         className={[
           btn,
