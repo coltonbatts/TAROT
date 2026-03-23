@@ -1,6 +1,19 @@
+import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { CardDetailPage } from "./pages/CardDetailPage";
 import { LibraryPage } from "./pages/LibraryPage";
+
+const FidelitySystemPage = lazy(() =>
+  import("./pages/FidelitySystemPage").then((m) => ({ default: m.FidelitySystemPage })),
+);
+
+function SystemRouteFallback() {
+  return (
+    <div className="flex min-h-[50vh] items-center justify-center font-mono text-[10px] text-muted" aria-busy="true">
+      …
+    </div>
+  );
+}
 
 function AppMain() {
   const location = useLocation();
@@ -17,6 +30,14 @@ function AppMain() {
     >
       <Routes>
         <Route path="/" element={<LibraryPage />} />
+        <Route
+          path="/system"
+          element={
+            <Suspense fallback={<SystemRouteFallback />}>
+              <FidelitySystemPage />
+            </Suspense>
+          }
+        />
         <Route path="/cards/:slug" element={<CardDetailPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

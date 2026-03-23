@@ -4,16 +4,24 @@ import type {
   RawTarotCard,
   RawTarotDataset,
   RawTarotInterpretationPatterns,
+  RawTarotKnowledgeMetadata,
+  RawTarotMeaningOrientationBlock,
   RawTarotRelationshipGroups,
+  RawTarotStructuredMeanings,
   RawTarotSymbolism,
+  RawTarotSymbolismSemantics,
   TarotCard,
   TarotArcana,
   TarotInterpretationPatterns,
+  TarotKnowledgeMetadata,
+  TarotMeaningOrientationBlock,
   TarotRelationshipGroups,
+  TarotStructuredMeanings,
   TarotSuit,
   TarotSuitPhilosophy,
-  TarotSystemData,
   TarotSymbolismDetail,
+  TarotSymbolismSemantics,
+  TarotSystemData,
 } from "./types";
 
 const RANK_TO_NUMBER: Record<string, number> = {
@@ -115,6 +123,104 @@ function minorRankAndNumber(rawNumber: unknown): { rank?: string; number?: numbe
 function stringArray(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.map((item) => asTrimmedString(item)).filter(Boolean);
+}
+
+function firstSentence(text: string): string {
+  const t = text.trim();
+  if (!t) return "";
+  const m = t.match(/^(.+?[.!?])(\s|$)/);
+  return m ? m[1].trim() : t;
+}
+
+function keywordsFromReversedText(reversed: string): string[] {
+  const t = reversed.trim();
+  if (!t) return [];
+  return t
+    .split(/[,;]|\bor\b/gi)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .slice(0, 6);
+}
+
+function parseMeaningOrientationBlock(
+  raw: RawTarotMeaningOrientationBlock | null | undefined,
+  fallback: TarotMeaningOrientationBlock,
+): TarotMeaningOrientationBlock {
+  if (!raw || typeof raw !== "object") return fallback;
+  const keywords = stringArray(raw.keywords);
+  const summary = asTrimmedString(raw.summary) || fallback.summary;
+  const detailed = asTrimmedString(raw.detailed) || fallback.detailed;
+  return {
+    keywords: keywords.length > 0 ? keywords : fallback.keywords,
+    summary,
+    detailed,
+  };
+}
+
+function deriveStructuredMeanings(
+  raw: RawTarotCard,
+  uprightMeaning: string,
+  reversedMeaning: string,
+  keywords: string[],
+  coreMeaning: string | undefined,
+): TarotStructuredMeanings {
+  const uprightFallback: TarotMeaningOrientationBlock = {
+    keywords,
+    summary: (coreMeaning || firstSentence(uprightMeaning)).trim(),
+    detailed: uprightMeaning,
+  };
+  const reversedFallback: TarotMeaningOrientationBlock = {
+    keywords: keywordsFromReversedText(reversedMeaning),
+    summary: firstSentence(reversedMeaning),
+    detailed: reversedMeaning,
+  };
+  const m = raw.meanings && typeof raw.meanings === "object" ? (raw.meanings as RawTarotStructuredMeanings) : undefined;
+  return {
+    upright: parseMeaningOrientationBlock(m?.upright ?? undefined, uprightFallback),
+    reversed: parseMeaningOrientationBlock(m?.reversed ?? undefined, reversedFallback),
+  };
+}
+
+function parseKnowledgeMetadata(raw: unknown): TarotKnowledgeMetadata | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const o = raw as RawTarotKnowledgeMetadata;
+  const element = asTrimmedString(o.element);
+  const astrology = asTrimmedString(o.astrology);
+  const hebrewLetter = asTrimmedString(o.hebrew_letter);
+  const qabalisticPath = asTrimmedString(o.qabalistic_path);
+  const chakra = asTrimmedString(o.chakra);
+  const elementalComposite = asTrimmedString(o.elemental_composite);
+  if (!element && !astrology && !hebrewLetter && !qabalisticPath && !chakra && !elementalComposite) {
+    return undefined;
+  }
+  return {
+    ...(element ? { element } : {}),
+    ...(astrology ? { astrology } : {}),
+    ...(hebrewLetter ? { hebrewLetter } : {}),
+    ...(qabalisticPath ? { qabalisticPath } : {}),
+    ...(chakra ? { chakra } : {}),
+    ...(elementalComposite ? { elementalComposite } : {}),
+  };
+}
+
+function parseSymbolismSemantics(
+  raw: unknown,
+  imageryFallback: string[],
+  interpretationFallback: string,
+): TarotSymbolismSemantics | undefined {
+  if (!raw || typeof raw !== "object") {
+    if (!interpretationFallback.trim() && imageryFallback.length === 0) return undefined;
+    return {
+      imagery: [...imageryFallback],
+      interpretation: interpretationFallback.trim(),
+    };
+  }
+  const o = raw as RawTarotSymbolismSemantics;
+  const imagery = stringArray(o.imagery);
+  const interpretation = asTrimmedString(o.interpretation) || interpretationFallback;
+  const img = imagery.length > 0 ? imagery : imageryFallback;
+  if (!interpretation && img.length === 0) return undefined;
+  return { imagery: img, interpretation };
 }
 
 function parseInterpretationPatterns(raw: RawTarotInterpretationPatterns | null | undefined): TarotInterpretationPatterns {
@@ -293,6 +399,20 @@ export function normalizeRawCard(raw: RawTarotCard, index: number): TarotCard {
     asTrimmedString(raw.imagePath) || asTrimmedString(raw.image_path),
   );
 
+  const meanings = deriveStructuredMeanings(raw, uprightMeaning, reversedMeaning, keywords, coreMeaning);
+  const knowledgeMetadata = parseKnowledgeMetadata(raw.knowledge_metadata);
+  const interpretationFallback =
+    asTrimmedString((raw.symbolism_semantics as RawTarotSymbolismSemantics | undefined)?.interpretation) ||
+    (coreMeaning ?? firstSentence(uprightMeaning));
+  const imageryFallback = sym.detail?.objects?.length
+    ? [...sym.detail.objects]
+    : stringArray(raw.symbolism);
+  const symbolismSemantics = parseSymbolismSemantics(
+    raw.symbolism_semantics,
+    imageryFallback,
+    interpretationFallback,
+  );
+
   return {
     id,
     slug,
@@ -315,6 +435,9 @@ export function normalizeRawCard(raw: RawTarotCard, index: number): TarotCard {
     suitPhilosophy,
     interpretationPatterns,
     relationships,
+    meanings,
+    knowledgeMetadata,
+    symbolismSemantics,
   };
 }
 

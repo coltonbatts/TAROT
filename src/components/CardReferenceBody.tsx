@@ -1,11 +1,18 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   formatReferenceMetaLine,
   getResolvedRelationshipGroups,
   type TarotCard,
+  type TarotOrientation,
 } from "../lib/tarot";
+import type { FidelityMajorCard } from "../lib/tarot/fidelityTypes";
 import { TarotCardImage } from "./TarotCardImage";
+
+const AttributedMajorDetailLazy = lazy(() =>
+  import("./AttributedMajorDetail").then((m) => ({ default: m.AttributedMajorDetail })),
+);
 
 function hasText(value: string | undefined | null): boolean {
   return Boolean(value && value.trim());
@@ -59,13 +66,59 @@ function CardLinkList({ cards, backSearch }: CardLinkListProps) {
   );
 }
 
+const ORIENTATION_PARAM = "orientation";
+
 type CardReferenceBodyProps = {
   card: TarotCard;
   /** Library query string (no leading `?`) to preserve when linking to related cards. */
   backSearch?: string;
+  /** When true, upright/reversed follows `?orientation=` (card detail page). */
+  syncOrientationInUrl?: boolean;
+  /** Fixed orientation when not syncing to URL (e.g. embedded previews). */
+  orientation?: TarotOrientation;
 };
 
-export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) {
+export function CardReferenceBody({
+  card,
+  backSearch,
+  syncOrientationInUrl = false,
+  orientation: orientationProp,
+}: CardReferenceBodyProps) {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const activeOrientation: TarotOrientation = useMemo(() => {
+    if (!syncOrientationInUrl) return orientationProp ?? "upright";
+    return searchParams.get(ORIENTATION_PARAM) === "reversed" ? "reversed" : "upright";
+  }, [syncOrientationInUrl, orientationProp, searchParams]);
+
+  function setOrientation(next: TarotOrientation) {
+    if (!syncOrientationInUrl) return;
+    const nextParams = new URLSearchParams(searchParams);
+    if (next === "reversed") nextParams.set(ORIENTATION_PARAM, "reversed");
+    else nextParams.delete(ORIENTATION_PARAM);
+    setSearchParams(nextParams, { replace: true });
+  }
+  const [fidelityMajor, setFidelityMajor] = useState<FidelityMajorCard | null>(null);
+  const [fidelityLoading, setFidelityLoading] = useState(false);
+
+  useEffect(() => {
+    if (card.arcana !== "major") {
+      setFidelityMajor(null);
+      setFidelityLoading(false);
+      return;
+    }
+    setFidelityLoading(true);
+    let cancelled = false;
+    void import("../lib/tarot/attributedMajors").then((mod) => {
+      if (cancelled) return;
+      setFidelityMajor(mod.getFidelityMajorForCard(card));
+      setFidelityLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [card]);
+
   const relationships = getResolvedRelationshipGroups(card);
   const sym = card.symbolismDetail;
   const hasSymbolismStructure =
@@ -90,6 +143,25 @@ export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) 
     relationships.previous.length > 0 ||
     relationships.next.length > 0;
 
+  const activeMeaning = card.meanings[activeOrientation];
+  const km = card.knowledgeMetadata;
+  const hasCorrespondences = Boolean(
+    km &&
+      (hasText(km.element) ||
+        hasText(km.astrology) ||
+        hasText(km.hebrewLetter) ||
+        hasText(km.qabalisticPath) ||
+        hasText(km.chakra) ||
+        hasText(km.elementalComposite)),
+  );
+  const sem = card.symbolismSemantics;
+  const hasSymbolismSemantics = Boolean(
+    sem && (hasText(sem.interpretation) || sem.imagery.length > 0),
+  );
+  const detailedDiffersFromSummary =
+    hasText(activeMeaning.detailed) &&
+    activeMeaning.detailed.trim() !== activeMeaning.summary.trim();
+
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(220px,320px)_1fr] lg:gap-14 lg:items-start">
       <figure className="space-y-3 lg:sticky lg:top-8">
@@ -109,34 +181,106 @@ export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) 
       </figure>
 
       <div className="min-w-0 space-y-10">
-        {card.keywords.length > 0 ? (
-          <section>
-            <h2 className="mb-4 font-mono text-[10px] uppercase tracking-label text-muted">Keywords</h2>
-            <p className="font-mono text-sm leading-snug text-bone">{card.keywords.join(" · ")}</p>
-          </section>
-        ) : null}
+        <section className="space-y-6">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <h2 className="font-mono text-[10px] uppercase tracking-label text-muted">Reading</h2>
+            {syncOrientationInUrl ? (
+              <div
+                className="inline-flex border border-line p-0.5"
+                role="group"
+                aria-label="Card orientation"
+              >
+                {(["upright", "reversed"] as const).map((o) => {
+                  const isActive = activeOrientation === o;
+                  const label = o === "upright" ? "Upright" : "Reversed";
+                  return (
+                    <button
+                      key={o}
+                      type="button"
+                      onClick={() => setOrientation(o)}
+                      className={[
+                        "min-w-[5.5rem] px-3 py-1.5 font-mono text-[11px] uppercase tracking-label transition duration-300",
+                        isActive
+                          ? "bg-blood/25 text-bone"
+                          : "text-muted hover:text-bone/90",
+                      ].join(" ")}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+            ) : null}
+          </div>
 
-        {hasText(card.coreMeaning) ? (
-          <Section title="Core meaning">
-            <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/95">
-              {card.coreMeaning}
+          {activeMeaning.keywords.length > 0 ? (
+            <p className="font-mono text-sm leading-snug text-bone">
+              {activeMeaning.keywords.join(" · ")}
             </p>
-          </Section>
-        ) : null}
+          ) : null}
 
-        {hasText(card.uprightMeaning) ? (
-          <Section title="Upright">
-            <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/95">
-              {card.uprightMeaning}
+          {hasText(activeMeaning.summary) ? (
+            <p className="max-w-prose font-body text-[0.9375rem] leading-[1.65] text-bone/95">
+              {activeMeaning.summary}
             </p>
-          </Section>
-        ) : null}
+          ) : null}
 
-        {hasText(card.reversedMeaning) ? (
-          <Section title="Reversed">
-            <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/95">
-              {card.reversedMeaning}
+          {detailedDiffersFromSummary ? (
+            <details className="group max-w-prose border border-line border-dashed bg-void/40 px-4 py-3">
+              <summary className="cursor-pointer font-mono text-[10px] uppercase tracking-label text-muted transition group-open:text-bone/80">
+                Full meaning
+              </summary>
+              <p className="mt-4 whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/90">
+                {activeMeaning.detailed}
+              </p>
+            </details>
+          ) : hasText(activeMeaning.detailed) ? (
+            <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/90">
+              {activeMeaning.detailed}
             </p>
+          ) : null}
+        </section>
+
+        {hasCorrespondences && km ? (
+          <Section title="Correspondences">
+            <dl className="max-w-prose grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 font-mono text-xs leading-relaxed text-muted">
+              {hasText(km.element) ? (
+                <>
+                  <dt className="text-faint">Element</dt>
+                  <dd className="text-bone/85">{km.element}</dd>
+                </>
+              ) : null}
+              {hasText(km.astrology) ? (
+                <>
+                  <dt className="text-faint">Astrology</dt>
+                  <dd className="text-bone/85">{km.astrology}</dd>
+                </>
+              ) : null}
+              {hasText(km.hebrewLetter) ? (
+                <>
+                  <dt className="text-faint">Hebrew letter</dt>
+                  <dd className="text-bone/85">{km.hebrewLetter}</dd>
+                </>
+              ) : null}
+              {hasText(km.qabalisticPath) ? (
+                <>
+                  <dt className="text-faint">Path</dt>
+                  <dd className="text-bone/85">{km.qabalisticPath}</dd>
+                </>
+              ) : null}
+              {hasText(km.chakra) ? (
+                <>
+                  <dt className="text-faint">Chakra</dt>
+                  <dd className="text-bone/85">{km.chakra}</dd>
+                </>
+              ) : null}
+              {hasText(km.elementalComposite) ? (
+                <>
+                  <dt className="text-faint">Court composite</dt>
+                  <dd className="text-bone/85">{km.elementalComposite}</dd>
+                </>
+              ) : null}
+            </dl>
           </Section>
         ) : null}
 
@@ -182,12 +326,40 @@ export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) 
           </Section>
         ) : null}
 
-        {hasSymbolismStructure && sym ? (
+        {hasSymbolismSemantics && sem ? (
+          <Section title="Symbolism" titleClassName="mb-4 font-mono text-[10px] uppercase tracking-label text-ochre/90">
+            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
+              {hasText(sem.interpretation) ? <p className="text-bone/88">{sem.interpretation}</p> : null}
+              {sem.imagery.length > 0 ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Imagery</h3>
+                  <ul className="list-inside list-disc space-y-1">
+                    {sem.imagery.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {sym && sym.colors.length > 0 ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Colors</h3>
+                  <p>{sym.colors.join(" · ")}</p>
+                </div>
+              ) : null}
+              {sym && hasText(sym.direction) ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Direction</h3>
+                  <p className="whitespace-pre-line">{sym.direction}</p>
+                </div>
+              ) : null}
+            </div>
+          </Section>
+        ) : hasSymbolismStructure && sym ? (
           <Section title="Symbolism" titleClassName="mb-4 font-mono text-[10px] uppercase tracking-label text-ochre/90">
             <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
               {sym.objects.length > 0 ? (
                 <div>
-                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Objects</h3>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Imagery</h3>
                   <ul className="list-inside list-disc space-y-1">
                     {sym.objects.map((item) => (
                       <li key={item}>{item}</li>
@@ -283,6 +455,23 @@ export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) 
               ) : null}
             </div>
           </Section>
+        ) : null}
+
+        {card.arcana === "major" && fidelityLoading ? (
+          <p className="font-mono text-[10px] text-faint" aria-busy="true">
+            …
+          </p>
+        ) : null}
+        {fidelityMajor ? (
+          <Suspense
+            fallback={
+              <p className="font-mono text-[10px] text-faint" aria-busy="true">
+                …
+              </p>
+            }
+          >
+            <AttributedMajorDetailLazy fidelity={fidelityMajor} backSearch={backSearch} />
+          </Suspense>
         ) : null}
       </div>
     </div>

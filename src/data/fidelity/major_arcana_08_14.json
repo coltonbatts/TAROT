@@ -1,0 +1,757 @@
+{
+  "meta": {
+    "file": "major_arcana_08_14.json",
+    "description": "Major Arcana cards VIII through XIV — the second septenary. In Pollack's model, these represent the subconscious line: the inward search to discover who we really are."
+  },
+  "cards": [
+    {
+      "name": "Strength",
+      "arcana": "major",
+      "number": 8,
+      "golden_dawn": {"hebrew_letter": "Teth", "astrology": "Leo", "tree_path": "Chesed to Geburah"},
+      "core_meaning": "Inner strength, courage, patience, compassion, gentle control. Mastery through love rather than force — the taming of the animal nature through spiritual courage.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Power, energy, action, courage, magnanimity; also complete success and honours.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite switched Strength to position VIII (from traditional XI) to align with Golden Dawn/Leo correspondence."
+        },
+        {
+          "type": "reversed",
+          "text": "Despotism, abuse of power, weakness, discord, sometimes even disgrace.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Strength begins the second line of the Major Arcana — the inward journey. Unlike the Chariot's forced control, Strength masters the animal nature through gentleness and inner courage. The infinity symbol links her to the Magician, but her power is receptive rather than active.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Force of character, spiritual power overcoming material power, love triumphing over hate, the higher nature over carnal desires.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Domination of the material. Discord, lack of moral force, fear of the unknown.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["power", "energy", "courage", "magnanimity", "complete success"],
+        "pollack_1980": ["inner strength", "patience", "compassion", "gentle mastery", "courage"],
+        "gray_1970": ["spiritual power", "love over hate", "higher nature", "character"],
+        "golden_dawn": ["Leo", "Teth", "serpent", "the secret of all spiritual activities"]
+      },
+      "symbolism": {
+        "woman_and_lion": {
+          "description": "A woman gently opening or closing a lion's mouth with her bare hands",
+          "meaning": "The conscious mind gently mastering the instinctual nature — not through suppression but through love and understanding. The woman does not fight the lion; she tames it.",
+          "source": "pollack_1980"
+        },
+        "infinity_symbol": {
+          "description": "The lemniscate above her head (same as the Magician)",
+          "meaning": "Eternal spiritual power. Links Strength to the Magician — both channel infinite energy, but through different means (will vs. compassion).",
+          "source": "waite_1910"
+        },
+        "flower_garland": {
+          "description": "A garland of flowers around the woman and lion",
+          "meaning": "Nature, beauty, and the gentle power of the feminine. The chain of flowers is stronger than iron, per Waite.",
+          "source": "waite_1910"
+        },
+        "white_robe": {
+          "description": "The woman wears a white robe",
+          "meaning": "Purity of intent and spiritual innocence.",
+          "source": "gray_1970"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Feminine Hero",
+          "tradition": "Mythological",
+          "description": "A model of heroism that operates through patience, compassion, and inner fortitude rather than external conquest.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 8,
+        "pythagorean": "The ogdoad — regeneration, power, cosmic balance. The double square representing material and spiritual mastery.",
+        "source_conflict": {
+          "description": "Strength is VIII in the RWS/Golden Dawn system but XI in the Marseille tradition. Waite and the Golden Dawn swapped Strength and Justice to align with astrological correspondences (Strength/Leo, Justice/Libra).",
+          "rws": 8,
+          "marseille": 11
+        }
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The Magician", "explanation": "Both share the infinity symbol and represent power — the Magician's is active and conscious, Strength's is passive and intuitive.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Star", "explanation": "Both represent calm, gentle, feminine power and spiritual renewal.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Chariot", "explanation": "Force of will vs. gentle mastery. External conquest vs. internal transformation.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Devil", "explanation": "In Pollack's vertical columns, Strength and Devil occupy the same column. Strength tames the animal nature; the Devil represents enslavement to it.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The Chariot", "explanation": "Outer triumph leads to the need for inner mastery."},
+          "next": {"card": "The Hermit", "explanation": "Inner strength enables the solitary search for deeper wisdom."}
+        },
+        "transformations": [
+          {"evolves_into": "The Hermit", "explanation": "Having found inner strength, the Fool withdraws to seek deeper wisdom in solitude.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "The Hermit",
+      "arcana": "major",
+      "number": 9,
+      "golden_dawn": {"hebrew_letter": "Yod", "astrology": "Virgo", "tree_path": "Chesed to Tiphareth"},
+      "core_meaning": "Solitude, introspection, inner guidance, wisdom earned through experience. The sage who withdraws from the world to find truth and then offers that light to others.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Prudence, circumspection; also and especially treason, dissimulation, roguery, corruption.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite's symbolic description is more elevated: 'a card of attainment rather than a card of quest.' His divinatory meanings are surprisingly dark."
+        },
+        {
+          "type": "reversed",
+          "text": "Concealment, disguise, policy, fear, unreasoned caution.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "The Hermit represents the deliberate withdrawal from society to seek inner truth. He has found the light within himself and holds it up for others. His solitude is not loneliness — it is the necessary condition for the deepest kind of wisdom.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Counsel sought and given. A meeting with one who will guide the seeker. Prudence. Withdrawal from participation to meditate.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["prudence", "circumspection", "attainment", "wisdom"],
+        "pollack_1980": ["solitude", "introspection", "inner guidance", "wisdom", "withdrawal", "the sage"],
+        "gray_1970": ["counsel", "prudence", "meditation", "guidance"],
+        "golden_dawn": ["Virgo", "Yod", "hand", "the intelligence of will"]
+      },
+      "symbolism": {
+        "figure_on_mountain": {
+          "description": "An old man standing alone on a snowy mountain peak",
+          "meaning": "Spiritual attainment and isolation. The heights represent the pinnacle of wisdom, accessible only through solitary effort.",
+          "source": "waite_1910"
+        },
+        "lantern": {
+          "description": "A lantern held high containing a six-pointed star (Seal of Solomon)",
+          "meaning": "The light of truth and wisdom. The Hermit illuminates the path for those who follow. Gray identifies this as the Lamp of Truth.",
+          "source": "gray_1970"
+        },
+        "staff": {
+          "description": "A patriarch's staff",
+          "meaning": "Support for the journey. Gray calls it the staff used 'on the narrow path of initiation.'",
+          "source": "gray_1970"
+        },
+        "grey_cloak": {
+          "description": "A grey hooded cloak",
+          "meaning": "The mantle of discretion — concealment and humility. The Hermit does not seek recognition.",
+          "source": "gray_1970"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Wise Old Man / Senex",
+          "tradition": "Jungian",
+          "description": "The archetype of wisdom earned through experience and withdrawal — the sage, the guru, the elder who has walked the path and can guide others.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "Diogenes / The Philosopher",
+          "tradition": "Classical",
+          "description": "The philosopher who carries a lamp in search of an honest man — truth-seeking through deliberate austerity.",
+          "source": "place_2005",
+          "confidence": "medium"
+        }
+      ],
+      "numerology": {
+        "number": 9,
+        "pythagorean": "The ennead — completion, the last single digit, wisdom attained through the full cycle of experience.",
+        "golden_dawn": "Yod = 10 (card numbered 9). The hand — the creative hand of God, the smallest Hebrew letter, the seed from which all other letters grow."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The High Priestess", "explanation": "Both hold wisdom in stillness. The Priestess guards hidden knowledge; the Hermit has found it through experience.", "source": "gray_1970", "confidence": "high"},
+          {"card": "Four of Swords", "explanation": "Both represent withdrawal and contemplation, though the Four of Swords implies rest while the Hermit implies active inner search.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Hierophant", "explanation": "Institutional teaching vs. solitary wisdom. The Hierophant speaks to many; the Hermit guides one at a time.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Sun", "explanation": "In Pollack's vertical correspondence (column 2), the Hermit's solitary lantern is amplified into the Sun's universal illumination.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "Strength", "explanation": "Inner strength enables the solitary quest."},
+          "next": {"card": "Wheel of Fortune", "explanation": "Personal wisdom encounters the impersonal force of fate and cycles."}
+        },
+        "transformations": [
+          {"evolves_into": "The Sun", "explanation": "The Hermit's small, personal light becomes the Sun's universal, radiant illumination.", "source": "pollack_1980", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "Wheel of Fortune",
+      "arcana": "major",
+      "number": 10,
+      "golden_dawn": {"hebrew_letter": "Kaph", "astrology": "Jupiter", "tree_path": "Chesed to Netzach"},
+      "core_meaning": "Cycles, fate, change, luck, destiny. The turning of the cosmic wheel — the impersonal forces of fortune that govern life beyond individual will.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Destiny, fortune, success, elevation, luck, felicity.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Increase, abundance, superfluity.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Unusually, Waite's reversed meaning is positive — suggesting excess of fortune rather than its absence."
+        },
+        {
+          "type": "upright",
+          "text": "The Wheel represents the understanding that life moves in cycles beyond our control. After the Hermit's personal wisdom, the Fool encounters the impersonal reality of fate. The Wheel teaches acceptance of change as the fundamental nature of existence.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Destiny, fortune, unexpected turn of luck. The beginning of a new cycle. Advancement for better or worse.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["destiny", "fortune", "success", "luck", "felicity"],
+        "pollack_1980": ["cycles", "fate", "change", "impermanence", "turning point"],
+        "gray_1970": ["destiny", "fortune", "new cycle", "advancement"],
+        "golden_dawn": ["Jupiter", "Kaph", "palm of hand", "intelligence of conciliation"]
+      },
+      "symbolism": {
+        "wheel": {
+          "description": "A large wheel with Hebrew letters (YHVH) and the alchemical symbols for mercury, sulphur, water, and salt",
+          "meaning": "The cycles of creation and destruction, the four elements in perpetual rotation, the divine name governing fate.",
+          "source": "waite_1910"
+        },
+        "four_creatures": {
+          "description": "Four winged creatures at the corners — bull, lion, eagle, angel",
+          "meaning": "The four fixed signs of the zodiac (Taurus, Leo, Scorpio, Aquarius) and the four evangelists. They represent stability within the midst of change.",
+          "source": "waite_1910"
+        },
+        "sphinx": {
+          "description": "A sphinx at the top of the wheel holding a sword",
+          "meaning": "Wisdom and equilibrium at the point of balance. The sphinx represents the consciousness that can ride the wheel without being thrown.",
+          "source": "pollack_1980"
+        },
+        "serpent_and_anubis": {
+          "description": "A serpent descending on one side, Anubis (or Typhon) ascending on the other",
+          "meaning": "The downward pull of material forces (serpent/entropy) and the upward aspiration of spiritual evolution (Anubis as psychopomp). The eternal dynamic of rise and fall.",
+          "source": "waite_1910"
+        }
+      },
+      "archetype": [
+        {
+          "name": "Fortuna / The Wheel of Fate",
+          "tradition": "Classical / Medieval",
+          "description": "The Roman goddess Fortuna and her wheel — the medieval concept that all worldly fortune rises and falls in cycles beyond human control.",
+          "source": "place_2005",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 10,
+        "pythagorean": "The decad — completion, return to unity (1+0=1). The full manifestation of a cycle.",
+        "golden_dawn": "Kaph = 20 (card numbered 10). The palm of the hand — grasping and releasing, the cyclical nature of fortune."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The World", "explanation": "Both represent cycles and completion, but the World is conscious integration while the Wheel is impersonal fate.", "confidence": "high"},
+          {"card": "Eight of Wands", "explanation": "Both represent swift change and momentum, though the Eight is more focused and directional.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Emperor", "explanation": "The Emperor imposes structure and control; the Wheel of Fortune reminds us that control is an illusion — everything changes.", "confidence": "high"},
+          {"card": "Justice", "explanation": "Fate vs. fairness. The Wheel is impersonal and amoral; Justice is deliberate and moral.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The Hermit", "explanation": "Personal wisdom encounters the impersonal force of destiny."},
+          "next": {"card": "Justice", "explanation": "After encountering fate, the Fool must understand cosmic balance and accountability."}
+        },
+        "transformations": [
+          {"evolves_into": "Justice", "explanation": "The recognition of cycles leads to the need for balance and moral reckoning.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "Justice",
+      "arcana": "major",
+      "number": 11,
+      "golden_dawn": {"hebrew_letter": "Lamed", "astrology": "Libra", "tree_path": "Geburah to Tiphareth"},
+      "core_meaning": "Fairness, truth, accountability, cause and effect, legal matters. The principle of cosmic balance — actions have consequences, and truth will be revealed.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Equity, rightness, probity, executive; triumph of the deserving side in law.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Law in all departments, bigotry, bias, excessive severity.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Justice represents the deep understanding that our actions create consequences. In the inward journey, it is the moment of honest self-assessment — seeing ourselves as we truly are, without self-deception.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Justice, harmony, balance. A well-balanced mind. Virtue, honor. Proper balance of mercy and severity.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["equity", "rightness", "probity", "law", "triumph of the deserving"],
+        "pollack_1980": ["accountability", "truth", "self-assessment", "cause and effect", "karma"],
+        "gray_1970": ["justice", "harmony", "balance", "virtue", "honor"],
+        "golden_dawn": ["Libra", "Lamed", "ox goad", "faithful intelligence"]
+      },
+      "symbolism": {
+        "seated_figure": {
+          "description": "A figure seated between two pillars, holding sword and scales",
+          "meaning": "The enthroned judge — positioned between mercy and severity, the same pillars as the High Priestess but in a context of judgment rather than mystery.",
+          "source": "waite_1910"
+        },
+        "sword": {
+          "description": "An upraised double-edged sword in the right hand",
+          "meaning": "The power of discernment and the authority to cut through deception. Double-edged because justice can wound as well as heal.",
+          "source": "pollack_1980"
+        },
+        "scales": {
+          "description": "A set of balanced scales in the left hand",
+          "meaning": "Weighing evidence, balancing opposing claims, measuring actions against consequences.",
+          "source": "gray_1970"
+        },
+        "veil": {
+          "description": "A thin veil behind the figure",
+          "meaning": "Justice is not fully revealed — there are always hidden factors. True justice requires seeing beyond appearances.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "Ma'at / Themis",
+          "tradition": "Egyptian / Greek",
+          "description": "The principle of cosmic order and truth. Ma'at weighed the heart of the dead against a feather; Themis personified divine law.",
+          "source": "place_2005",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 11,
+        "pythagorean": "The master number — spiritual insight, intuition, the gateway. Also 1+1=2, echoing the High Priestess's balance.",
+        "source_conflict": {
+          "description": "Justice is XI in RWS but VIII in Marseille tradition.",
+          "rws": 11,
+          "marseille": 8
+        }
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The Hierophant", "explanation": "Both represent systems of law — spiritual law (Hierophant) and moral/civil law (Justice).", "confidence": "medium"},
+          {"card": "Judgement", "explanation": "Both involve assessment and reckoning, but Justice is personal accountability while Judgement is cosmic/collective awakening.", "confidence": "high"}
+        ],
+        "contrasts": [
+          {"card": "Wheel of Fortune", "explanation": "Impersonal fate vs. moral reckoning. The Wheel is amoral; Justice is the moral counterweight.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "Wheel of Fortune", "explanation": "Fate demands accountability."},
+          "next": {"card": "The Hanged Man", "explanation": "After honest self-assessment, radical perspective shift becomes necessary."}
+        },
+        "transformations": [
+          {"evolves_into": "The Hanged Man", "explanation": "Honest self-assessment leads to the willingness to surrender and see from a completely different angle.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "The Hanged Man",
+      "arcana": "major",
+      "number": 12,
+      "golden_dawn": {"hebrew_letter": "Mem", "astrology": "Water (element)", "tree_path": "Geburah to Hod"},
+      "core_meaning": "Surrender, new perspective, letting go, sacrifice, suspension. Seeing the world from a radically different angle by voluntarily surrendering control.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Wisdom, circumspection, discernment, trials, sacrifice, intuition, divination, prophecy.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite emphasizes this is not martyrdom but willing sacrifice — 'the submission of the lower to the higher.'"
+        },
+        {
+          "type": "reversed",
+          "text": "Selfishness, the crowd, body politic.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "The Hanged Man represents the complete reversal of the Fool's perspective. By voluntarily surrendering — suspending action, letting go of ego control — the Fool gains access to a completely new way of seeing. This is the core of spiritual transformation: you must let go of everything you think you know.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Wisdom, prophetic power. A pause in one's life. Sacrifice. Readjustment. Reversal of one's way of life. Transition period.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["wisdom", "sacrifice", "intuition", "divination", "prophecy"],
+        "pollack_1980": ["surrender", "reversal", "new perspective", "letting go", "suspension"],
+        "gray_1970": ["wisdom", "sacrifice", "transition", "readjustment", "pause"],
+        "golden_dawn": ["Water (element)", "Mem", "water", "the stable intelligence"]
+      },
+      "symbolism": {
+        "inverted_figure": {
+          "description": "A man hanging upside down by one foot from a T-shaped wooden frame, the other leg crossed behind",
+          "meaning": "Voluntary inversion — seeing the world from the opposite perspective. The crossed legs form a figure-four, suggesting stability within surrender.",
+          "source": "waite_1910"
+        },
+        "serene_face": {
+          "description": "The figure's face appears calm and peaceful, with a halo of light",
+          "meaning": "This is not punishment but illumination. The halo suggests the Hanged Man has found enlightenment through surrender.",
+          "source": "pollack_1980"
+        },
+        "living_wood": {
+          "description": "The frame appears to be made of living wood with leaves",
+          "meaning": "Connection to the World Tree (Yggdrasil). Odin hung himself on the World Tree for nine days to gain the runes. Sacrifice as the path to wisdom.",
+          "source": "place_2005"
+        }
+      },
+      "archetype": [
+        {
+          "name": "Odin on the World Tree",
+          "tradition": "Norse",
+          "description": "Odin voluntarily hung himself upside down on Yggdrasil for nine days to gain the wisdom of the runes — sacrifice of the self to the self for knowledge.",
+          "source": "place_2005",
+          "confidence": "high"
+        },
+        {
+          "name": "The Mystic / Contemplative",
+          "tradition": "Spiritual",
+          "description": "The one who withdraws from worldly action to gain spiritual insight through stillness and surrender.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 12,
+        "pythagorean": "1+2=3 — creative synthesis, but achieved through reversal rather than direct creation. The twelve signs, twelve months, twelve disciples.",
+        "golden_dawn": "Mem = 40 (card numbered 12). Water — the elemental trump of the receptive, dissolving principle."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "Four of Swords", "explanation": "Both represent deliberate withdrawal and suspension of activity, though the Four of Swords is more about rest than transformation.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Chariot", "explanation": "Maximum action vs. maximum stillness. The Chariot pushes forward; the Hanged Man lets go entirely.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Magician", "explanation": "Active direction of will vs. passive surrender of will. Opposite approaches to accessing spiritual power.", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "Justice", "explanation": "Honest self-assessment leads to the willingness to surrender old perspectives."},
+          "next": {"card": "Death", "explanation": "After surrender comes transformation — the death of the old self."}
+        },
+        "transformations": [
+          {"evolves_into": "Death", "explanation": "Letting go of the old perspective makes way for the death of the old identity.", "confidence": "high"},
+          {"leads_from": "The Hierophant", "explanation": "In Pollack's vertical correspondence (column 5), the Hierophant's fixed doctrine must be inverted by the Hanged Man before the Sun can illuminate.", "source": "pollack_1980", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "Death",
+      "arcana": "major",
+      "number": 13,
+      "golden_dawn": {"hebrew_letter": "Nun", "astrology": "Scorpio", "tree_path": "Tiphareth to Netzach"},
+      "core_meaning": "Transformation, ending, transition, release. The death of an old form to make way for the new. Not literal death but the necessary destruction that precedes rebirth.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "End, mortality, destruction, corruption; also, for a man, the loss of a benefactor; for a woman, many contrarieties; for a maid, the failure of marriage projects.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Inertia, sleep, lethargy, petrifaction, somnambulism.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "The reversed meaning suggests resisting transformation — the refusal to let the old die, resulting in stagnation."
+        },
+        {
+          "type": "upright",
+          "text": "Death represents the necessary destruction of the old to make way for the new. After the Hanged Man's surrender, the old self actually dies. This is not tragedy but transformation — the caterpillar dissolving in the chrysalis.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Transformation, clearing away the old to make way for the new. The end of a phase. Sometimes a birth. Not necessarily physical death.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["end", "mortality", "destruction", "corruption"],
+        "pollack_1980": ["transformation", "release", "rebirth", "necessary ending", "clearing"],
+        "gray_1970": ["transformation", "clearing", "end of a phase", "new beginning"],
+        "golden_dawn": ["Scorpio", "Nun", "fish", "the imaginative intelligence"]
+      },
+      "symbolism": {
+        "skeleton_on_horse": {
+          "description": "A skeleton in black armor riding a white horse, carrying a black flag with a white mystic rose",
+          "meaning": "Death as the great equalizer — the skeleton shows no flesh, no identity. The white horse suggests purity of purpose. The mystic rose (five petals, five-pointed) on the flag represents transformation and the unfolding of new life.",
+          "source": "waite_1910"
+        },
+        "fallen_figures": {
+          "description": "A king lies dead, a bishop prays, children look on, a maiden appears to swoon",
+          "meaning": "Death comes for all — king and peasant, priest and child. No rank or station provides exemption from transformation.",
+          "source": "pollack_1980"
+        },
+        "rising_sun": {
+          "description": "A sun rising (or setting) between two towers in the distance",
+          "meaning": "The promise of rebirth after death. The same towers appear in the Moon card, creating a visual link between death and the unconscious.",
+          "source": "pollack_1980"
+        },
+        "river": {
+          "description": "A river flowing in the background",
+          "meaning": "The river of life continues to flow. Transformation is not cessation but a change in form.",
+          "source": "gray_1970"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Grim Reaper",
+          "tradition": "Medieval European",
+          "description": "The personification of death as an impartial, inevitable force. Not evil, but necessary.",
+          "source": "place_2005",
+          "confidence": "high"
+        },
+        {
+          "name": "Osiris / Persephone",
+          "tradition": "Mythological",
+          "description": "The dying and reborn god/goddess — destruction as the prerequisite for rebirth and renewal.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 13,
+        "pythagorean": "1+3=4 — structure and foundation, but through destruction and rebuilding. 13 is traditionally feared, which mirrors the card's misunderstood nature.",
+        "golden_dawn": "Nun = 50 (card numbered 13). The fish — life that swims through the waters of the unconscious, transforming and renewing."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The Tower", "explanation": "Both represent destruction and upheaval, but Death is a natural, necessary process while the Tower is sudden, violent, and often externally imposed.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "Ten of Swords", "explanation": "Both represent endings, though the Ten of Swords emphasizes the pain of the ending while Death emphasizes the transformation that follows.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Empress", "explanation": "Creation vs. destruction. The Empress gives life; Death takes it away — but both are part of the same cycle.", "confidence": "high"},
+          {"card": "The Star", "explanation": "Death strips away; the Star restores. They represent different stages of the same transformative process.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The Hanged Man", "explanation": "Surrender of the old perspective enables the actual death of the old self."},
+          "next": {"card": "Temperance", "explanation": "After death, the new self must be integrated and tempered."}
+        },
+        "transformations": [
+          {"evolves_into": "Temperance", "explanation": "The destruction of the old creates raw material that must be integrated and balanced into a new form.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "Temperance",
+      "arcana": "major",
+      "number": 14,
+      "golden_dawn": {"hebrew_letter": "Samekh", "astrology": "Sagittarius", "tree_path": "Tiphareth to Yesod"},
+      "core_meaning": "Balance, moderation, patience, integration, alchemy. The careful blending of opposing elements into a harmonious whole — the angel who tempers fire with water.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Economy, moderation, frugality, management, accommodation.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Things connected with churches, religions, sects, the priesthood, sometimes even the priest who will marry the Querent; also disunion, unfortunate combinations, competing interests.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Temperance represents the integration that follows Death's transformation. The angel pours water between two cups in an impossible flow — blending the conscious and unconscious, the old self and the new. It is the alchemical process of creating something greater than its parts.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high",
+          "notes": "Pollack places Temperance at the end of the second line (column 7, with Chariot and World) — representing the inner equivalent of the Chariot's outer mastery."
+        },
+        {
+          "type": "upright",
+          "text": "Adaptation, coordination, self-control, modification. Working in harmony with others. Good management.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["economy", "moderation", "frugality", "management"],
+        "pollack_1980": ["balance", "integration", "alchemy", "patience", "blending", "harmony"],
+        "gray_1970": ["adaptation", "coordination", "self-control", "harmony"],
+        "golden_dawn": ["Sagittarius", "Samekh", "prop/support", "intelligence of probation"]
+      },
+      "symbolism": {
+        "angel": {
+          "description": "A winged angel pouring water between two cups",
+          "meaning": "The angel of alchemy — blending opposites (conscious/unconscious, masculine/feminine, fire/water) into a unified whole. The impossible flow between cups represents the transcendence of normal limitations.",
+          "source": "pollack_1980"
+        },
+        "one_foot_in_water": {
+          "description": "The angel has one foot on land and one in water",
+          "meaning": "Bridging the conscious (land) and unconscious (water) realms simultaneously. Grounded in both.",
+          "source": "pollack_1980"
+        },
+        "triangle_in_square": {
+          "description": "A triangle within a square on the angel's chest",
+          "meaning": "Spirit (triangle) contained within matter (square). The alchemical symbol for the philosopher's stone — the integration of the spiritual and material.",
+          "source": "gray_1970"
+        },
+        "path_to_crown": {
+          "description": "A winding path leading to a radiant crown or sun on the horizon",
+          "meaning": "The path of continued spiritual development. The crown/sun represents the goal of integration — full illumination.",
+          "source": "pollack_1980"
+        },
+        "irises": {
+          "description": "Irises growing by the water",
+          "meaning": "Named for Iris, the Greek goddess of the rainbow (bridge between heaven and earth). Reinforces the card's theme of bridging opposites.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Alchemist",
+          "tradition": "Alchemical / Hermetic",
+          "description": "The practitioner who transforms base matter into gold — integrating opposing elements through patience and skill into something transcendent.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "The Angel / Divine Mediator",
+          "tradition": "Christian / Angelic",
+          "description": "The angelic being who bridges heaven and earth, embodying divine grace and the possibility of human transformation.",
+          "source": "waite_1910",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 14,
+        "pythagorean": "1+4=5 — mediation and change, but at a higher octave. Also 2×7 — the doubled sacred number, representing the completion of the second septenary.",
+        "golden_dawn": "Samekh = 60 (card numbered 14). The prop or support — the integrating intelligence that holds everything together."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The Star", "explanation": "Both involve an angelic/divine figure pouring water, suggesting healing and renewal. The Star is more about hope and inspiration; Temperance is about integration.", "confidence": "high"},
+          {"card": "Two of Cups", "explanation": "Both represent harmonious union and the blending of energies, though Temperance operates at a cosmic/alchemical level.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Tower", "explanation": "Gentle, gradual integration vs. sudden, violent destruction. Temperance builds; the Tower shatters.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Chariot", "explanation": "In Pollack's vertical correspondence (column 7), the Chariot's forced control is refined into Temperance's graceful integration.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "Death", "explanation": "Transformation requires integration — the new elements must be blended into a coherent whole."},
+          "next": {"card": "The Devil", "explanation": "After integration, the Fool must confront the shadow — the parts of the self that resist transformation."}
+        },
+        "transformations": [
+          {"evolves_into": "The World", "explanation": "In Pollack's column 7: Chariot (outer mastery) → Temperance (inner integration) → World (cosmic dance/completion).", "source": "pollack_1980", "confidence": "high"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1043 @@
+{
+  "meta": {
+    "file": "major_arcana.json",
+    "description": "All 22 Major Arcana cards of the Rider-Waite-Smith deck with multi-source attributed meanings, symbolism, archetypes, numerology, and cross-card relationships.",
+    "card_count": 22
+  },
+  "cards": [
+    {
+      "name": "The Fool",
+      "arcana": "major",
+      "number": 0,
+      "golden_dawn": {"hebrew_letter": "Aleph", "astrology": "Air", "tree_path": "Kether to Chokmah"},
+      "core_meaning": "Innocent potential, the leap of faith, the spirit setting out on its journey through experience. The Fool is both the beginning and the end — numbered 0, containing all possibilities.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Folly, mania, extravagance, intoxication, delirium, frenzy. Also the spirit in search of experience — a prince of the other world on his travels through this one.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite's divinatory meanings are surprisingly negative, but his symbolic description is transcendent. He describes the Fool as having a 'countenance full of intelligence and expectant dream.'"
+        },
+        {
+          "type": "reversed",
+          "text": "Negligence, absence, distribution, carelessness, apathy, nullity, vanity.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite's reversed meanings follow the inverted model — simple negation of the upright energy."
+        },
+        {
+          "type": "upright",
+          "text": "Infinite potential and innocence. The Fool represents untouched innocence and spontaneity — not naivety in the pejorative sense, but a state of openness to all possibilities before experience has imposed limitations.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high",
+          "notes": "Pollack places the Fool above the three lines of seven, as the protagonist who moves through the entire Major Arcana. She pairs the Fool with the World as bookends of joy and movement."
+        },
+        {
+          "type": "upright",
+          "text": "The beginning of a new adventure. Taking a risk. Trust in the universe. Starting a journey without knowing the destination.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high",
+          "notes": "Gray popularized the idea of the Fool's Journey as a metaphor for life."
+        },
+        {
+          "type": "upright",
+          "text": "The Life-Breath (Aleph). Spirit descending into manifestation. The superconscious mind before it has taken on any particular form or limitation.",
+          "source": "case_1947",
+          "author": "Paul Foster Case",
+          "year": 1947,
+          "confidence": "high",
+          "notes": "Case emphasizes the Kabbalistic correspondence — Aleph means Ox (life-force) and represents the element of Air."
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["folly", "mania", "extravagance", "intoxication", "spirit in search of experience"],
+        "pollack_1980": ["innocence", "spontaneity", "potential", "freedom", "openness", "beginnings"],
+        "gray_1970": ["new beginnings", "adventure", "risk", "trust", "leap of faith"],
+        "golden_dawn": ["Air", "Aleph", "Life-Breath", "spirit", "superconscious"]
+      },
+      "symbolism": {
+        "figure": {
+          "description": "A young man in elaborate clothing standing at the edge of a cliff, looking upward",
+          "meaning": "The spirit facing the unknown with joy rather than fear. His upward gaze suggests connection to the divine rather than attention to material danger.",
+          "source": "waite_1910"
+        },
+        "cliff": {
+          "description": "A precipice at the figure's feet",
+          "meaning": "The leap into the unknown. The danger of unconscious action, but also the necessary risk of beginning any journey.",
+          "source": "pollack_1980"
+        },
+        "white_rose": {
+          "description": "A white rose held in the left hand",
+          "meaning": "Purity and innocence. Freedom from desire. In some readings, the rose represents the mystic experience.",
+          "source": "waite_1910"
+        },
+        "wand_and_wallet": {
+          "description": "A wand over the right shoulder with an embroidered wallet",
+          "meaning": "Waite says the wallet contains 'many sub-conscious memories stored up in the soul.' The wand represents the will. Together they suggest the Fool carries more than he knows.",
+          "source": "waite_1910"
+        },
+        "small_white_dog": {
+          "description": "A small white dog at the Fool's feet",
+          "meaning": "Variously interpreted as a protector, the animal nature, or natural instinct. In the Fool's Journey, the dog represents the Fool's companion — the part of the self that remains faithful through all transformations.",
+          "source": "pollack_1980"
+        },
+        "sun": {
+          "description": "A bright sun behind the figure",
+          "meaning": "Waite says the sun 'knows whence he came, whither he is going, and how he will return.' It represents the higher self or Neshamah — the part of consciousness that holds divine knowledge even when the Fool appears unaware.",
+          "source": "waite_1910"
+        },
+        "mountains": {
+          "description": "Snow-capped mountains in the background",
+          "meaning": "The heights of spiritual attainment that await. Also the cold, abstract realm of pure thought — the Fool has not yet descended into the valleys of experience.",
+          "source": "pollack_1980"
+        },
+        "clothing": {
+          "description": "Elaborate, decorated garments",
+          "meaning": "Waite's design includes various symbols on the clothing. Some readers identify the Hebrew letter Shin on the garment, suggesting the Fool is a trinity in unity.",
+          "source": "waite_1910"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Trickster",
+          "tradition": "Mythological / Jungian",
+          "description": "The Fool as Trickster archetype — the figure who exists outside social norms, who breaks rules not from malice but from a different kind of wisdom. Found in Coyote (Native American), Loki (Norse), Hermes (Greek).",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "The Holy Fool",
+          "tradition": "Christian mysticism",
+          "description": "The innocent who speaks truth that the wise cannot see. The Fool as spiritual seeker unencumbered by worldly knowledge.",
+          "source": "place_2005",
+          "confidence": "high"
+        },
+        {
+          "name": "The Divine Child",
+          "tradition": "Jungian",
+          "description": "The archetype of pure potential — the self before it has been shaped by experience. Carries both vulnerability and extraordinary power.",
+          "source": "pollack_1980",
+          "confidence": "medium"
+        }
+      ],
+      "numerology": {
+        "number": 0,
+        "pythagorean": "Zero is not a traditional Pythagorean number. It represents the void, the unmanifest, the circle without beginning or end.",
+        "golden_dawn": "Aleph = 1 (but the Fool is numbered 0, placing it before the sequence). This paradox is intentional — the Fool contains the potential of 1 but has not yet become it.",
+        "case": "Zero represents the boundless, infinite potential from which all numbers emerge. It is the Absolute before differentiation.",
+        "source_conflict": {
+          "description": "The Fool's position in the sequence is contested. Waite numbered it 0 but placed it between Judgment (XX) and World (XXI) in his discussion. Some traditions place it at the end (XXII). The Golden Dawn placed it at the beginning.",
+          "positions": {
+            "rws_numbering": 0,
+            "waite_discussion_order": "between XX and XXI",
+            "marseille_tradition": "unnumbered, no fixed position",
+            "golden_dawn": "0, placed at beginning"
+          }
+        }
+      },
+      "relationships": {
+        "similar": [
+          {
+            "card": "The World",
+            "explanation": "Pollack pairs the Fool and World as the two cards of joy, movement, and freedom. The Fool is innocence before the journey; the World is wisdom after integration. Together they bookend the Major Arcana.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          },
+          {
+            "card": "Page of Wands",
+            "explanation": "Both represent youthful energy and enthusiasm for new beginnings, though the Page is grounded in the element of Fire while the Fool transcends elemental boundaries.",
+            "source": "greer_2006",
+            "confidence": "medium"
+          }
+        ],
+        "contrasts": [
+          {
+            "card": "The Emperor",
+            "explanation": "The Emperor represents established order, authority, and structure — everything the Fool has not yet encountered or accepted. The Fool is pre-societal; the Emperor is society itself.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          },
+          {
+            "card": "The Hermit",
+            "explanation": "Both are solitary figures, but the Hermit's solitude comes from wisdom and withdrawal, while the Fool's comes from not yet engaging. The Hermit has found what the Fool seeks.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          }
+        ],
+        "progression": {
+          "previous": null,
+          "next": {
+            "card": "The Magician",
+            "explanation": "The Fool's first encounter — the differentiation of pure potential into directed will and conscious action. The Magician takes the Fool's raw energy and channels it.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          }
+        },
+        "transformations": [
+          {
+            "evolves_into": "The Magician",
+            "explanation": "Innocent potential becomes focused will. The leap of faith becomes directed action.",
+            "confidence": "high"
+          },
+          {
+            "leads_from": "The World",
+            "explanation": "The completed journey returns to the beginning — the World's integration dissolves back into the Fool's openness at a higher octave.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Magician",
+      "arcana": "major",
+      "number": 1,
+      "golden_dawn": {"hebrew_letter": "Beth", "astrology": "Mercury", "tree_path": "Kether to Binah"},
+      "core_meaning": "Willpower, manifestation, skill, concentration. The conscious mind directing spiritual energy into material reality. The conduit between above and below.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Skill, diplomacy, address, subtlety; sickness, pain, loss, disaster, self-confidence, will; the Querent if male.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite's divinatory meanings include both positive and negative interpretations. His symbolic description is more unified: the Magician as conduit of divine power."
+        },
+        {
+          "type": "reversed",
+          "text": "Physician, Magus, mental disease, disgrace, disquiet.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Action and conscious awareness. The Magician symbolizes the capacity for intentional action — taking the raw energy of the Fool and directing it with purpose. He represents the creative process itself and the male principle of focused will.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high",
+          "notes": "Pollack sees the Magician and High Priestess as the first duality — active/passive, conscious/unconscious, yang/yin."
+        },
+        {
+          "type": "upright",
+          "text": "Originality, creativity, skill, willpower, self-confidence, dexterity, sleight of hand. The ability to translate ideas into action.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Indecision, weak will, ineptitude. The use of power for destructive ends.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["skill", "diplomacy", "self-confidence", "will", "address"],
+        "pollack_1980": ["action", "consciousness", "willpower", "manifestation", "creativity", "focused intent"],
+        "gray_1970": ["originality", "creativity", "skill", "willpower", "dexterity"],
+        "golden_dawn": ["Mercury", "Beth", "attention", "concentration", "transparency"]
+      },
+      "symbolism": {
+        "figure": {
+          "description": "A figure standing with one hand raised holding a wand, the other pointing to the ground",
+          "meaning": "The gesture embodies the Hermetic axiom 'as above, so below' — the Magician channels divine energy through himself into the material world.",
+          "source": "waite_1910"
+        },
+        "infinity_symbol": {
+          "description": "A horizontal figure-eight (lemniscate) above his head",
+          "meaning": "Eternity, infinite potential, the endless cycle of energy. Links the Magician to Strength (VIII), which also bears this symbol.",
+          "source": "waite_1910"
+        },
+        "ouroboros_belt": {
+          "description": "A serpent biting its own tail forming the figure's belt",
+          "meaning": "Eternity, the cyclical nature of existence, self-sustaining creative power.",
+          "source": "waite_1910"
+        },
+        "four_suit_objects": {
+          "description": "A wand, cup, sword, and pentacle on the table before him",
+          "meaning": "The four elements at his disposal — fire, water, air, earth. He has mastery over all domains of experience. Waite notes they 'lie like counters before the adept, and he adapts them as he wills.'",
+          "source": "waite_1910"
+        },
+        "roses_and_lilies": {
+          "description": "A garden of red roses and white lilies",
+          "meaning": "Roses represent desire/passion; lilies represent purity/abstract thought. Together they show the Magician cultivating both. Waite references the biblical Song of Songs.",
+          "source": "waite_1910"
+        },
+        "white_robe_red_cloak": {
+          "description": "White inner robe with red outer cloak",
+          "meaning": "Purity of intent (white) combined with active willpower and desire (red). The dual nature of the Magician's power.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Trickster-Wizard",
+          "tradition": "Mythological",
+          "description": "Pollack describes the Magician as 'in the image of the trickster-wizard' — one who manipulates reality through knowledge of hidden laws. Related to Hermes/Mercury as the psychopomp and messenger.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "The Conscious Mind",
+          "tradition": "Psychological",
+          "description": "The Magician represents the ego in its healthy, creative function — the ability to focus attention and direct will toward a goal.",
+          "source": "case_1947",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 1,
+        "pythagorean": "Unity, the monad, the source from which all other numbers derive. The active, masculine principle.",
+        "golden_dawn": "Beth = 2 (but the card is numbered 1). The Magician is the first differentiated consciousness to emerge from the Fool's void.",
+        "case": "One is the number of concentration and attention — the focused point of consciousness."
+      },
+      "relationships": {
+        "similar": [
+          {
+            "card": "The High Priestess",
+            "explanation": "Together they form the first duality of the Major Arcana: active consciousness (Magician) and passive unconscious (High Priestess). They are complementary, not opposing.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          },
+          {
+            "card": "Ace of Wands",
+            "explanation": "Both represent the spark of creative will and the power to begin. The Ace is the elemental seed; the Magician is the conscious agent who wields it.",
+            "source": "greer_2006",
+            "confidence": "medium"
+          }
+        ],
+        "contrasts": [
+          {
+            "card": "The High Priestess",
+            "explanation": "While similar as a pair, they also contrast: the Magician acts outwardly and consciously; the High Priestess receives inwardly and intuitively.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          },
+          {
+            "card": "The Devil",
+            "explanation": "The Devil mirrors the Magician's posture but inverts the energy — where the Magician channels light downward, the Devil holds a torch pointing down. The Devil is sometimes called 'the Black Magician.'",
+            "source": "pollack_1980",
+            "confidence": "high"
+          }
+        ],
+        "progression": {
+          "previous": {"card": "The Fool", "explanation": "Pure potential becomes directed will."},
+          "next": {"card": "The High Priestess", "explanation": "Active consciousness encounters its passive, receptive counterpart."}
+        },
+        "transformations": [
+          {
+            "evolves_into": "Strength",
+            "explanation": "In Pollack's vertical correspondence (column 1), the Magician's outward power evolves into Strength's inward mastery. Both share the infinity symbol.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "name": "The High Priestess",
+      "arcana": "major",
+      "number": 2,
+      "golden_dawn": {"hebrew_letter": "Gimel", "astrology": "Moon", "tree_path": "Kether to Tiphareth"},
+      "core_meaning": "Intuition, mystery, the unconscious mind, hidden knowledge, receptivity. The keeper of secrets and the gateway to deeper understanding.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Secrets, mystery, the future as yet unrevealed; the woman who interests the Querent; silence, tenacity; mystery, wisdom, science.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite emphasizes the High Priestess as guardian of esoteric knowledge — she holds the scroll of Tora (Divine Law) partially concealed."
+        },
+        {
+          "type": "reversed",
+          "text": "Passion, moral or physical ardour, conceit, surface knowledge.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Intuition and feminine wisdom. The High Priestess represents the mysterious wisdom within us — the capacity to access the unconscious and receive knowledge without rational analysis.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high",
+          "notes": "Pollack sees her as the passive, receptive counterpart to the Magician — together they form the fundamental duality of consciousness."
+        },
+        {
+          "type": "upright",
+          "text": "Wisdom, serenity, knowledge and understanding. Unrevealed future. Hidden influences at work.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["secrets", "mystery", "silence", "tenacity", "wisdom", "science"],
+        "pollack_1980": ["intuition", "unconscious", "receptivity", "feminine wisdom", "mystery", "stillness"],
+        "gray_1970": ["wisdom", "serenity", "knowledge", "hidden influences"],
+        "golden_dawn": ["Moon", "Gimel", "memory", "fluctuation", "the uniting intelligence"]
+      },
+      "symbolism": {
+        "pillars": {
+          "description": "Two pillars flanking the figure — one black (B for Boaz), one white (J for Jachin)",
+          "meaning": "The pillars of Solomon's Temple. Boaz represents the negative/passive life force; Jachin the positive/active. The High Priestess sits between them, balancing the polarities.",
+          "source": "gray_1970"
+        },
+        "scroll": {
+          "description": "A scroll labeled TORA on her lap, partially concealed by her robe",
+          "meaning": "The Torah / Divine Law / esoteric wisdom. Partially hidden because full knowledge is not available to the uninitiated — some truths can only be accessed through direct experience.",
+          "source": "waite_1910"
+        },
+        "crescent_moon": {
+          "description": "A crescent moon at her feet",
+          "meaning": "The lunar consciousness — intuition, cycles, the receptive feminine principle. Also her connection to the tidal rhythms of the unconscious.",
+          "source": "pollack_1980"
+        },
+        "veil": {
+          "description": "A veil between the pillars decorated with pomegranates and palms",
+          "meaning": "The veil between the conscious and unconscious worlds. The pomegranates reference Persephone and the underworld. The Moon card shows the same trees from the other side of this veil.",
+          "source": "pollack_1980"
+        },
+        "cross": {
+          "description": "A solar cross on her breast with arms of equal length",
+          "meaning": "Balance of positive and negative forces. The upright arm is the positive, male element; the horizontal arm is the negative, female element.",
+          "source": "gray_1970"
+        },
+        "blue_robe": {
+          "description": "A flowing blue robe",
+          "meaning": "Water, the unconscious, emotional depth, spiritual receptivity.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Great Mother / Isis",
+          "tradition": "Mythological",
+          "description": "The High Priestess is connected to Isis, the Egyptian goddess of mystery and magic, who holds the secrets of life and death.",
+          "source": "waite_1910",
+          "confidence": "high"
+        },
+        {
+          "name": "The Anima",
+          "tradition": "Jungian",
+          "description": "In Jungian terms, the High Priestess represents the anima — the feminine aspect of the unconscious that serves as a bridge to deeper self-knowledge.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 2,
+        "pythagorean": "Duality, the dyad — the first differentiation from unity. Receptivity, reflection, polarity.",
+        "golden_dawn": "Gimel = 3 (card numbered 2). Represents the uniting intelligence that bridges the highest point (Kether) to the center (Tiphareth).",
+        "case": "Two is the number of duplication, repetition, and the subconscious mind."
+      },
+      "relationships": {
+        "similar": [
+          {
+            "card": "The Moon",
+            "explanation": "Both represent the lunar, intuitive, unconscious realm. The Moon shows what lies beyond the High Priestess's veil — the same trees appear in both cards, seen from different sides.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          },
+          {
+            "card": "The Hermit",
+            "explanation": "Both are figures of solitary wisdom and inner knowledge, though the Hermit's knowledge is earned through experience while the High Priestess's is innate.",
+            "source": "gray_1970",
+            "confidence": "medium"
+          }
+        ],
+        "contrasts": [
+          {
+            "card": "The Magician",
+            "explanation": "Active vs. passive, conscious vs. unconscious, directing vs. receiving. They form the fundamental polarity of the Major Arcana.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          },
+          {
+            "card": "The Empress",
+            "explanation": "Both are feminine archetypes, but the High Priestess is virginal, withdrawn, and spiritual, while the Empress is fertile, sensual, and embodied.",
+            "source": "pollack_1980",
+            "confidence": "high"
+          }
+        ],
+        "progression": {
+          "previous": {"card": "The Magician", "explanation": "Active will encounters its receptive counterpart."},
+          "next": {"card": "The Empress", "explanation": "Hidden wisdom becomes embodied abundance and fertility."}
+        },
+        "transformations": [
+          {
+            "evolves_into": "The Empress",
+            "explanation": "The spiritual, hidden feminine energy of the High Priestess becomes the fertile, manifest feminine energy of the Empress.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Empress",
+      "arcana": "major",
+      "number": 3,
+      "golden_dawn": {"hebrew_letter": "Daleth", "astrology": "Venus", "tree_path": "Chokmah to Binah"},
+      "core_meaning": "Abundance, fertility, nature, sensuality, nurturing. The creative mother principle — life expressing itself through growth, beauty, and material abundance.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Fruitfulness, action, initiative, length of days; the unknown, clandestine; also difficulty, doubt, ignorance.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Light, truth, the unravelling of involved matters, public rejoicings; according to another reading, vacillation.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite's reversed Empress meanings are unusually positive — an anomaly in his typically negative reversals."
+        },
+        {
+          "type": "upright",
+          "text": "The nurturing power of nature and considerable emotional depth. The Empress embodies the creative, generative force of the feminine — not hidden like the High Priestess, but abundant, visible, and overflowing.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Material wealth, marriage, fertility. Creative intelligence. Action, development. The feminine principle made manifest.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["fruitfulness", "action", "initiative", "length of days"],
+        "pollack_1980": ["abundance", "fertility", "nature", "sensuality", "nurturing", "embodiment"],
+        "gray_1970": ["wealth", "marriage", "fertility", "creative intelligence"],
+        "golden_dawn": ["Venus", "Daleth", "imagination", "desire", "the luminous intelligence"]
+      },
+      "symbolism": {
+        "figure": {
+          "description": "A regal woman seated on cushions in a lush garden, wearing a crown of twelve stars",
+          "meaning": "The queen of the natural world. Her crown of stars connects her to the zodiac and cosmic cycles. She is nature enthroned.",
+          "source": "waite_1910"
+        },
+        "wheat_field": {
+          "description": "Ripe wheat growing before her",
+          "meaning": "Abundance, harvest, the fruits of the earth. Connects to Demeter/Ceres mythology.",
+          "source": "pollack_1980"
+        },
+        "venus_symbol": {
+          "description": "A heart-shaped shield with the symbol of Venus",
+          "meaning": "Love, beauty, attraction, the feminine creative principle.",
+          "source": "waite_1910"
+        },
+        "waterfall_and_forest": {
+          "description": "A waterfall and dense forest in the background",
+          "meaning": "The flowing abundance of nature and the deep, wild, fertile unconscious from which all life springs.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Great Mother",
+          "tradition": "Mythological / Jungian",
+          "description": "Demeter, Isis, Gaia — the universal mother who embodies fertility, nurturing, and the cycles of nature.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "Venus/Aphrodite",
+          "tradition": "Classical",
+          "description": "The goddess of love, beauty, and sensual pleasure. The Empress as the embodiment of desire and attraction.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 3,
+        "pythagorean": "The triad — creative synthesis, the child born of duality. The first number that creates a shape (triangle).",
+        "golden_dawn": "Daleth = 4 (card numbered 3). The door/gateway through which creative energy flows into form."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "Nine of Pentacles", "explanation": "Both represent abundance, comfort, and the enjoyment of material success, though the Nine is more solitary.", "source": "greer_2006", "confidence": "medium"},
+          {"card": "Queen of Pentacles", "explanation": "Both embody nurturing, practical abundance and connection to nature.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Emperor", "explanation": "The fundamental masculine-feminine polarity. The Empress creates through growth and nurturing; the Emperor creates through structure and law.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The High Priestess", "explanation": "Both feminine, but the Priestess is withdrawn and spiritual while the Empress is abundant and embodied.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The High Priestess", "explanation": "Hidden wisdom becomes manifest abundance."},
+          "next": {"card": "The Emperor", "explanation": "Creative fertility encounters the need for structure and order."}
+        },
+        "transformations": [
+          {"evolves_into": "The Emperor", "explanation": "Boundless creative energy requires structure and governance to sustain.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "The Emperor",
+      "arcana": "major",
+      "number": 4,
+      "golden_dawn": {"hebrew_letter": "Heh", "astrology": "Aries", "tree_path": "Chokmah to Tiphareth"},
+      "core_meaning": "Authority, structure, stability, fatherhood, leadership. The ordering principle that establishes boundaries and rules to give form to the creative chaos of the Empress.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Stability, power, protection, realization; a great person; aid, reason, conviction; also authority and will.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "The Emperor represents authority, structure, and the societal order. He is the father figure who creates civilization through law and regulation. His power is organizational rather than creative.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Worldly power, accomplishment, confidence, wealth, stability, authority, indomitable spirit. Leadership, mental activity.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Immaturity, ineffectiveness. Loss of control. Domination by others.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["stability", "power", "protection", "authority", "will", "reason"],
+        "pollack_1980": ["authority", "structure", "order", "father", "society", "law", "civilization"],
+        "gray_1970": ["worldly power", "accomplishment", "confidence", "leadership"],
+        "golden_dawn": ["Aries", "Heh", "sight", "vision", "constituting intelligence"]
+      },
+      "symbolism": {
+        "throne": {
+          "description": "A stone throne decorated with rams' heads",
+          "meaning": "Solid, immovable authority. The rams connect to Aries — the cardinal fire sign of leadership and initiative.",
+          "source": "waite_1910"
+        },
+        "armor": {
+          "description": "The figure wears armor beneath red robes",
+          "meaning": "Readiness for conflict, protection, the warrior aspect of leadership. Red symbolizes passion and willpower.",
+          "source": "pollack_1980"
+        },
+        "ankh_scepter": {
+          "description": "An ankh-shaped scepter in his right hand",
+          "meaning": "The Egyptian symbol of life — the Emperor holds the power of life and death, the authority over the material realm.",
+          "source": "waite_1910"
+        },
+        "barren_mountains": {
+          "description": "A stark, barren mountain landscape",
+          "meaning": "Contrast with the Empress's lush garden. The Emperor's domain is abstract, structured, and rational — order imposed on nature rather than flowing from it.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Father",
+          "tradition": "Jungian / Psychological",
+          "description": "The patriarchal principle — authority, protection, and structure. Can be nurturing (healthy father) or tyrannical (shadow father).",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "Mars/Aries",
+          "tradition": "Astrological",
+          "description": "The warrior-king who establishes dominion through force of will and initiative.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 4,
+        "pythagorean": "The tetrad — stability, order, the four elements, the four directions. The first solid number (cube).",
+        "golden_dawn": "Heh = 5 (card numbered 4). The window through which light enters — vision and constituting intelligence."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "King of Pentacles", "explanation": "Both represent established material power and authority in the physical world.", "confidence": "medium"},
+          {"card": "Four of Wands", "explanation": "Both represent structure and celebration of established foundations.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Empress", "explanation": "Structure vs. growth, law vs. nature, father vs. mother. The fundamental polarity of ordering and creating.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Fool", "explanation": "Maximum structure vs. maximum freedom. The Emperor is everything the Fool has not yet become.", "source": "pollack_1980", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The Empress", "explanation": "Creative abundance requires structure to sustain."},
+          "next": {"card": "The Hierophant", "explanation": "Secular authority evolves into spiritual and institutional authority."}
+        },
+        "transformations": [
+          {"evolves_into": "The Hierophant", "explanation": "Worldly authority seeks spiritual legitimacy and institutional form.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "The Hierophant",
+      "arcana": "major",
+      "number": 5,
+      "golden_dawn": {"hebrew_letter": "Vav", "astrology": "Taurus", "tree_path": "Chokmah to Chesed"},
+      "core_meaning": "Tradition, institutional religion, conformity, education, spiritual authority. The bridge between the human and the divine through established systems.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Marriage, alliance, captivity, servitude; by another account, mercy and goodness; inspiration; the man to whom the Querent has recourse.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Society, good understanding, concord, overkindness, weakness.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "The Hierophant represents religion, education, and all forms of institutional teaching. He is the mediator between God and humanity — not through direct experience (like the High Priestess) but through established doctrine and tradition.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Mercy, kindness, goodness, inspiration. A person who is a teacher or counselor. Conformity. The need to follow rules or established norms.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["marriage", "alliance", "captivity", "mercy", "inspiration"],
+        "pollack_1980": ["tradition", "institution", "religion", "education", "conformity", "doctrine"],
+        "gray_1970": ["mercy", "kindness", "teaching", "counseling", "conformity"],
+        "golden_dawn": ["Taurus", "Vav", "nail", "union", "eternal intelligence"]
+      },
+      "symbolism": {
+        "triple_crown": {
+          "description": "A triple-tiered papal crown",
+          "meaning": "Authority over the three worlds — physical, intellectual, spiritual. Also represents the trinity.",
+          "source": "waite_1910"
+        },
+        "two_acolytes": {
+          "description": "Two kneeling figures before the Hierophant",
+          "meaning": "The students/congregation. They represent the two paths of approach to spiritual knowledge — one through doctrine, one through devotion.",
+          "source": "pollack_1980"
+        },
+        "crossed_keys": {
+          "description": "Two crossed keys at the Hierophant's feet",
+          "meaning": "The keys to the kingdom of heaven (Matthew 16:19). Esoteric and exoteric knowledge — one gold (sun/conscious), one silver (moon/unconscious).",
+          "source": "waite_1910"
+        },
+        "raised_hand_blessing": {
+          "description": "Right hand raised in a gesture of blessing with two fingers pointing up, two down",
+          "meaning": "The sign of esoteric blessing. The two fingers up represent the seen; two down represent the hidden. Also references the Hermetic axiom.",
+          "source": "gray_1970"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Priest / Teacher",
+          "tradition": "Institutional Religion",
+          "description": "The mediator between the divine and the human through established doctrine, ritual, and hierarchy.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 5,
+        "pythagorean": "The pentad — mediation, the human being (five senses, five fingers). The number of learning through experience.",
+        "golden_dawn": "Vav = 6 (card numbered 5). The nail that joins — the unifying principle of education and tradition."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "The High Priestess", "explanation": "Both hold spiritual knowledge, but the Priestess guards hidden wisdom while the Hierophant teaches public doctrine.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "Justice", "explanation": "Both represent systems of law — the Hierophant represents spiritual/moral law; Justice represents rational/civil law.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Hermit", "explanation": "Institutional teaching vs. solitary wisdom. The Hierophant works through organizations; the Hermit works alone.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Tower", "explanation": "The Hierophant builds institutions; the Tower destroys them. Tradition vs. revolutionary destruction.", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The Emperor", "explanation": "Secular authority seeks spiritual legitimacy."},
+          "next": {"card": "The Lovers", "explanation": "Institutional authority gives way to personal choice and the intimate knowledge of love."}
+        },
+        "transformations": [
+          {"evolves_into": "The Hanged Man", "explanation": "In Pollack's vertical correspondence (column 5), the Hierophant's fixed doctrine must eventually be surrendered for a radically different perspective.", "source": "pollack_1980", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "The Lovers",
+      "arcana": "major",
+      "number": 6,
+      "golden_dawn": {"hebrew_letter": "Zayin", "astrology": "Gemini", "tree_path": "Binah to Tiphareth"},
+      "core_meaning": "Love, choice, union, values, alignment. The moment of choosing based on desire and authentic values rather than external authority.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Attraction, love, beauty, trials overcome.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Failure, foolish designs. Another account says — Loss, destruction, seduction, adultery.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "The Lovers asks what role love plays in our lives. It represents the choices surrounding who you want to be and who you want to be with. In the Fool's Journey, it is the first encounter with personal choice based on desire rather than authority.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high",
+          "notes": "Pollack emphasizes the choice aspect over the romance aspect. Earlier Marseille decks showed a man choosing between two lovers."
+        },
+        {
+          "type": "upright",
+          "text": "Love, beauty, harmony. Trials successfully overcome. The need to make a choice, to test or be tested.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["attraction", "love", "beauty", "trials overcome"],
+        "pollack_1980": ["choice", "love", "values", "union", "desire", "authenticity"],
+        "gray_1970": ["love", "beauty", "harmony", "choice", "testing"],
+        "golden_dawn": ["Gemini", "Zayin", "sword", "discrimination", "disposing intelligence"]
+      },
+      "symbolism": {
+        "adam_and_eve": {
+          "description": "A naked man and woman beneath an angel, with the Tree of Knowledge and Tree of Life",
+          "meaning": "The Garden of Eden. Waite replaced the older Marseille image (a man choosing between two women) with a biblical scene. The nakedness represents vulnerability and authenticity in love.",
+          "source": "waite_1910"
+        },
+        "angel_raphael": {
+          "description": "A large winged angel above the couple, arms spread in blessing",
+          "meaning": "The archangel Raphael (or in some readings, Eros). Divine love or cosmic love blessing the human relationship. The higher force that sanctifies union.",
+          "source": "waite_1910"
+        },
+        "tree_of_knowledge": {
+          "description": "Behind the woman, a tree with a serpent and fruit",
+          "meaning": "The Tree of Knowledge of Good and Evil — the woman looks toward knowledge and experience. The serpent represents temptation but also wisdom.",
+          "source": "pollack_1980"
+        },
+        "tree_of_life": {
+          "description": "Behind the man, a tree with twelve flames",
+          "meaning": "The Tree of Life with the twelve signs of the zodiac (or twelve fruits of the spirit). The man looks toward the woman, not the tree — choosing love over abstract knowledge.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Sacred Marriage / Hieros Gamos",
+          "tradition": "Mythological / Alchemical",
+          "description": "The union of opposites — masculine and feminine, conscious and unconscious, spirit and matter. The alchemical coniunctio.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 6,
+        "pythagorean": "The hexad — harmony, balance, beauty, the union of opposites (2×3, 3+3). Associated with Venus and love.",
+        "golden_dawn": "Zayin = 7 (card numbered 6). The sword that divides — discrimination and the power of choice."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "Two of Cups", "explanation": "Both represent romantic partnership and emotional union, though the Lovers carries greater archetypal weight.", "confidence": "high"},
+          {"card": "Temperance", "explanation": "Both represent integration and harmonious blending of opposing forces.", "source": "pollack_1980", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "The Devil", "explanation": "Authentic union vs. bondage. The Lovers shows free choice; the Devil shows enslavement to desire.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Hermit", "explanation": "Union with another vs. solitude and self-knowledge. The Lovers gives up isolation; the Hermit seeks it.", "confidence": "medium"}
+        ],
+        "progression": {
+          "previous": {"card": "The Hierophant", "explanation": "External authority gives way to personal choice."},
+          "next": {"card": "The Chariot", "explanation": "The choice made in love must now be defended and carried forward through willpower."}
+        },
+        "transformations": [
+          {"evolves_into": "The Chariot", "explanation": "The choice becomes commitment, and commitment requires willpower and direction.", "confidence": "high"}
+        ]
+      }
+    },
+    {
+      "name": "The Chariot",
+      "arcana": "major",
+      "number": 7,
+      "golden_dawn": {"hebrew_letter": "Cheth", "astrology": "Cancer", "tree_path": "Binah to Geburah"},
+      "core_meaning": "Willpower, triumph, determination, self-discipline. Victory through force of will and the ability to control opposing forces. The culmination of the first stage of the Fool's Journey.",
+      "meanings": [
+        {
+          "type": "upright",
+          "text": "Succour, providence; also war, triumph, presumption, vengeance, trouble.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high",
+          "notes": "Waite describes the Charioteer as 'conquest on all planes — in the mind, in science, in progress, in certain trials of initiation.'"
+        },
+        {
+          "type": "reversed",
+          "text": "Riot, quarrel, dispute, litigation, defeat.",
+          "source": "waite_1910",
+          "author": "A.E. Waite",
+          "year": 1910,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "The Chariot represents the outer triumph that ends the first line of the Major Arcana. The Charioteer has mastered the worldly challenges of the first seven cards through willpower and self-discipline. But this is outer victory — the inner journey has not yet begun.",
+          "source": "pollack_1980",
+          "author": "Rachel Pollack",
+          "year": 1980,
+          "confidence": "high"
+        },
+        {
+          "type": "upright",
+          "text": "Adversity possibly already overcome. Triumph, victory. Those who achieve greatness. Also may indicate travel.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        },
+        {
+          "type": "reversed",
+          "text": "Decadent desires, possibility of ill health, restlessness and desire for change, an unethical victory.",
+          "source": "gray_1970",
+          "author": "Eden Gray",
+          "year": 1970,
+          "confidence": "high"
+        }
+      ],
+      "keywords": {
+        "waite_1910": ["succour", "triumph", "conquest", "providence", "war"],
+        "pollack_1980": ["willpower", "self-discipline", "outer triumph", "control", "determination"],
+        "gray_1970": ["triumph", "victory", "greatness", "travel", "overcoming adversity"],
+        "golden_dawn": ["Cancer", "Cheth", "fence", "enclosure", "intelligence of the house of influence"]
+      },
+      "symbolism": {
+        "chariot": {
+          "description": "A stone or metal chariot with no visible means of locomotion",
+          "meaning": "The vehicle of the will — it moves through force of personality and inner conviction, not mechanical means.",
+          "source": "waite_1910"
+        },
+        "two_sphinxes": {
+          "description": "One black sphinx and one white sphinx pulling the chariot",
+          "meaning": "Opposing forces (positive/negative, conscious/unconscious, mercy/severity) held in check by the Charioteer's will. Following Lévi's design rather than traditional horses.",
+          "source": "waite_1910"
+        },
+        "canopy_of_stars": {
+          "description": "A starry canopy above the figure",
+          "meaning": "Celestial authority and cosmic awareness. The Charioteer operates under divine mandate.",
+          "source": "pollack_1980"
+        },
+        "armor_and_skirt": {
+          "description": "The figure wears armor with a skirt decorated with esoteric symbols",
+          "meaning": "Protection through knowledge. The symbols on the skirt include alchemical and astrological sigils indicating mastery of multiple domains.",
+          "source": "waite_1910"
+        },
+        "city_behind": {
+          "description": "A city or civilization visible behind the chariot",
+          "meaning": "The Charioteer has already conquered the social world — he rides out from civilization toward new challenges.",
+          "source": "pollack_1980"
+        }
+      },
+      "archetype": [
+        {
+          "name": "The Hero / Conqueror",
+          "tradition": "Mythological",
+          "description": "The triumphant warrior returning from conquest. Related to Alexander, Caesar, or any hero who masters the external world through force of will.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "name": "The Ego in Full Power",
+          "tradition": "Jungian",
+          "description": "The ego at its peak of worldly effectiveness — disciplined, focused, victorious. The limit of what the conscious will alone can achieve before the deeper journey begins.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        }
+      ],
+      "numerology": {
+        "number": 7,
+        "pythagorean": "The heptad — the sacred number, the number of completion in many traditions. Seven days, seven planets, seven chakras. Mastery and spiritual power.",
+        "golden_dawn": "Cheth = 8 (card numbered 7). The fence or enclosure — the boundaries the Charioteer has established around his will."
+      },
+      "relationships": {
+        "similar": [
+          {"card": "Six of Wands", "explanation": "Both represent public victory and triumph, though the Chariot carries deeper archetypal significance.", "confidence": "medium"},
+          {"card": "The Emperor", "explanation": "Both represent mastery and authority, but the Emperor's is static/structural while the Chariot's is dynamic/conquering.", "confidence": "medium"}
+        ],
+        "contrasts": [
+          {"card": "Strength", "explanation": "Outer triumph (Chariot) vs. inner mastery (Strength). The Chariot controls by force of will; Strength controls by gentleness and love.", "source": "pollack_1980", "confidence": "high"},
+          {"card": "The Hanged Man", "explanation": "Action and triumph vs. surrender and reversal. The Chariot pushes forward; the Hanged Man lets go.", "confidence": "high"}
+        ],
+        "progression": {
+          "previous": {"card": "The Lovers", "explanation": "The choice becomes a direction, and the direction demands willpower to pursue."},
+          "next": {"card": "Strength", "explanation": "Outer victory completed; the Fool must now turn inward and develop inner mastery."}
+        },
+        "transformations": [
+          {"evolves_into": "Temperance", "explanation": "In Pollack's vertical correspondence (column 7), the Chariot's forced control evolves into Temperance's graceful integration. The World then completes this column as cosmic dance.", "source": "pollack_1980", "confidence": "high"}
+        ]
+      }
+    }
+  ]
+}

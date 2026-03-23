@@ -64,6 +64,60 @@ export type RawTarotRelationship =
   | string
   | { slug?: string | null; id?: string | null; [key: string]: unknown };
 
+/** Structured upright/reversed blocks (generated in cards.json + esoteric layer). */
+export type RawTarotMeaningOrientationBlock = {
+  keywords?: string[] | null;
+  summary?: string | null;
+  detailed?: string | null;
+};
+
+export type RawTarotStructuredMeanings = {
+  upright?: RawTarotMeaningOrientationBlock | null;
+  reversed?: RawTarotMeaningOrientationBlock | null;
+};
+
+/** Esoteric / correspondence grid; optional per card. */
+export type RawTarotKnowledgeMetadata = {
+  element?: string | null;
+  astrology?: string | null;
+  hebrew_letter?: string | null;
+  qabalistic_path?: string | null;
+  chakra?: string | null;
+  elemental_composite?: string | null;
+};
+
+export type RawTarotSymbolismSemantics = {
+  imagery?: string[] | null;
+  interpretation?: string | null;
+};
+
+export type TarotMeaningOrientationBlock = {
+  keywords: string[];
+  summary: string;
+  detailed: string;
+};
+
+export type TarotStructuredMeanings = {
+  upright: TarotMeaningOrientationBlock;
+  reversed: TarotMeaningOrientationBlock;
+};
+
+export type TarotKnowledgeMetadata = {
+  element?: string;
+  astrology?: string;
+  hebrewLetter?: string;
+  qabalisticPath?: string;
+  chakra?: string;
+  elementalComposite?: string;
+};
+
+export type TarotSymbolismSemantics = {
+  imagery: string[];
+  interpretation: string;
+};
+
+export type TarotOrientation = "upright" | "reversed";
+
 export type RawTarotCard = {
   name?: string | null;
   slug?: string | null;
@@ -91,6 +145,9 @@ export type RawTarotCard = {
   description?: string | null;
   image_path?: string | null;
   imagePath?: string | null;
+  meanings?: RawTarotStructuredMeanings | null;
+  knowledge_metadata?: RawTarotKnowledgeMetadata | null;
+  symbolism_semantics?: RawTarotSymbolismSemantics | null;
   [key: string]: unknown;
 };
 
@@ -140,6 +197,10 @@ export type TarotCard = {
   interpretationPatterns: TarotInterpretationPatterns;
   /** Relationship groups resolved by selectors; values are raw references until resolved. */
   relationships: TarotRelationshipGroups;
+  /** Query-friendly meaning layer (upright / reversed). */
+  meanings: TarotStructuredMeanings;
+  knowledgeMetadata?: TarotKnowledgeMetadata;
+  symbolismSemantics?: TarotSymbolismSemantics;
 };
 
 export type TarotCategory = "all" | TarotArcana | TarotSuit;

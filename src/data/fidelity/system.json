@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "created": "2026-03-23",
+    "schema": "tarot-intelligence-system",
+    "description": "System-level data for the Rider-Waite-Smith tarot knowledge base. Covers suit philosophy, number patterns, reversal logic, and the Fool's Journey across multiple authoritative sources. Bibliography IDs resolve via `source-catalog.json`."
+  },
+  "suits": {
+    "wands": {
+      "element": "fire",
+      "domain": "creativity, willpower, ambition, energy, action, enterprise",
+      "season": "spring",
+      "direction": "south",
+      "kabbalistic_world": "Atziluth (Archetypal World)",
+      "playing_card_equivalent": "clubs",
+      "interpretations": [
+        {
+          "text": "Wands represent the active, fiery principle — enterprise, animation, desire, and growth. They correspond to the creative impulse and the will to act.",
+          "source": "waite_1910",
+          "confidence": "high"
+        },
+        {
+          "text": "Wands signify the primal energy of the spirit, the first spark of creation. They represent passion, inspiration, and the fire of will.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "The suit of Wands is associated with enterprise and glory. It represents the life force itself, ambition, and the creative imagination.",
+          "source": "gray_1970",
+          "confidence": "high"
+        },
+        {
+          "text": "In the Golden Dawn system, Wands correspond to the Yod of YHVH, the archetypal world of Atziluth, and the element of Fire. They represent pure creative force before manifestation.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        },
+        {
+          "text": "Jodorowsky views the Batons (Wands) as representing sexual and creative energy — the raw force of life that drives all action and desire.",
+          "source": "jodorowsky_2004",
+          "confidence": "medium"
+        }
+      ],
+      "court_card_element_sub": {
+        "king": "fire_of_fire",
+        "queen": "water_of_fire",
+        "knight": "air_of_fire",
+        "page": "earth_of_fire"
+      }
+    },
+    "cups": {
+      "element": "water",
+      "domain": "emotions, relationships, love, intuition, the unconscious",
+      "season": "summer",
+      "direction": "west",
+      "kabbalistic_world": "Briah (Creative World)",
+      "playing_card_equivalent": "hearts",
+      "interpretations": [
+        {
+          "text": "Cups are connected with the emotional life and the heart. They represent love, happiness, sensitivity, and the inner world of feeling.",
+          "source": "waite_1910",
+          "confidence": "high"
+        },
+        {
+          "text": "Cups represent the passive, receptive principle — emotions, love, fantasy, and the imagination. They symbolize the inner life and relationships.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "The suit of Cups is associated with love, happiness, and the emotions. Cups reflect our relationships and our capacity for compassion.",
+          "source": "gray_1970",
+          "confidence": "high"
+        },
+        {
+          "text": "In the Golden Dawn system, Cups correspond to the first Heh of YHVH, the creative world of Briah, and the element of Water. They represent the formative emotional response to creative impulse.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        }
+      ],
+      "court_card_element_sub": {
+        "king": "fire_of_water",
+        "queen": "water_of_water",
+        "knight": "air_of_water",
+        "page": "earth_of_water"
+      }
+    },
+    "swords": {
+      "element": "air",
+      "domain": "intellect, conflict, communication, truth, mental processes",
+      "season": "autumn",
+      "direction": "east",
+      "kabbalistic_world": "Yetzirah (Formative World)",
+      "playing_card_equivalent": "spades",
+      "interpretations": [
+        {
+          "text": "Swords are connected to strife, struggle, courage, and conflict. They represent the intellect and the realm of thought, which is naturally associated with challenge.",
+          "source": "waite_1910",
+          "confidence": "high"
+        },
+        {
+          "text": "Swords represent the mind and its double-edged nature — the ability to perceive truth and also to cause pain through analysis, judgment, and overthinking.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "The suit of Swords is associated with struggle, aggression, and misfortune, but also with courage and action. They represent the intellect and the challenges of the mind.",
+          "source": "gray_1970",
+          "confidence": "high"
+        },
+        {
+          "text": "In the Golden Dawn system, Swords correspond to Vav of YHVH, the formative world of Yetzirah, and the element of Air. They represent the analytical mind that dissects and categorizes.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        }
+      ],
+      "court_card_element_sub": {
+        "king": "fire_of_air",
+        "queen": "water_of_air",
+        "knight": "air_of_air",
+        "page": "earth_of_air"
+      },
+      "source_conflict": {
+        "note": "Some older French traditions (Lévi, Papus) assign Swords to Fire and Wands to Air. The Golden Dawn reversed this, and RWS follows the Golden Dawn. This is a significant source of confusion across traditions.",
+        "golden_dawn_position": "Swords = Air",
+        "french_tradition_position": "Swords = Fire",
+        "confidence": "high"
+      }
+    },
+    "pentacles": {
+      "element": "earth",
+      "domain": "material world, money, health, work, physical body, nature",
+      "season": "winter",
+      "direction": "north",
+      "kabbalistic_world": "Assiah (Material World)",
+      "playing_card_equivalent": "diamonds",
+      "interpretations": [
+        {
+          "text": "Pentacles represent the material side of life — commerce, money, trade, and the earthly realm of possessions and physical experience.",
+          "source": "waite_1910",
+          "confidence": "high"
+        },
+        {
+          "text": "Pentacles symbolize the physical world in all its forms — the body, nature, material resources, work, and the fruits of labor. They ground the spiritual in the tangible.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "The suit of Pentacles is associated with money and material interests. It represents worldly matters, financial affairs, and practical concerns.",
+          "source": "gray_1970",
+          "confidence": "high"
+        },
+        {
+          "text": "In the Golden Dawn system, Pentacles correspond to the final Heh of YHVH, the material world of Assiah, and the element of Earth. They represent the final manifestation of energy into physical form.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        }
+      ],
+      "court_card_element_sub": {
+        "king": "fire_of_earth",
+        "queen": "water_of_earth",
+        "knight": "air_of_earth",
+        "page": "earth_of_earth"
+      }
+    }
+  },
+  "numbers": {
+    "1": {
+      "name": "Ace",
+      "meaning": "Beginning, seed, root, potential, pure elemental force",
+      "interpretations": [
+        {
+          "text": "The Aces represent the root of each element — the seed from which everything in the suit grows. They are pure potential, not yet manifested.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        },
+        {
+          "text": "Aces are the gift of their suit — an offering of new energy, new beginnings, new possibilities.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "The Ace represents Kether, the Crown, in each of the four Kabbalistic worlds. It is the primal spark of each element.",
+          "source": "case_1947",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Kether"
+    },
+    "2": {
+      "name": "Two",
+      "meaning": "Duality, partnership, balance, choice, polarity",
+      "interpretations": [
+        {
+          "text": "Twos represent the first differentiation of the element — the emergence of duality, balance, and the need for partnership or choice.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "The number two in the Tarot represents the polarity inherent in all existence. It is the first division from unity.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Chokmah"
+    },
+    "3": {
+      "name": "Three",
+      "meaning": "Growth, creativity, expression, initial completion, synthesis",
+      "interpretations": [
+        {
+          "text": "Threes represent the first fruit of the element's energy — creativity, growth, and the initial expression of what was seeded in the Ace.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Three is the number of creative synthesis — the child of the duality represented by two.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Binah"
+    },
+    "4": {
+      "name": "Four",
+      "meaning": "Structure, stability, foundation, consolidation, stasis",
+      "interpretations": [
+        {
+          "text": "Fours represent structure and foundation — the element's energy has solidified into a stable form, which can be either grounding or confining.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Four is the number of order and reason. It represents the material and structural basis of things.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Chesed"
+    },
+    "5": {
+      "name": "Five",
+      "meaning": "Conflict, disruption, challenge, instability, change",
+      "interpretations": [
+        {
+          "text": "Fives represent disruption — the breakdown of the stability established in the Fours. They bring challenge, conflict, and the need for adaptation.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Five is the number of conflict and adjustment. It upsets the balance of four and demands growth through adversity.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Geburah"
+    },
+    "6": {
+      "name": "Six",
+      "meaning": "Harmony, communication, reciprocity, resolution, beauty",
+      "interpretations": [
+        {
+          "text": "Sixes represent harmony after conflict — a return to balance, communication, and the resolution of the struggle introduced by the Fives.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Six is the number of beauty and balance. It represents the harmony achieved after the disruption of five.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Tiphareth"
+    },
+    "7": {
+      "name": "Seven",
+      "meaning": "Assessment, reflection, inner work, mystery, challenge of faith",
+      "interpretations": [
+        {
+          "text": "Sevens represent the inner dimension of each element — reflection, assessment, and the challenge of maintaining faith in one's path.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Seven is a mystical and sacred number representing spiritual forces at work beneath the surface. It demands deeper understanding.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Netzach"
+    },
+    "8": {
+      "name": "Eight",
+      "meaning": "Movement, mastery, change, power, re-evaluation",
+      "interpretations": [
+        {
+          "text": "Eights represent movement and change — a shift in the element's energy toward greater mastery or the need for re-evaluation.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Eight is the number of regeneration and power. It represents the rhythmic alternation of involution and evolution.",
+          "source": "case_1947",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Hod"
+    },
+    "9": {
+      "name": "Nine",
+      "meaning": "Culmination, near-completion, fulfillment, solitude, independence",
+      "interpretations": [
+        {
+          "text": "Nines represent the culmination of the suit's energy — the element at its most intense, just before completion. They carry both fulfillment and the isolation of peak experience.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Nine is the number of completion and attainment on the spiritual plane. It is the last single digit, representing the threshold before the cycle ends.",
+          "source": "gray_1970",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Yesod"
+    },
+    "10": {
+      "name": "Ten",
+      "meaning": "Completion, ending, excess, transition, finality",
+      "interpretations": [
+        {
+          "text": "Tens represent the final expression of the element — completion that may be fulfilling or excessive. They mark the end of a cycle and the seed of the next.",
+          "source": "pollack_1980",
+          "confidence": "high"
+        },
+        {
+          "text": "Ten represents the complete manifestation of each element in the physical world. It is both an ending and a return to the Ace at a new level.",
+          "source": "golden_dawn",
+          "confidence": "high"
+        }
+      ],
+      "kabbalistic_sephirah": "Malkuth"
+    }
+  },
+  "reversal_models": [
+    {
+      "type": "blocked",
+      "description": "The upright meaning is present but obstructed — the energy is there but cannot flow freely.",
+      "supported_by": ["pollack_1980", "greer_2006"],
+      "example": "Reversed Ace of Wands: creative energy exists but is being blocked by external circumstances or self-doubt.",
+      "confidence": "high"
+    },
+    {
+      "type": "internalized",
+      "description": "The card's energy is directed inward rather than outward — private experience rather than public expression.",
+      "supported_by": ["pollack_1980", "greer_2006"],
+      "example": "Reversed Empress: nurturing energy directed toward self-care rather than care of others.",
+      "confidence": "high"
+    },
+    {
+      "type": "delayed",
+      "description": "The upright meaning will manifest but is not yet ready — timing is off, patience is needed.",
+      "supported_by": ["gray_1970", "greer_2006"],
+      "example": "Reversed Three of Pentacles: collaboration will come, but the groundwork hasn't been laid yet.",
+      "confidence": "high"
+    },
+    {
+      "type": "shadow",
+      "description": "The dark or unconscious aspect of the card's meaning — what the upright energy looks like when distorted by fear, ego, or unconscious patterns.",
+      "supported_by": ["pollack_1980", "jodorowsky_2004"],
+      "example": "Reversed Emperor: tyranny, rigidity, abuse of authority — the shadow side of structure and order.",
+      "confidence": "high"
+    },
+    {
+      "type": "inverted",
+      "description": "The direct opposite of the upright meaning — a simple negation or reversal of the card's core energy.",
+      "supported_by": ["waite_1910", "gray_1970"],
+      "example": "Reversed Sun: unhappiness, clouded joy, broken engagements (per Waite's divinatory meanings).",
+      "confidence": "high",
+      "notes": "This is the oldest and most traditional approach to reversals. Waite's own reversed meanings often follow this model."
+    },
+    {
+      "type": "excess",
+      "description": "Too much of the upright energy — the card's meaning taken to an extreme, becoming counterproductive.",
+      "supported_by": ["greer_2006"],
+      "example": "Reversed Seven of Cups: not just fantasy and imagination, but total delusion and escapism.",
+      "confidence": "medium"
+    }
+  ],
+  "major_arcana_journey": {
+    "name": "The Fool's Journey",
+    "description": "The 22 Major Arcana cards tell the story of the Fool's passage through life — from innocent potential (0) to integrated wholeness (XXI). Multiple authors structure this journey differently.",
+    "models": [
+      {
+        "author": "Eden Gray",
+        "source": "gray_1970",
+        "structure": "linear",
+        "description": "Gray was one of the first to popularize the concept of the Fool's Journey as a linear narrative. The Fool begins as an innocent, encounters worldly authorities (Emperor, Hierophant), faces moral and spiritual challenges (Strength, Hermit), undergoes a dark night of the soul (Tower, Moon), and arrives at cosmic completion (World).",
+        "stages": [
+          {"cards": [0], "label": "The Innocent"},
+          {"cards": [1, 2, 3, 4, 5, 6, 7], "label": "Worldly encounter — society, authority, love, willpower"},
+          {"cards": [8, 9, 10, 11, 12, 13, 14], "label": "Turning inward — moral strength, solitude, fate, sacrifice, transformation"},
+          {"cards": [15, 16, 17, 18, 19, 20, 21], "label": "Spiritual awakening — liberation, illumination, judgment, integration"}
+        ],
+        "confidence": "high"
+      },
+      {
+        "author": "Rachel Pollack",
+        "source": "pollack_1980",
+        "structure": "three_lines_of_seven",
+        "description": "Pollack divides the Major Arcana (excluding the Fool) into three rows of seven cards. The Fool stands above all three lines as the protagonist who moves through them. The first line (1-7) represents consciousness and outer life. The second line (8-14) represents the subconscious and the inward search. The third line (15-21) represents the superconscious and spiritual liberation.",
+        "stages": [
+          {"cards": [0], "label": "The Fool — stands above, moves through all three lines"},
+          {"cards": [1, 2, 3, 4, 5, 6, 7], "label": "Line 1: Consciousness — the outer concerns of life in society"},
+          {"cards": [8, 9, 10, 11, 12, 13, 14], "label": "Line 2: Subconsciousness — the inward search to find who we really are"},
+          {"cards": [15, 16, 17, 18, 19, 20, 21], "label": "Line 3: Superconsciousness — the development of spiritual awareness and release of archetypal energy"}
+        ],
+        "vertical_correspondences": {
+          "description": "Pollack identifies vertical relationships between cards in the same column across the three lines.",
+          "examples": [
+            {"column": 1, "cards": [1, 8, 15], "names": ["Magician", "Strength", "Devil"], "note": "All three are cards of power. Magician and Strength share the infinity symbol; the Devil is a dark parody of the Magician's posture."},
+            {"column": 5, "cards": [5, 12, 19], "names": ["Hierophant", "Hanged Man", "Sun"], "note": "Religious/spiritual authority → surrender and reversal → illumination and rebirth."},
+            {"column": 7, "cards": [7, 14, 21], "names": ["Chariot", "Temperance", "World"], "note": "Outer triumph → inner integration → cosmic completion."}
+          ]
+        },
+        "confidence": "high"
+      },
+      {
+        "author": "Paul Foster Case",
+        "source": "case_1947",
+        "structure": "three_septenaries",
+        "description": "Case also uses three groups of seven (like Pollack), but emphasizes the Kabbalistic and Hebrew letter correspondences more heavily. Each septenary corresponds to a stage of spiritual development: powers (1-7), laws (8-14), and conditions (15-21).",
+        "stages": [
+          {"cards": [0], "label": "The Fool — Aleph — the Life-Breath, spirit descending into manifestation"},
+          {"cards": [1, 2, 3, 4, 5, 6, 7], "label": "First Septenary: The Powers — the conscious agents and forces the Fool encounters"},
+          {"cards": [8, 9, 10, 11, 12, 13, 14], "label": "Second Septenary: The Laws — the spiritual laws governing transformation"},
+          {"cards": [15, 16, 17, 18, 19, 20, 21], "label": "Third Septenary: The Conditions — the states of consciousness achieved through initiation"}
+        ],
+        "confidence": "high"
+      },
+      {
+        "author": "A.E. Waite",
+        "source": "waite_1910",
+        "structure": "non_linear",
+        "description": "Waite does not present a clear linear journey. He discusses the Fool between Judgment (XX) and the World (XXI) rather than at the beginning, and his ordering places the Fool at 0 but discusses it near the end. Waite emphasized inner symbolism over sequential narrative and was deliberately cryptic about the true structure due to Golden Dawn oath obligations.",
+        "notes": "Waite explicitly states he has 'not rectified' the position of the Fool, and that his reasons 'carry nothing which will signify to the reader.' He also switched Strength (VIII) and Justice (XI) from the Marseille order to align with Golden Dawn astrological correspondences (Strength/Leo, Justice/Libra).",
+        "confidence": "high"
+      }
+    ]
+  },
+  "golden_dawn_correspondences": {
+    "description": "The Golden Dawn assigned each Major Arcana card a Hebrew letter, astrological correspondence, and path on the Tree of Life. These correspondences deeply influenced the RWS deck's imagery.",
+    "cards": {
+      "0_fool": {"hebrew_letter": "Aleph", "hebrew_meaning": "Ox", "astrology": "Air (element)", "tree_path": "Kether to Chokmah"},
+      "1_magician": {"hebrew_letter": "Beth", "hebrew_meaning": "House", "astrology": "Mercury", "tree_path": "Kether to Binah"},
+      "2_high_priestess": {"hebrew_letter": "Gimel", "hebrew_meaning": "Camel", "astrology": "Moon", "tree_path": "Kether to Tiphareth"},
+      "3_empress": {"hebrew_letter": "Daleth", "hebrew_meaning": "Door", "astrology": "Venus", "tree_path": "Chokmah to Binah"},
+      "4_emperor": {"hebrew_letter": "Heh", "hebrew_meaning": "Window", "astrology": "Aries", "tree_path": "Chokmah to Tiphareth"},
+      "5_hierophant": {"hebrew_letter": "Vav", "hebrew_meaning": "Nail", "astrology": "Taurus", "tree_path": "Chokmah to Chesed"},
+      "6_lovers": {"hebrew_letter": "Zayin", "hebrew_meaning": "Sword", "astrology": "Gemini", "tree_path": "Binah to Tiphareth"},
+      "7_chariot": {"hebrew_letter": "Cheth", "hebrew_meaning": "Fence", "astrology": "Cancer", "tree_path": "Binah to Geburah"},
+      "8_strength": {"hebrew_letter": "Teth", "hebrew_meaning": "Serpent", "astrology": "Leo", "tree_path": "Chesed to Geburah"},
+      "9_hermit": {"hebrew_letter": "Yod", "hebrew_meaning": "Hand", "astrology": "Virgo", "tree_path": "Chesed to Tiphareth"},
+      "10_wheel": {"hebrew_letter": "Kaph", "hebrew_meaning": "Palm of hand", "astrology": "Jupiter", "tree_path": "Chesed to Netzach"},
+      "11_justice": {"hebrew_letter": "Lamed", "hebrew_meaning": "Ox goad", "astrology": "Libra", "tree_path": "Geburah to Tiphareth"},
+      "12_hanged_man": {"hebrew_letter": "Mem", "hebrew_meaning": "Water", "astrology": "Water (element)", "tree_path": "Geburah to Hod"},
+      "13_death": {"hebrew_letter": "Nun", "hebrew_meaning": "Fish", "astrology": "Scorpio", "tree_path": "Tiphareth to Netzach"},
+      "14_temperance": {"hebrew_letter": "Samekh", "hebrew_meaning": "Prop/Support", "astrology": "Sagittarius", "tree_path": "Tiphareth to Yesod"},
+      "15_devil": {"hebrew_letter": "Ayin", "hebrew_meaning": "Eye", "astrology": "Capricorn", "tree_path": "Tiphareth to Hod"},
+      "16_tower": {"hebrew_letter": "Peh", "hebrew_meaning": "Mouth", "astrology": "Mars", "tree_path": "Netzach to Hod"},
+      "17_star": {"hebrew_letter": "Tzaddi", "hebrew_meaning": "Fish hook", "astrology": "Aquarius", "tree_path": "Netzach to Yesod"},
+      "18_moon": {"hebrew_letter": "Qoph", "hebrew_meaning": "Back of head", "astrology": "Pisces", "tree_path": "Netzach to Malkuth"},
+      "19_sun": {"hebrew_letter": "Resh", "hebrew_meaning": "Head", "astrology": "Sun", "tree_path": "Hod to Yesod"},
+      "20_judgement": {"hebrew_letter": "Shin", "hebrew_meaning": "Tooth", "astrology": "Fire (element)", "tree_path": "Hod to Malkuth"},
+      "21_world": {"hebrew_letter": "Tav", "hebrew_meaning": "Cross/Mark", "astrology": "Saturn", "tree_path": "Yesod to Malkuth"}
+    },
+    "source_conflicts": [
+      {
+        "topic": "Strength/Justice numbering",
+        "golden_dawn_rws": "Strength = VIII, Justice = XI (to align with Leo and Libra respectively)",
+        "marseille_tradition": "Justice = VIII, Strength = XI (traditional ordering)",
+        "note": "Waite stated he switched these 'for reasons which satisfy myself.' The actual reason was Golden Dawn astrological correspondences, which he could not openly reveal due to oath obligations.",
+        "confidence": "high"
+      },
+      {
+        "topic": "Tzaddi/Star attribution",
+        "golden_dawn": "Tzaddi = The Star = Aquarius",
+        "crowley_variant": "Crowley declared 'Tzaddi is not the Star' and swapped The Star and The Emperor in his Thoth deck.",
+        "rws_position": "Follows Golden Dawn standard: Star = Tzaddi = Aquarius",
+        "confidence": "high"
+      }
+    ]
+  },
+  "notes": "This system file provides the structural framework for the tarot knowledge base. Individual card files reference source IDs defined here. The suit and number meanings serve as contextual backdrops for interpreting individual cards — they establish the 'grammar' of the deck. Cross-referencing between cards should always account for both the suit's elemental meaning and the number's positional meaning within the sequence."
+}

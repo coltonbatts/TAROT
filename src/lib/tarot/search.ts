@@ -33,6 +33,32 @@ function searchHaystack(card: TarotCard): string {
     .filter(Boolean)
     .join(" ");
 
+  const meaningsText = [
+    card.meanings.upright.summary,
+    card.meanings.upright.detailed,
+    card.meanings.upright.keywords.join(" "),
+    card.meanings.reversed.summary,
+    card.meanings.reversed.detailed,
+    card.meanings.reversed.keywords.join(" "),
+  ].join(" ");
+
+  const knowledgeText = card.knowledgeMetadata
+    ? [
+        card.knowledgeMetadata.element,
+        card.knowledgeMetadata.astrology,
+        card.knowledgeMetadata.hebrewLetter,
+        card.knowledgeMetadata.qabalisticPath,
+        card.knowledgeMetadata.chakra,
+        card.knowledgeMetadata.elementalComposite,
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : "";
+
+  const semanticsText = card.symbolismSemantics
+    ? [card.symbolismSemantics.interpretation, card.symbolismSemantics.imagery.join(" ")].join(" ")
+    : "";
+
   return [
     card.name,
     card.slug,
@@ -51,6 +77,9 @@ function searchHaystack(card: TarotCard): string {
     card.suitMeaning,
     suitPhilosophyText,
     interpretationText,
+    meaningsText,
+    knowledgeText,
+    semanticsText,
     relationshipText,
     symbolismExtra,
   ]

@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "file": "major_arcana_15_21.json",
+    "description": "Major Arcana cards XV through XXI — the third septenary. In Pollack's model, these represent the superconscious line: spiritual awakening, liberation from bondage, and cosmic integration."
+  },
+  "cards": [
+    {
+      "name": "The Devil",
+      "arcana": "major",
+      "number": 15,
+      "golden_dawn": {"hebrew_letter": "Ayin", "astrology": "Capricorn", "tree_path": "Tiphareth to Hod"},
+      "core_meaning": "Bondage, materialism, shadow self, addiction, ignorance. Enslavement to the physical or to unconscious patterns — but also the recognition that the chains are self-imposed.",
+      "meanings": [
+        {"type": "upright", "text": "Ravage, violence, vehemence, extraordinary efforts, force, fatality; that which is predestined but is not for this reason evil.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high", "notes": "Waite's description is nuanced — the Devil is not simply evil but represents forces that are predestined and powerful."},
+        {"type": "reversed", "text": "Evil fatality, weakness, pettiness, blindness.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "upright", "text": "The Devil represents everything in us that we do not want to look at — the shadow self. The chains around the figures' necks are loose enough to remove, meaning our bondage is self-imposed. The Devil is the first card of the third line, confronting us with the darkness that must be acknowledged before liberation is possible.", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Subordination, bondage to material things, domination of matter over spirit. Violence, fatality. Self-punishment.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"},
+        {"type": "reversed", "text": "Beginning of spiritual understanding. Throwing off shackles. Divorce. Recognition of one's own needs.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["ravage", "violence", "force", "fatality", "predestined"],
+        "pollack_1980": ["shadow", "bondage", "materialism", "addiction", "ignorance", "self-imposed chains"],
+        "gray_1970": ["bondage", "materialism", "violence", "self-punishment"],
+        "golden_dawn": ["Capricorn", "Ayin", "eye", "renewing intelligence"]
+      },
+      "symbolism": {
+        "baphomet_figure": {"description": "A horned, winged figure with a torch in the left hand, seated on a black half-cube", "meaning": "A dark parody of the Magician — one hand up, one down, but channeling materialistic/destructive energy. The inverted pentagram on the forehead represents spirit dominated by matter.", "source": "pollack_1980"},
+        "chained_figures": {"description": "A naked man and woman with loose chains around their necks, with small horns and tails", "meaning": "The same couple from the Lovers card, now in bondage. Their chains are loose — they could leave if they chose. They are becoming like the Devil through their attachment.", "source": "pollack_1980"},
+        "inverted_torch": {"description": "A torch pointing downward in the left hand", "meaning": "The Magician's wand inverted — creative energy directed toward destruction or material enslavement rather than spiritual illumination.", "source": "pollack_1980"},
+        "black_half_cube": {"description": "The Devil sits on a black half-cube or altar", "meaning": "Only seeing half the picture — incomplete understanding, the material world mistaken for the whole of reality.", "source": "pollack_1980"}
+      },
+      "archetype": [
+        {"name": "The Shadow", "tradition": "Jungian", "description": "The repressed, denied aspects of the self that must be confronted and integrated for wholeness. The Devil is not evil but unconscious.", "source": "pollack_1980", "confidence": "high"},
+        {"name": "Pan / The Horned God", "tradition": "Classical / Pagan", "description": "The wild, untamed forces of nature and instinct. Not inherently evil but terrifying to the civilized mind.", "source": "place_2005", "confidence": "medium"}
+      ],
+      "numerology": {"number": 15, "pythagorean": "1+5=6, echoing the Lovers. The Devil is the shadow side of love — attachment, possession, obsession.", "golden_dawn": "Ayin = 70. The eye — what we see (or refuse to see) about ourselves."},
+      "relationships": {
+        "similar": [{"card": "Eight of Swords", "explanation": "Both represent self-imposed bondage and the illusion of being trapped.", "confidence": "medium"}, {"card": "Seven of Cups", "explanation": "Both involve illusion and the temptation of false desires.", "confidence": "medium"}],
+        "contrasts": [{"card": "Strength", "explanation": "In Pollack's vertical columns, Strength gently masters the animal nature while the Devil represents enslavement to it.", "source": "pollack_1980", "confidence": "high"}, {"card": "The Lovers", "explanation": "Free, conscious union vs. enslaved, unconscious bondage. The Devil shows the Lovers' shadow.", "source": "pollack_1980", "confidence": "high"}, {"card": "The Magician", "explanation": "Both share similar posture but opposite intent — the Magician channels spiritual power; the Devil enslaves through material power.", "source": "pollack_1980", "confidence": "high"}],
+        "progression": {"previous": {"card": "Temperance", "explanation": "Integration achieved; now the shadow must be confronted."}, "next": {"card": "The Tower", "explanation": "Recognition of bondage leads to the shattering force that breaks the chains."}},
+        "transformations": [{"evolves_into": "The Tower", "explanation": "The tension of recognized bondage builds until it explodes — the Tower liberates through destruction what the Devil held captive.", "confidence": "high"}]
+      }
+    },
+    {
+      "name": "The Tower",
+      "arcana": "major",
+      "number": 16,
+      "golden_dawn": {"hebrew_letter": "Peh", "astrology": "Mars", "tree_path": "Netzach to Hod"},
+      "core_meaning": "Sudden upheaval, revelation, destruction of false structures, liberation through crisis. The lightning bolt of truth that shatters illusion.",
+      "meanings": [
+        {"type": "upright", "text": "Misery, distress, indigence, adversity, calamity, disgrace, deception, ruin.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "reversed", "text": "According to one account, the same in a lesser degree; also oppression, imprisonment, tyranny.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "upright", "text": "The Tower shatters the false structures of the ego and belief systems. The lightning bolt represents divine truth breaking through. While terrifying, the Tower is ultimately liberating — it destroys only what was built on false foundations. After the Devil's bondage, the Tower sets us free.", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Breaking down of existing forms. Change, conflict, catastrophe, overthrow of existing ways of life. Disruption will bring enlightenment.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["misery", "distress", "calamity", "ruin", "deception"],
+        "pollack_1980": ["upheaval", "revelation", "liberation", "destruction of illusion", "breakthrough"],
+        "gray_1970": ["change", "conflict", "catastrophe", "disruption", "enlightenment"],
+        "golden_dawn": ["Mars", "Peh", "mouth", "exciting intelligence"]
+      },
+      "symbolism": {
+        "tower": {"description": "A tall stone tower struck by lightning, with its crown blown off", "meaning": "The false structures of the ego, materialism, and self-deception — built high but on unstable foundations. The crown blown off represents the shattering of the ego's defenses.", "source": "pollack_1980"},
+        "lightning": {"description": "A bolt of lightning striking the tower's crown", "meaning": "Divine truth, sudden revelation. The force of reality that cannot be resisted or negotiated with. Mars (destructive energy) serves as the agent of spiritual liberation.", "source": "waite_1910"},
+        "falling_figures": {"description": "Two figures falling from the tower", "meaning": "The same figures from the Devil — now liberated from their prison, though the liberation is violent and disorienting.", "source": "pollack_1980"},
+        "flames": {"description": "22 flames (shaped like Hebrew letter Yod) falling around the tower", "meaning": "The 22 paths of the Tree of Life, the 22 letters of the Hebrew alphabet. Even in destruction, divine order is present. The Yod-shaped flames suggest the hand of God.", "source": "golden_dawn"}
+      },
+      "archetype": [
+        {"name": "The Lightning Flash", "tradition": "Kabbalistic", "description": "The lightning bolt that created the universe — the same force of creation is also the force of destruction. The Tower represents the flash of divine energy descending through the Tree of Life.", "source": "golden_dawn", "confidence": "high"},
+        {"name": "The Tower of Babel", "tradition": "Biblical", "description": "The tower of human pride and ambition struck down by God. The attempt to reach heaven through material means must fail.", "source": "place_2005", "confidence": "high"}
+      ],
+      "numerology": {"number": 16, "pythagorean": "1+6=7, echoing the Chariot. Where the Chariot was the triumph of the ego, the Tower is its destruction.", "golden_dawn": "Peh = 80. The mouth — the power of speech and utterance that can build or destroy."},
+      "relationships": {
+        "similar": [{"card": "Ten of Swords", "explanation": "Both represent devastating endings and the feeling of total destruction, though the Tower is more sudden and the Ten of Swords more personal.", "confidence": "high"}, {"card": "Death", "explanation": "Both represent necessary destruction, but Death is a natural, gradual process while the Tower is sudden and violent.", "source": "pollack_1980", "confidence": "high"}],
+        "contrasts": [{"card": "The Hierophant", "explanation": "The Hierophant builds institutions and traditions; the Tower destroys them. Establishment vs. revolution.", "confidence": "high"}, {"card": "Temperance", "explanation": "Gradual integration vs. sudden shattering. Temperance blends; the Tower explodes.", "source": "pollack_1980", "confidence": "high"}],
+        "progression": {"previous": {"card": "The Devil", "explanation": "Bondage is recognized and then violently broken."}, "next": {"card": "The Star", "explanation": "After destruction, hope and healing emerge."}},
+        "transformations": [{"evolves_into": "The Star", "explanation": "The complete destruction of false structures creates the empty, clear space in which the Star's healing light can be received.", "confidence": "high"}]
+      }
+    },
+    {
+      "name": "The Star",
+      "arcana": "major",
+      "number": 17,
+      "golden_dawn": {"hebrew_letter": "Tzaddi", "astrology": "Aquarius", "tree_path": "Netzach to Yesod"},
+      "core_meaning": "Hope, inspiration, renewal, serenity, spiritual healing. After the destruction of the Tower, the Star offers gentle, restorative light — the first sign that the worst is over.",
+      "meanings": [
+        {"type": "upright", "text": "Loss, theft, privation, abandonment; another reading says — hope and bright prospects.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high", "notes": "Waite presents conflicting divinatory traditions — one negative, one positive. His symbolic description is consistently positive."},
+        {"type": "reversed", "text": "Arrogance, haughtiness, impotence.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "upright", "text": "After the shattering Tower, the Star is the calm after the storm — a moment of pure grace and hope. The naked figure pours water without reserve, suggesting complete openness and trust in the universe. It represents the first experience of spiritual truth after the ego's defenses have been destroyed.", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Hope, inspiration, bright prospects. Mixing the past and the present. Spiritual insight. Optimism.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["hope", "bright prospects", "loss", "privation"],
+        "pollack_1980": ["hope", "renewal", "inspiration", "healing", "grace", "openness"],
+        "gray_1970": ["hope", "inspiration", "spiritual insight", "optimism"],
+        "golden_dawn": ["Aquarius", "Tzaddi", "fish hook", "natural intelligence"]
+      },
+      "symbolism": {
+        "naked_figure": {"description": "A naked woman kneeling by a pool, pouring water from two pitchers", "meaning": "Complete vulnerability and openness. The nakedness represents the soul stripped of all ego defenses after the Tower. She pours without holding back — total trust in the flow of life.", "source": "pollack_1980"},
+        "two_pitchers": {"description": "Water poured from two vessels — one onto land, one into water", "meaning": "Similar to Temperance's two cups, but here the water flows freely rather than being carefully measured. Nourishing both the conscious (land) and unconscious (water) simultaneously.", "source": "pollack_1980"},
+        "eight_pointed_star": {"description": "One large eight-pointed star surrounded by seven smaller stars", "meaning": "The central star often associated with Venus/Ishtar. Eight points suggest cosmic renewal (octave). Seven smaller stars may represent the seven classical planets or seven chakras.", "source": "waite_1910"},
+        "bird_in_tree": {"description": "A bird (ibis) perched in a tree in the background", "meaning": "The ibis is sacred to Thoth/Hermes — the bird of wisdom and communication with the divine. It suggests that spiritual knowledge is now accessible.", "source": "waite_1910"}
+      },
+      "archetype": [
+        {"name": "Aquarius / The Water Bearer", "tradition": "Astrological", "description": "The one who pours out the waters of knowledge and renewal for all humanity — the Age of Aquarius as an era of spiritual awakening.", "source": "golden_dawn", "confidence": "high"},
+        {"name": "Isis Unveiled", "tradition": "Egyptian", "description": "The goddess who has removed her veil, revealing the naked truth. After the Tower's destruction, there is nothing left to hide.", "source": "place_2005", "confidence": "medium"}
+      ],
+      "numerology": {"number": 17, "pythagorean": "1+7=8, linking to Strength — gentle, feminine power expressed as hope and healing rather than mastery.", "golden_dawn": "Tzaddi = 90. The fish hook — that which draws up hidden things from the depths."},
+      "relationships": {
+        "similar": [{"card": "Temperance", "explanation": "Both feature a figure pouring water, representing healing and integration. Temperance is more about careful balance; the Star is about abundant grace.", "confidence": "high"}, {"card": "Ace of Cups", "explanation": "Both represent overflowing spiritual/emotional renewal and divine gift.", "confidence": "medium"}],
+        "contrasts": [{"card": "The Tower", "explanation": "Destruction vs. healing. The Tower shatters; the Star restores.", "source": "pollack_1980", "confidence": "high"}, {"card": "The Moon", "explanation": "The Star is clear and hopeful; the Moon is confusing and anxious. The Star's light is direct; the Moon's is deceptive.", "source": "pollack_1980", "confidence": "high"}],
+        "progression": {"previous": {"card": "The Tower", "explanation": "After destruction, hope and healing emerge."}, "next": {"card": "The Moon", "explanation": "After the clarity of hope, the Fool must navigate the confusion and fear of the unconscious."}},
+        "transformations": [{"evolves_into": "The Moon", "explanation": "Hope and openness lead into the deeper journey through the unconscious — the dark night of the soul that precedes dawn.", "confidence": "high"}]
+      }
+    },
+    {
+      "name": "The Moon",
+      "arcana": "major",
+      "number": 18,
+      "golden_dawn": {"hebrew_letter": "Qoph", "astrology": "Pisces", "tree_path": "Netzach to Malkuth"},
+      "core_meaning": "Illusion, fear, anxiety, the unconscious, confusion. The journey through the dark night of the soul where nothing is as it seems and instinct must guide where reason cannot.",
+      "meanings": [
+        {"type": "upright", "text": "Hidden enemies, danger, calumny, darkness, terror, deception, occult forces, error.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "reversed", "text": "Instability, inconstancy, silence, lesser degrees of deception and error.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "upright", "text": "The Moon represents the deepest, most confusing phase of the spiritual journey. After the Star's hope, the Fool must travel through darkness where the rational mind cannot help. Intuition is the unreliable but necessary guide. This card represents facing our deepest fears and unconscious patterns.", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Disillusionment, danger, deception. Unforeseen perils, secret enemies. Bad luck for someone dear to you.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["danger", "darkness", "terror", "deception", "occult forces"],
+        "pollack_1980": ["illusion", "fear", "unconscious", "confusion", "intuition", "anxiety", "dark night of the soul"],
+        "gray_1970": ["disillusionment", "danger", "deception", "secret enemies"],
+        "golden_dawn": ["Pisces", "Qoph", "back of head", "corporeal intelligence"]
+      },
+      "symbolism": {
+        "moon_face": {"description": "A full moon with a crescent moon profile, dropping dew", "meaning": "The deceptive, reflected light of the Moon — not the Sun's direct illumination but its distorted reflection. The drops falling represent the dew of unconscious influence.", "source": "pollack_1980"},
+        "two_towers": {"description": "Two grey towers flanking a narrow path", "meaning": "The same towers visible in Death. They mark the boundary between the known and unknown worlds. The path between them leads into darkness.", "source": "pollack_1980"},
+        "dog_and_wolf": {"description": "A dog and wolf howling at the moon", "meaning": "The domesticated and wild aspects of our animal nature — both responding to the pull of the unconscious. They represent the dual aspects of instinct.", "source": "pollack_1980"},
+        "lobster_crayfish": {"description": "A lobster or crayfish emerging from a pool", "meaning": "Waite calls it 'the nameless and hideous tendency which is lower than the savage beast.' It represents our most primitive fears and impulses rising from the deepest unconscious.", "source": "waite_1910"},
+        "path": {"description": "A winding path leading from the pool between the towers into the distance", "meaning": "The path through the unconscious — there is a way through the darkness, but it is neither straight nor obvious.", "source": "pollack_1980"}
+      },
+      "archetype": [
+        {"name": "The Dark Night of the Soul", "tradition": "Mystical (St. John of the Cross)", "description": "The necessary period of spiritual darkness, confusion, and doubt that precedes illumination. The soul must pass through its own shadow.", "source": "pollack_1980", "confidence": "high"},
+        {"name": "Hecate / Selene", "tradition": "Classical", "description": "The lunar goddess of crossroads, magic, and the liminal spaces between worlds.", "source": "place_2005", "confidence": "medium"}
+      ],
+      "numerology": {"number": 18, "pythagorean": "1+8=9, echoing the Hermit — solitary journey through darkness, but the Moon's journey is through the unconscious rather than the conscious.", "golden_dawn": "Qoph = 100. The back of the head — what lies behind consciousness, the unconscious mind."},
+      "relationships": {
+        "similar": [{"card": "The High Priestess", "explanation": "Both represent the lunar, unconscious realm. Pollack notes the trees in the Moon card are the same trees behind the High Priestess's veil — seen from the other side.", "source": "pollack_1980", "confidence": "high"}, {"card": "Seven of Cups", "explanation": "Both represent confusion, illusion, and the difficulty of distinguishing reality from fantasy.", "confidence": "medium"}],
+        "contrasts": [{"card": "The Sun", "explanation": "Maximum darkness vs. maximum light. The Moon deceives; the Sun reveals. They are the penultimate pair of the Major Arcana.", "source": "pollack_1980", "confidence": "high"}, {"card": "The Star", "explanation": "Clear hope vs. murky confusion. The Star's light is direct and healing; the Moon's is reflected and deceptive.", "confidence": "high"}],
+        "progression": {"previous": {"card": "The Star", "explanation": "After hope, the Fool must navigate the deepest darkness of the unconscious."}, "next": {"card": "The Sun", "explanation": "Surviving the dark night leads to the dawn of full illumination."}},
+        "transformations": [{"evolves_into": "The Sun", "explanation": "The dark night of the soul gives way to the dawn. The confusion resolves into clarity.", "confidence": "high"}]
+      }
+    },
+    {
+      "name": "The Sun",
+      "arcana": "major",
+      "number": 19,
+      "golden_dawn": {"hebrew_letter": "Resh", "astrology": "Sun", "tree_path": "Hod to Yesod"},
+      "core_meaning": "Joy, success, vitality, clarity, enlightenment. The full radiance of consciousness — everything revealed, everything celebrated. The child reborn in the light.",
+      "meanings": [
+        {"type": "upright", "text": "Material happiness, fortunate marriage, contentment.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "reversed", "text": "The same in a lesser sense.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high", "notes": "One of the few cards where Waite's reversed meaning is simply a diminished version of the upright — the Sun's energy cannot truly be inverted."},
+        {"type": "upright", "text": "After the Moon's darkness, the Sun represents the dawn of full illumination. The child riding the white horse represents the innocence of the Fool reborn — but now it is conscious innocence, wisdom that has passed through experience and emerged joyful.", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Happiness, achievement, attainment. Satisfactory conclusion. Success, good health, happy marriage, contentment.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["happiness", "contentment", "fortunate marriage"],
+        "pollack_1980": ["joy", "enlightenment", "vitality", "clarity", "rebirth", "conscious innocence"],
+        "gray_1970": ["happiness", "achievement", "success", "contentment"],
+        "golden_dawn": ["Sun", "Resh", "head", "collecting intelligence"]
+      },
+      "symbolism": {
+        "sun": {"description": "A radiant sun with a face, shining intensely", "meaning": "Direct, unmediated light — the source itself, not a reflection. Full consciousness, divine radiance, the light that reveals everything.", "source": "waite_1910"},
+        "child_on_horse": {"description": "A naked child riding a white horse, arms spread open", "meaning": "The Fool reborn as a conscious, enlightened being. The child represents recovered innocence — innocence that knows itself. The white horse represents purified will and instinct.", "source": "pollack_1980"},
+        "sunflowers": {"description": "Four tall sunflowers behind a wall", "meaning": "The four suits, four elements, four directions — all turning toward the sun. Natural growth oriented toward the light. The wall suggests the garden of the physical world.", "source": "pollack_1980"},
+        "red_banner": {"description": "The child holds a red banner/flag", "meaning": "The banner of life force and vitality. The active, joyful assertion of the life principle.", "source": "gray_1970"}
+      },
+      "archetype": [
+        {"name": "The Divine Child / Puer Aeternus", "tradition": "Jungian", "description": "The archetype of eternal youth, joy, and renewal — the self reborn after the death of the ego. The recovered paradise.", "source": "pollack_1980", "confidence": "high"},
+        {"name": "Apollo / Sol Invictus", "tradition": "Classical", "description": "The sun god — light, truth, art, healing, and the triumph of consciousness over darkness.", "source": "golden_dawn", "confidence": "high"}
+      ],
+      "numerology": {"number": 19, "pythagorean": "1+9=10=1 — return to unity through completion of the cycle. The Sun is the penultimate unity before the World.", "golden_dawn": "Resh = 200. The head — the seat of consciousness, fully illuminated."},
+      "relationships": {
+        "similar": [{"card": "The Fool", "explanation": "Both represent innocence and joy, but the Fool's is pre-experiential while the Sun's is post-experiential — conscious innocence regained.", "source": "pollack_1980", "confidence": "high"}, {"card": "Six of Wands", "explanation": "Both represent triumph and celebration, though the Sun operates at a cosmic level.", "confidence": "medium"}],
+        "contrasts": [{"card": "The Moon", "explanation": "Darkness vs. light, confusion vs. clarity, fear vs. joy. The fundamental opposition of the pair.", "source": "pollack_1980", "confidence": "high"}],
+        "progression": {"previous": {"card": "The Moon", "explanation": "The dark night gives way to dawn."}, "next": {"card": "Judgement", "explanation": "Personal illumination leads to cosmic awakening and resurrection."}},
+        "transformations": [{"leads_from": "The Hermit", "explanation": "In Pollack's vertical correspondence (column 2), the Hermit's small lantern becomes the Sun's universal radiance.", "source": "pollack_1980", "confidence": "high"}]
+      }
+    },
+    {
+      "name": "Judgement",
+      "arcana": "major",
+      "number": 20,
+      "golden_dawn": {"hebrew_letter": "Shin", "astrology": "Fire (element)", "tree_path": "Hod to Malkuth"},
+      "core_meaning": "Rebirth, calling, absolution, inner reckoning, resurrection. The moment of cosmic awakening when the dead are called to rise — not as punishment but as liberation into a new life.",
+      "meanings": [
+        {"type": "upright", "text": "Change of position, renewal, outcome. Another reading: loss, sentence, decision.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "reversed", "text": "Weakness, pusillanimity, simplicity; also deliberation, decision, sentence.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "upright", "text": "Judgement represents the call to a new life — not the judgement of a punishing god but the trumpet blast that awakens the dead to resurrection. It is the moment when all parts of the self — past, present, and future — are integrated into a new wholeness.", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Atonement. The need to repay past deeds. Reward and punishment. Development of psychic powers. A spiritual awakening.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["change", "renewal", "outcome", "decision"],
+        "pollack_1980": ["rebirth", "calling", "awakening", "resurrection", "integration"],
+        "gray_1970": ["atonement", "reward", "spiritual awakening", "psychic development"],
+        "golden_dawn": ["Fire (element)", "Shin", "tooth", "perpetual intelligence"]
+      },
+      "symbolism": {
+        "angel_with_trumpet": {"description": "An angel (Gabriel) blowing a trumpet from clouds, with a red cross on a white banner", "meaning": "The call to awakening — the divine summons that cannot be ignored. The trumpet reaches everyone simultaneously. The cross represents the intersection of spirit and matter.", "source": "waite_1910"},
+        "rising_figures": {"description": "Naked figures — a man, woman, and child — rising from coffins with arms outstretched", "meaning": "Resurrection of the complete family / complete self. Past, present, and future selves rising together. The nakedness represents the soul stripped of all pretense.", "source": "pollack_1980"},
+        "grey_coffins": {"description": "Stone coffins floating on water", "meaning": "The coffins of the old self, floating on the waters of the unconscious. The dead selves are being called to rise.", "source": "pollack_1980"},
+        "mountains": {"description": "Mountains or icebergs in the background", "meaning": "The immovable reality of the spiritual world — the eternal backdrop against which human transformation plays out.", "source": "gray_1970"}
+      },
+      "archetype": [
+        {"name": "The Last Judgement", "tradition": "Christian / Eschatological", "description": "The Day of Judgement when the dead rise — but in tarot, this is not punishment but awakening and integration.", "source": "waite_1910", "confidence": "high"},
+        {"name": "Osiris Rising", "tradition": "Egyptian", "description": "The resurrection of Osiris — death and rebirth as the fundamental spiritual mystery.", "source": "golden_dawn", "confidence": "medium"}
+      ],
+      "numerology": {"number": 20, "pythagorean": "2+0=2, echoing the High Priestess — but now the duality is resolved into a higher unity through the experience of the entire journey.", "golden_dawn": "Shin = 300. The tooth — the consuming fire of spiritual transformation. Shin has three prongs representing the three mother letters (Aleph, Mem, Shin) and the three elements (Air, Water, Fire)."},
+      "relationships": {
+        "similar": [{"card": "Justice", "explanation": "Both involve reckoning and assessment, but Justice is personal karma while Judgement is cosmic resurrection.", "confidence": "high"}, {"card": "Death", "explanation": "Both represent transformation, but Death is the ending and Judgement is the rebirth that follows.", "confidence": "high"}],
+        "contrasts": [{"card": "The Devil", "explanation": "Bondage vs. liberation. The Devil traps; Judgement frees.", "confidence": "high"}],
+        "progression": {"previous": {"card": "The Sun", "explanation": "Personal illumination leads to cosmic awakening."}, "next": {"card": "The World", "explanation": "Resurrection completes in the cosmic dance of the World."}},
+        "transformations": [{"evolves_into": "The World", "explanation": "The awakened self enters the dance of cosmic completion.", "confidence": "high"}]
+      }
+    },
+    {
+      "name": "The World",
+      "arcana": "major",
+      "number": 21,
+      "golden_dawn": {"hebrew_letter": "Tav", "astrology": "Saturn", "tree_path": "Yesod to Malkuth"},
+      "core_meaning": "Completion, integration, accomplishment, wholeness, cosmic dance. The end of the Fool's Journey — all opposites reconciled, all lessons integrated, the self fully realized.",
+      "meanings": [
+        {"type": "upright", "text": "Assured success, recompense, voyage, route, emigration, flight, change of place.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "reversed", "text": "Inertia, fixity, stagnation, permanence.", "source": "waite_1910", "author": "A.E. Waite", "year": 1910, "confidence": "high"},
+        {"type": "upright", "text": "The World represents the successful completion of the Fool's Journey — all opposites reconciled, all lessons learned, all parts of the self integrated. The dancer represents freedom and joy in the midst of completion. Pollack says: 'The Fool is innocence, but the World is wisdom.'", "source": "pollack_1980", "author": "Rachel Pollack", "year": 1980, "confidence": "high"},
+        {"type": "upright", "text": "Completion, perfection, ultimate change, the end result of all efforts. Success, triumph in undertakings. The rewards that come from hard work.", "source": "gray_1970", "author": "Eden Gray", "year": 1970, "confidence": "high"}
+      ],
+      "keywords": {
+        "waite_1910": ["success", "recompense", "voyage", "change of place"],
+        "pollack_1980": ["completion", "integration", "wholeness", "cosmic dance", "freedom", "wisdom"],
+        "gray_1970": ["completion", "perfection", "success", "triumph"],
+        "golden_dawn": ["Saturn", "Tav", "cross/mark", "administrative intelligence"]
+      },
+      "symbolism": {
+        "dancing_figure": {"description": "A figure dancing within a large laurel wreath, holding two wands", "meaning": "The cosmic dance — movement within stillness, freedom within structure. The two wands suggest the reconciliation of all dualities (Magician's wand now doubled). Waite notes the figure is 'truth' according to Lévi.", "source": "waite_1910"},
+        "laurel_wreath": {"description": "An oval wreath of laurel, tied at top and bottom with red ribbons in the form of infinity symbols", "meaning": "Victory, completion, and the eternal cycle. The oval shape suggests the cosmic egg — the womb of creation. The infinity symbols at top and bottom connect back to the Magician and Strength.", "source": "pollack_1980"},
+        "four_creatures": {"description": "The same four winged creatures as the Wheel of Fortune — bull, lion, eagle, angel", "meaning": "The four fixed signs/four evangelists, now stable and serene rather than spinning. What was in flux on the Wheel of Fortune is now in harmonious balance.", "source": "pollack_1980"},
+        "purple_scarf": {"description": "A purple scarf or veil partially covering the dancer", "meaning": "Spiritual royalty and the last veil of manifestation. The scarf suggests that even in completion, some mystery remains — the World is not the final word.", "source": "pollack_1980"}
+      },
+      "archetype": [
+        {"name": "Anima Mundi / World Soul", "tradition": "Neoplatonic", "description": "The soul of the world — the animating principle of the entire cosmos, now fully realized within the individual.", "source": "place_2005", "confidence": "high"},
+        {"name": "The Self (Jungian Individuation Complete)", "tradition": "Jungian", "description": "The fully individuated Self — all aspects of the psyche integrated, the unconscious and conscious reconciled, the shadow acknowledged and embraced.", "source": "pollack_1980", "confidence": "high"},
+        {"name": "Shekhinah / Divine Feminine", "tradition": "Kabbalistic", "description": "The indwelling divine presence in the material world — God fully manifest in creation.", "source": "golden_dawn", "confidence": "medium"}
+      ],
+      "numerology": {"number": 21, "pythagorean": "2+1=3 — creative synthesis at the highest level. Also 7×3 — the triple completion of the three septenaries. The total of 0 through 21 is 231, which is the number of connecting paths between all 22 Hebrew letters.", "golden_dawn": "Tav = 400. The cross or mark — the final seal, the completion of the alphabet and the Tree of Life."},
+      "relationships": {
+        "similar": [{"card": "The Fool", "explanation": "Pollack pairs them as bookends — both represent joy, movement, and freedom. The Fool is innocence; the World is wisdom. The journey ends where it began, but at a higher octave.", "source": "pollack_1980", "confidence": "high"}, {"card": "Ten of Pentacles", "explanation": "Both represent completion and the full manifestation of a cycle, though the Ten is more specifically material/familial.", "confidence": "medium"}],
+        "contrasts": [{"card": "The Devil", "explanation": "The Devil is bondage to the material; the World is freedom within the material. Same world, opposite relationship to it.", "confidence": "high"}],
+        "progression": {"previous": {"card": "Judgement", "explanation": "Cosmic awakening resolves into cosmic dance."}, "next": {"card": "The Fool (return)", "explanation": "The cycle completes and begins again — the World dissolves back into the Fool's openness at a new level.", "source": "pollack_1980"}},
+        "transformations": [{"evolves_into": "The Fool (new cycle)", "explanation": "The completed journey returns to the beginning. The World's wisdom becomes the Fool's innocence again, but at a higher spiral.", "source": "pollack_1980", "confidence": "high"}, {"leads_from": "Temperance", "explanation": "In Pollack's column 7: Chariot (outer) → Temperance (inner) → World (cosmic). The mastery and integration of the two earlier cards flower into the World's dance.", "source": "pollack_1980", "confidence": "high"}]
+      }
+    }
+  ]
+}

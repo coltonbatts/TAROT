@@ -1,5 +1,11 @@
 import { cardsByNameLower, cardsBySlug, tarotCards } from "./normalize";
-import type { TarotArcana, TarotCard, TarotSuit } from "./types";
+import type {
+  TarotArcana,
+  TarotCard,
+  TarotMeaningOrientationBlock,
+  TarotOrientation,
+  TarotSuit,
+} from "./types";
 import { matchesSearch } from "./search";
 
 function asTrimmedString(value: unknown): string {
@@ -100,6 +106,22 @@ export function getCardByName(name: string): TarotCard | undefined {
   const key = name.trim().toLowerCase();
   if (!key) return undefined;
   return cardsByNameLower.get(key);
+}
+
+/** Structured meaning for spreads / APIs; orientation selects upright vs reversed block. */
+export function getMeaning(
+  cardId: string,
+  orientation: TarotOrientation,
+): TarotMeaningOrientationBlock | undefined {
+  const card = getCardById(cardId);
+  if (!card) return undefined;
+  return card.meanings[orientation];
+}
+
+/** Major arcana only; matches RWS numbering (0 = Fool). */
+export function getMajorArcanaCardByNumber(num: number): TarotCard | undefined {
+  if (!Number.isFinite(num)) return undefined;
+  return tarotCards.find((c) => c.arcana === "major" && c.number === num);
 }
 
 function normalizeArcanaFilter(arcana: string): TarotArcana | undefined {

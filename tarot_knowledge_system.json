@@ -281,7 +281,44 @@
           ]
         }
       },
-      "slug": "the-fool"
+      "slug": "the-fool",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "beginnings",
+            "freedom",
+            "faith",
+            "risk"
+          ],
+          "summary": "Open potential seeking experience.",
+          "detailed": "Leap, trust, experiment, and enter life with curiosity."
+        },
+        "reversed": {
+          "keywords": [
+            "Recklessness",
+            "drift",
+            "fear of commitment",
+            "a blocked beginning."
+          ],
+          "summary": "Recklessness, drift, fear of commitment, or a blocked beginning.",
+          "detailed": "Recklessness, drift, fear of commitment, or a blocked beginning."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Air",
+        "astrology": "Uranus",
+        "hebrew_letter": "Aleph",
+        "qabalistic_path": "11 · Kether → Chokmah",
+        "chakra": "Crown"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "cliff edge",
+          "white rose",
+          "small dog"
+        ],
+        "interpretation": "Zero-point potential: the unformed moment before pattern; associated with sudden breakthroughs and stepping outside convention."
+      }
     },
     {
       "name": "The Magician",
@@ -338,7 +375,43 @@
           ]
         }
       },
-      "slug": "the-magician"
+      "slug": "the-magician",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "will",
+            "skill",
+            "manifestation",
+            "agency"
+          ],
+          "summary": "Directed will turns potential into action.",
+          "detailed": "Use tools, focus intention, and act with skill."
+        },
+        "reversed": {
+          "keywords": [
+            "Manipulation",
+            "scattered will",
+            "hollow display",
+            "unused talent."
+          ],
+          "summary": "Manipulation, scattered will, hollow display, or unused talent.",
+          "detailed": "Manipulation, scattered will, hollow display, or unused talent."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mercury",
+        "hebrew_letter": "Beth",
+        "qabalistic_path": "12 · Kether → Binah",
+        "chakra": "Throat"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "raised wand",
+          "table of suit tools",
+          "lemniscate"
+        ],
+        "interpretation": "Conscious will channeling inspiration into form — the Hermetic bridge between above and below; skill, speech, and the four tools in play."
+      }
     },
     {
       "name": "The High Priestess",
@@ -395,7 +468,43 @@
           ]
         }
       },
-      "slug": "the-high-priestess"
+      "slug": "the-high-priestess",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "intuition",
+            "mystery",
+            "silence",
+            "depth"
+          ],
+          "summary": "Inner knowing guards hidden truth.",
+          "detailed": "Pause, listen inwardly, and trust what is not yet visible."
+        },
+        "reversed": {
+          "keywords": [
+            "Blocked intuition",
+            "secrecy",
+            "passivity",
+            "disconnection from inner knowledge."
+          ],
+          "summary": "Blocked intuition, secrecy, passivity, or disconnection from inner knowledge.",
+          "detailed": "Blocked intuition, secrecy, passivity, or disconnection from inner knowledge."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Moon",
+        "hebrew_letter": "Gimel",
+        "qabalistic_path": "13 · Kether → Tiphereth",
+        "chakra": "Third eye"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "veil and pillars",
+          "crescent moon",
+          "scroll"
+        ],
+        "interpretation": "Guardian of the unmanifest: intuition, lunar depth, and knowledge held in stillness between balanced opposites."
+      }
     },
     {
       "name": "The Empress",
@@ -452,7 +561,43 @@
           ]
         }
       },
-      "slug": "the-empress"
+      "slug": "the-empress",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "fertility",
+            "nurture",
+            "sensuality",
+            "growth"
+          ],
+          "summary": "Life grows through nurture, beauty, and abundance.",
+          "detailed": "Create, receive, nourish, and let growth become fertile."
+        },
+        "reversed": {
+          "keywords": [
+            "Smothering",
+            "creative block",
+            "emptiness",
+            "misused abundance."
+          ],
+          "summary": "Smothering, creative block, emptiness, or misused abundance.",
+          "detailed": "Smothering, creative block, emptiness, or misused abundance."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Venus",
+        "hebrew_letter": "Daleth",
+        "qabalistic_path": "14 · Chokmah → Binah",
+        "chakra": "Heart / sacral"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "wheat field",
+          "Venus shield",
+          "crown of stars"
+        ],
+        "interpretation": "The great mother of manifestation — Venusian abundance, fertility, and the sensual garden where life flourishes."
+      }
     },
     {
       "name": "The Emperor",
@@ -509,7 +654,44 @@
           ]
         }
       },
-      "slug": "the-emperor"
+      "slug": "the-emperor",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "structure",
+            "authority",
+            "boundary",
+            "order"
+          ],
+          "summary": "Order, structure, and authority create stability.",
+          "detailed": "Set boundaries, lead clearly, and establish durable form."
+        },
+        "reversed": {
+          "keywords": [
+            "Rigidity",
+            "domination",
+            "brittle control",
+            "refusal to lead."
+          ],
+          "summary": "Rigidity, domination, brittle control, or refusal to lead.",
+          "detailed": "Rigidity, domination, brittle control, or refusal to lead."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Fire",
+        "astrology": "Aries · Mars",
+        "hebrew_letter": "Heh",
+        "qabalistic_path": "15 · Chokmah → Tiphereth",
+        "chakra": "Root"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "stone throne",
+          "ram heads",
+          "orb and scepter"
+        ],
+        "interpretation": "Law, boundary, and temporal authority — Mars–Aries ordering force that stabilizes creative chaos into structure."
+      }
     },
     {
       "name": "The Hierophant",
@@ -566,7 +748,43 @@
           ]
         }
       },
-      "slug": "the-hierophant"
+      "slug": "the-hierophant",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "tradition",
+            "teaching",
+            "ritual",
+            "belief"
+          ],
+          "summary": "Tradition transmits meaning through shared systems.",
+          "detailed": "Learn from lineage, ritual, mentorship, and tested wisdom."
+        },
+        "reversed": {
+          "keywords": [
+            "Dogma",
+            "rebellion without grounding",
+            "empty conformity",
+            "bad counsel."
+          ],
+          "summary": "Dogma, rebellion without grounding, empty conformity, or bad counsel.",
+          "detailed": "Dogma, rebellion without grounding, empty conformity, or bad counsel."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Taurus · Venus",
+        "hebrew_letter": "Vav",
+        "qabalistic_path": "16 · Chokmah → Chesed",
+        "chakra": "Throat"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "triple crown",
+          "acolytes",
+          "crossed keys"
+        ],
+        "interpretation": "Tradition as bridge: formal teaching, shared doctrine, and the social body of the sacred."
+      }
     },
     {
       "name": "The Lovers",
@@ -623,7 +841,43 @@
           ]
         }
       },
-      "slug": "the-lovers"
+      "slug": "the-lovers",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "union",
+            "choice",
+            "alignment",
+            "values"
+          ],
+          "summary": "Union depends on conscious alignment of values.",
+          "detailed": "Choose with integrity, bond deeply, and bring desire into harmony with truth."
+        },
+        "reversed": {
+          "keywords": [
+            "Misalignment",
+            "fractured union",
+            "temptation",
+            "avoidance of real choice."
+          ],
+          "summary": "Misalignment, fractured union, temptation, or avoidance of real choice.",
+          "detailed": "Misalignment, fractured union, temptation, or avoidance of real choice."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Gemini · Mercury",
+        "hebrew_letter": "Zayin",
+        "qabalistic_path": "17 · Binah → Tiphereth",
+        "chakra": "Heart"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "angel over couple",
+          "tree of knowledge",
+          "mountain"
+        ],
+        "interpretation": "Moral and aesthetic alignment — not only romance but the inner harmony required to choose a path truthfully."
+      }
     },
     {
       "name": "The Chariot",
@@ -680,7 +934,43 @@
           ]
         }
       },
-      "slug": "the-chariot"
+      "slug": "the-chariot",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "willpower",
+            "victory",
+            "discipline",
+            "control"
+          ],
+          "summary": "Victory comes from disciplined direction of will.",
+          "detailed": "Commit, steer opposing drives, and advance with control."
+        },
+        "reversed": {
+          "keywords": [
+            "Loss of control",
+            "scattered effort",
+            "aggression",
+            "stalled momentum."
+          ],
+          "summary": "Loss of control, scattered effort, aggression, or stalled momentum.",
+          "detailed": "Loss of control, scattered effort, aggression, or stalled momentum."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Cancer · Moon",
+        "hebrew_letter": "Chet",
+        "qabalistic_path": "18 · Binah → Geburah",
+        "chakra": "Throat"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "chariot",
+          "black and white sphinxes",
+          "city behind"
+        ],
+        "interpretation": "Directed will mastering opposing drives — triumph in the world through focus and containment of conflicting forces."
+      }
     },
     {
       "name": "Strength",
@@ -737,7 +1027,43 @@
           ]
         }
       },
-      "slug": "strength"
+      "slug": "strength",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "courage",
+            "compassion",
+            "resilience",
+            "self-mastery"
+          ],
+          "summary": "Gentle courage masters raw instinct.",
+          "detailed": "Lead with composure, patience, and heart-centered resilience."
+        },
+        "reversed": {
+          "keywords": [
+            "Self-doubt",
+            "repression",
+            "forcefulness",
+            "inability to regulate instinct."
+          ],
+          "summary": "Self-doubt, repression, forcefulness, or inability to regulate instinct.",
+          "detailed": "Self-doubt, repression, forcefulness, or inability to regulate instinct."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Leo · Sun",
+        "hebrew_letter": "Tet",
+        "qabalistic_path": "19 · Chesed → Geburah",
+        "chakra": "Solar plexus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "woman and lion",
+          "lemniscate",
+          "garland"
+        ],
+        "interpretation": "Power through compassion: instinct integrated without domination — the gentle closure of the lion’s jaws."
+      }
     },
     {
       "name": "The Hermit",
@@ -794,7 +1120,43 @@
           ]
         }
       },
-      "slug": "the-hermit"
+      "slug": "the-hermit",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "solitude",
+            "wisdom",
+            "guidance",
+            "search"
+          ],
+          "summary": "Solitude clarifies wisdom and direction.",
+          "detailed": "Withdraw, examine, and seek truth with patience."
+        },
+        "reversed": {
+          "keywords": [
+            "Isolation",
+            "avoidance",
+            "cynicism",
+            "refusal to listen inwardly."
+          ],
+          "summary": "Isolation, avoidance, cynicism, or refusal to listen inwardly.",
+          "detailed": "Isolation, avoidance, cynicism, or refusal to listen inwardly."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Virgo · Mercury",
+        "hebrew_letter": "Yod",
+        "qabalistic_path": "20 · Chesed → Tiphereth",
+        "chakra": "Third eye"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "lantern",
+          "staff",
+          "mountaintop"
+        ],
+        "interpretation": "The inward lamp — measured retreat, discrimination, and wisdom offered to those who walk behind."
+      }
     },
     {
       "name": "Wheel of Fortune",
@@ -851,7 +1213,43 @@
           ]
         }
       },
-      "slug": "wheel-of-fortune"
+      "slug": "wheel-of-fortune",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "cycles",
+            "change",
+            "fate",
+            "turning point"
+          ],
+          "summary": "Life turns through cycles beyond full control.",
+          "detailed": "Recognize change, timing, and the turning of circumstance."
+        },
+        "reversed": {
+          "keywords": [
+            "Resistance to change",
+            "bad timing",
+            "fatalism",
+            "clinging to a passing phase."
+          ],
+          "summary": "Resistance to change, bad timing, fatalism, or clinging to a passing phase.",
+          "detailed": "Resistance to change, bad timing, fatalism, or clinging to a passing phase."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Jupiter",
+        "hebrew_letter": "Kaph",
+        "qabalistic_path": "21 · Chesed → Netzach",
+        "chakra": "Solar plexus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "turning wheel",
+          "sphinx",
+          "four creatures"
+        ],
+        "interpretation": "Cyclical fate and karmic turning — ascent and descent beyond ego control; a hinge in the story."
+      }
     },
     {
       "name": "Justice",
@@ -908,7 +1306,43 @@
           ]
         }
       },
-      "slug": "justice"
+      "slug": "justice",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "justice",
+            "truth",
+            "balance",
+            "accountability"
+          ],
+          "summary": "Reality asks for truth, proportion, and accountability.",
+          "detailed": "Assess fairly, tell the truth, and accept consequences."
+        },
+        "reversed": {
+          "keywords": [
+            "Bias",
+            "evasion",
+            "unfairness",
+            "refusal to face cause and effect."
+          ],
+          "summary": "Bias, evasion, unfairness, or refusal to face cause and effect.",
+          "detailed": "Bias, evasion, unfairness, or refusal to face cause and effect."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Libra · Venus",
+        "hebrew_letter": "Lamed",
+        "qabalistic_path": "22 · Geburah → Tiphereth",
+        "chakra": "Heart"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "scales",
+          "sword upright",
+          "red robe"
+        ],
+        "interpretation": "Clear reckoning — Libra’s scales; cause, effect, and the ethics of what must now be owned."
+      }
     },
     {
       "name": "The Hanged Man",
@@ -965,7 +1399,44 @@
           ]
         }
       },
-      "slug": "the-hanged-man"
+      "slug": "the-hanged-man",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "surrender",
+            "pause",
+            "reversal",
+            "insight"
+          ],
+          "summary": "Release of control opens a new perspective.",
+          "detailed": "Surrender, pause, and allow meaning to invert before acting."
+        },
+        "reversed": {
+          "keywords": [
+            "Martyrdom",
+            "pointless suspension",
+            "delay without insight",
+            "resistance to letting go."
+          ],
+          "summary": "Martyrdom, pointless suspension, delay without insight, or resistance to letting go.",
+          "detailed": "Martyrdom, pointless suspension, delay without insight, or resistance to letting go."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Water",
+        "astrology": "Neptune",
+        "hebrew_letter": "Mem",
+        "qabalistic_path": "23 · Geburah → Hod",
+        "chakra": "Third eye"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "inverted figure",
+          "halo",
+          "living tree"
+        ],
+        "interpretation": "Sacred pause: enlightenment through voluntary suspension — seeing from an inverted angle."
+      }
     },
     {
       "name": "Death",
@@ -1022,7 +1493,44 @@
           ]
         }
       },
-      "slug": "death"
+      "slug": "death",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "ending",
+            "transformation",
+            "release",
+            "renewal"
+          ],
+          "summary": "Transformation arrives through necessary ending.",
+          "detailed": "Let a chapter end so life can renew itself."
+        },
+        "reversed": {
+          "keywords": [
+            "Refusal to release",
+            "prolonged decay",
+            "fear of change",
+            "partial transformation."
+          ],
+          "summary": "Refusal to release, prolonged decay, fear of change, or partial transformation.",
+          "detailed": "Refusal to release, prolonged decay, fear of change, or partial transformation."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Water",
+        "astrology": "Scorpio · Pluto",
+        "hebrew_letter": "Nun",
+        "qabalistic_path": "24 · Tiphereth → Netzach",
+        "chakra": "Heart"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "skeletal rider",
+          "fallen figures",
+          "rising sun"
+        ],
+        "interpretation": "Transformation, not annihilation — the necessary clearing that makes room for a new cycle (Scorpio–Pluto)."
+      }
     },
     {
       "name": "Temperance",
@@ -1079,7 +1587,43 @@
           ]
         }
       },
-      "slug": "temperance"
+      "slug": "temperance",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "balance",
+            "healing",
+            "integration",
+            "moderation"
+          ],
+          "summary": "Healing comes through measured integration.",
+          "detailed": "Blend, moderate, adapt, and create flow between opposites."
+        },
+        "reversed": {
+          "keywords": [
+            "Imbalance",
+            "excess",
+            "impatience",
+            "fragmented healing."
+          ],
+          "summary": "Imbalance, excess, impatience, or fragmented healing.",
+          "detailed": "Imbalance, excess, impatience, or fragmented healing."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sagittarius · Jupiter",
+        "hebrew_letter": "Samekh",
+        "qabalistic_path": "25 · Tiphereth → Yesod",
+        "chakra": "Solar plexus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "angel pouring cups",
+          "iris flowers",
+          "path to crown"
+        ],
+        "interpretation": "Alchemical mixing — temperate middle path, healing integration, and measured exchange between vessels."
+      }
     },
     {
       "name": "The Devil",
@@ -1136,7 +1680,42 @@
           ]
         }
       },
-      "slug": "the-devil"
+      "slug": "the-devil",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "bondage",
+            "temptation",
+            "shadow",
+            "compulsion"
+          ],
+          "summary": "Bondage persists where desire rules without consciousness.",
+          "detailed": "Name the attachment, shadow, or compulsion that keeps power chained."
+        },
+        "reversed": {
+          "keywords": [
+            "Release from bondage",
+            "denial of shadow",
+            "being secretly ruled by appetite."
+          ],
+          "summary": "Release from bondage, denial of shadow, or being secretly ruled by appetite.",
+          "detailed": "Release from bondage, denial of shadow, or being secretly ruled by appetite."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Capricorn · Saturn",
+        "hebrew_letter": "Ayin",
+        "qabalistic_path": "26 · Tiphereth → Hod",
+        "chakra": "Root"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "horned figure",
+          "loose chains",
+          "inverted torch"
+        ],
+        "interpretation": "Self-imposed bondage of appetite and shadow — chains loose enough to escape once the knot is seen."
+      }
     },
     {
       "name": "The Tower",
@@ -1193,7 +1772,44 @@
           ]
         }
       },
-      "slug": "the-tower"
+      "slug": "the-tower",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "upheaval",
+            "revelation",
+            "collapse",
+            "liberation"
+          ],
+          "summary": "False structures collapse under truth.",
+          "detailed": "Breakthrough, revelation, and necessary disruption clear what cannot stand."
+        },
+        "reversed": {
+          "keywords": [
+            "Avoided collapse",
+            "internal upheaval",
+            "denial",
+            "controlled demolition instead of catastrophe."
+          ],
+          "summary": "Avoided collapse, internal upheaval, denial, or controlled demolition instead of catastrophe.",
+          "detailed": "Avoided collapse, internal upheaval, denial, or controlled demolition instead of catastrophe."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Fire",
+        "astrology": "Mars",
+        "hebrew_letter": "Peh",
+        "qabalistic_path": "27 · Netzach → Hod",
+        "chakra": "Crown"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "lightning strike",
+          "falling crown",
+          "figures cast out"
+        ],
+        "interpretation": "Sudden restructuring — lightning striking false security so a truer architecture can emerge."
+      }
     },
     {
       "name": "The Star",
@@ -1250,7 +1866,43 @@
           ]
         }
       },
-      "slug": "the-star"
+      "slug": "the-star",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "hope",
+            "healing",
+            "guidance",
+            "renewal"
+          ],
+          "summary": "Hope returns through openness, guidance, and replenishment.",
+          "detailed": "Trust renewal, healing, and the long arc of restoration."
+        },
+        "reversed": {
+          "keywords": [
+            "Discouragement",
+            "spiritual dryness",
+            "overidealizing",
+            "difficulty trusting renewal."
+          ],
+          "summary": "Discouragement, spiritual dryness, overidealizing, or difficulty trusting renewal.",
+          "detailed": "Discouragement, spiritual dryness, overidealizing, or difficulty trusting renewal."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Aquarius · Uranus",
+        "hebrew_letter": "Tzaddi",
+        "qabalistic_path": "28 · Netzach → Yesod",
+        "chakra": "Crown"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "naked figure pouring water",
+          "large star",
+          "bird in tree"
+        ],
+        "interpretation": "After the storm, quiet renewal — hope, guidance, and the soul’s drink from living water."
+      }
     },
     {
       "name": "The Moon",
@@ -1307,7 +1959,43 @@
           ]
         }
       },
-      "slug": "the-moon"
+      "slug": "the-moon",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "uncertainty",
+            "dream",
+            "illusion",
+            "subconscious"
+          ],
+          "summary": "The path runs through ambiguity, dream, and projection.",
+          "detailed": "Respect uncertainty, intuition, and what the conscious mind cannot master directly."
+        },
+        "reversed": {
+          "keywords": [
+            "Confusion lifting",
+            "hidden fear",
+            "self-deception",
+            "distortion mistaken for intuition."
+          ],
+          "summary": "Confusion lifting, hidden fear, self-deception, or distortion mistaken for intuition.",
+          "detailed": "Confusion lifting, hidden fear, self-deception, or distortion mistaken for intuition."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Pisces · Neptune",
+        "hebrew_letter": "Qoph",
+        "qabalistic_path": "29 · Netzach → Malkuth",
+        "chakra": "Third eye"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "moonlight path",
+          "dog and wolf",
+          "crayfish"
+        ],
+        "interpretation": "The lucid–irrational border — dreams, projections, and navigation by uncertain light."
+      }
     },
     {
       "name": "The Sun",
@@ -1364,7 +2052,43 @@
           ]
         }
       },
-      "slug": "the-sun"
+      "slug": "the-sun",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "clarity",
+            "joy",
+            "vitality",
+            "success"
+          ],
+          "summary": "Life becomes visible, vital, and affirmed.",
+          "detailed": "Enjoy clarity, confidence, joy, and full exposure of what is true."
+        },
+        "reversed": {
+          "keywords": [
+            "Temporary dimming",
+            "inflated optimism",
+            "burnout after success",
+            "difficulty receiving joy."
+          ],
+          "summary": "Temporary dimming, inflated optimism, burnout after success, or difficulty receiving joy.",
+          "detailed": "Temporary dimming, inflated optimism, burnout after success, or difficulty receiving joy."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sun",
+        "hebrew_letter": "Resh",
+        "qabalistic_path": "30 · Hod → Yesod",
+        "chakra": "Solar plexus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "child on white horse",
+          "sunflowers",
+          "walled garden"
+        ],
+        "interpretation": "Radiant clarity and vital joy — the self shown without concealment; fruition in the open."
+      }
     },
     {
       "name": "Judgement",
@@ -1421,7 +2145,44 @@
           ]
         }
       },
-      "slug": "judgement"
+      "slug": "judgement",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "awakening",
+            "reckoning",
+            "calling",
+            "renewal"
+          ],
+          "summary": "The soul is called to awaken and answer.",
+          "detailed": "Review honestly, forgive, rise, and respond to vocation or truth."
+        },
+        "reversed": {
+          "keywords": [
+            "Self-doubt",
+            "refusal of the call",
+            "harsh self-judgment",
+            "unfinished reckoning."
+          ],
+          "summary": "Self-doubt, refusal of the call, harsh self-judgment, or unfinished reckoning.",
+          "detailed": "Self-doubt, refusal of the call, harsh self-judgment, or unfinished reckoning."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Fire",
+        "astrology": "Pluto",
+        "hebrew_letter": "Shin",
+        "qabalistic_path": "31 · Hod → Malkuth",
+        "chakra": "Crown"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "angel trumpet",
+          "rising figures",
+          "open coffins"
+        ],
+        "interpretation": "The call to rise — reckoning, rebirth, and answering what transcends the personal story."
+      }
     },
     {
       "name": "The World",
@@ -1478,7 +2239,44 @@
           ]
         }
       },
-      "slug": "the-world"
+      "slug": "the-world",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "completion",
+            "integration",
+            "wholeness",
+            "mastery"
+          ],
+          "summary": "Completion integrates all parts into wholeness.",
+          "detailed": "Finish, integrate, and inhabit earned mastery."
+        },
+        "reversed": {
+          "keywords": [
+            "Incomplete closure",
+            "fragmentation",
+            "fear of ending",
+            "difficulty entering the next cycle."
+          ],
+          "summary": "Incomplete closure, fragmentation, fear of ending, or difficulty entering the next cycle.",
+          "detailed": "Incomplete closure, fragmentation, fear of ending, or difficulty entering the next cycle."
+        }
+      },
+      "knowledge_metadata": {
+        "element": "Earth",
+        "astrology": "Saturn",
+        "hebrew_letter": "Tav",
+        "qabalistic_path": "32 · Yesod → Malkuth",
+        "chakra": "Root"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "dancing figure",
+          "laurel wreath",
+          "four creatures"
+        ],
+        "interpretation": "Integrated completion — the dance inside the wreath; mastery that closes the ring and opens the next."
+      }
     },
     {
       "name": "Ace of Wands",
@@ -1534,7 +2332,40 @@
           ]
         }
       },
-      "slug": "ace-of-wands"
+      "slug": "ace-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "spark",
+            "initiative",
+            "desire",
+            "potential"
+          ],
+          "summary": "Creative force breaks into action.",
+          "detailed": "Inspiration, initiative, erotic spark, and bold beginning."
+        },
+        "reversed": {
+          "keywords": [
+            "Stalled start",
+            "scattered drive",
+            "creative frustration",
+            "misfired impulse."
+          ],
+          "summary": "Stalled start, scattered drive, creative frustration, or misfired impulse.",
+          "detailed": "Stalled start, scattered drive, creative frustration, or misfired impulse."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Root of Fire — pure spark of will and new creative opportunity."
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "hand from cloud",
+          "sprouting wand",
+          "distant castle"
+        ],
+        "interpretation": "Root of Fire — pure spark of will and new creative opportunity."
+      }
     },
     {
       "name": "Two of Wands",
@@ -1590,7 +2421,39 @@
           ]
         }
       },
-      "slug": "two-of-wands"
+      "slug": "two-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "planning",
+            "vision",
+            "power",
+            "expansion"
+          ],
+          "summary": "Will becomes vision, range, and planning.",
+          "detailed": "Expand the horizon, claim agency, and plan from a position of power."
+        },
+        "reversed": {
+          "keywords": [
+            "Fear of the larger world",
+            "timid planning",
+            "power without action."
+          ],
+          "summary": "Fear of the larger world, timid planning, or power without action.",
+          "detailed": "Fear of the larger world, timid planning, or power without action."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mars in Aries"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "globe",
+          "battlement",
+          "fixed and held staffs"
+        ],
+        "interpretation": "Mars in Aries decan: Will becomes vision, range, and planning."
+      }
     },
     {
       "name": "Three of Wands",
@@ -1646,7 +2509,39 @@
           ]
         }
       },
-      "slug": "three-of-wands"
+      "slug": "three-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "expansion",
+            "enterprise",
+            "foresight",
+            "progress"
+          ],
+          "summary": "Enterprise moves from vision into outward growth.",
+          "detailed": "Expect progress, launch, trade, and widening results."
+        },
+        "reversed": {
+          "keywords": [
+            "Delayed expansion",
+            "poor foresight",
+            "plans that do not yet carry."
+          ],
+          "summary": "Delayed expansion, poor foresight, or plans that do not yet carry.",
+          "detailed": "Delayed expansion, poor foresight, or plans that do not yet carry."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sun in Aries"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "figure on cliff",
+          "ships at sea",
+          "three planted wands"
+        ],
+        "interpretation": "Sun in Aries decan: Enterprise moves from vision into outward growth."
+      }
     },
     {
       "name": "Four of Wands",
@@ -1702,7 +2597,39 @@
           ]
         }
       },
-      "slug": "four-of-wands"
+      "slug": "four-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "celebration",
+            "homecoming",
+            "stability",
+            "community"
+          ],
+          "summary": "Energy stabilizes in celebration and safe structure.",
+          "detailed": "Celebrate milestones, enjoy welcome, and stabilize joy through community."
+        },
+        "reversed": {
+          "keywords": [
+            "Unstable home base",
+            "tension inside celebration",
+            "difficulty landing success."
+          ],
+          "summary": "Unstable home base, tension inside celebration, or difficulty landing success.",
+          "detailed": "Unstable home base, tension inside celebration, or difficulty landing success."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Venus in Aries"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "garlanded canopy",
+          "two celebrants",
+          "castle"
+        ],
+        "interpretation": "Venus in Aries decan: Energy stabilizes in celebration and safe structure."
+      }
     },
     {
       "name": "Five of Wands",
@@ -1758,7 +2685,40 @@
           ]
         }
       },
-      "slug": "five-of-wands"
+      "slug": "five-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "competition",
+            "friction",
+            "testing",
+            "struggle"
+          ],
+          "summary": "Fire meets fire as contest, friction, and testing.",
+          "detailed": "Compete, spar, refine, and prove capacity through challenge."
+        },
+        "reversed": {
+          "keywords": [
+            "Chaotic conflict",
+            "ego clashes",
+            "pointless drama",
+            "avoidance of healthy contest."
+          ],
+          "summary": "Chaotic conflict, ego clashes, pointless drama, or avoidance of healthy contest.",
+          "detailed": "Chaotic conflict, ego clashes, pointless drama, or avoidance of healthy contest."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Saturn in Leo"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "five raised staves",
+          "uncoordinated fighters",
+          "open ground"
+        ],
+        "interpretation": "Saturn in Leo decan: Fire meets fire as contest, friction, and testing."
+      }
     },
     {
       "name": "Six of Wands",
@@ -1814,7 +2774,40 @@
           ]
         }
       },
-      "slug": "six-of-wands"
+      "slug": "six-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "victory",
+            "recognition",
+            "confidence",
+            "momentum"
+          ],
+          "summary": "Effort earns visible recognition and momentum.",
+          "detailed": "Victory, praise, public success, and confidence backed by results."
+        },
+        "reversed": {
+          "keywords": [
+            "Fragile ego",
+            "hollow praise",
+            "delayed recognition",
+            "fear of exposure after success."
+          ],
+          "summary": "Fragile ego, hollow praise, delayed recognition, or fear of exposure after success.",
+          "detailed": "Fragile ego, hollow praise, delayed recognition, or fear of exposure after success."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Jupiter in Leo"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "laurelled rider",
+          "wreath-topped wand",
+          "attending crowd"
+        ],
+        "interpretation": "Jupiter in Leo decan: Effort earns visible recognition and momentum."
+      }
     },
     {
       "name": "Seven of Wands",
@@ -1870,7 +2863,40 @@
           ]
         }
       },
-      "slug": "seven-of-wands"
+      "slug": "seven-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "defense",
+            "assertion",
+            "perseverance",
+            "pressure"
+          ],
+          "summary": "A gained position must now be defended.",
+          "detailed": "Hold your ground, protect advantage, and resist pressure."
+        },
+        "reversed": {
+          "keywords": [
+            "Exhaustion",
+            "defensiveness",
+            "loss of nerve",
+            "being overwhelmed by challenge."
+          ],
+          "summary": "Exhaustion, defensiveness, loss of nerve, or being overwhelmed by challenge.",
+          "detailed": "Exhaustion, defensiveness, loss of nerve, or being overwhelmed by challenge."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mars in Leo"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "high ground",
+          "single defender",
+          "six wands below"
+        ],
+        "interpretation": "Mars in Leo decan: A gained position must now be defended."
+      }
     },
     {
       "name": "Eight of Wands",
@@ -1926,7 +2952,40 @@
           ]
         }
       },
-      "slug": "eight-of-wands"
+      "slug": "eight-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "speed",
+            "movement",
+            "message",
+            "momentum"
+          ],
+          "summary": "Fire accelerates into swift movement and delivery.",
+          "detailed": "Rapid developments, messages, momentum, and clean forward motion."
+        },
+        "reversed": {
+          "keywords": [
+            "Delays",
+            "crossed signals",
+            "scattered haste",
+            "action without coordination."
+          ],
+          "summary": "Delays, crossed signals, scattered haste, or action without coordination.",
+          "detailed": "Delays, crossed signals, scattered haste, or action without coordination."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mercury in Sagittarius"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "flying wands",
+          "open sky",
+          "empty landscape"
+        ],
+        "interpretation": "Mercury in Sagittarius decan: Fire accelerates into swift movement and delivery."
+      }
     },
     {
       "name": "Nine of Wands",
@@ -1982,7 +3041,40 @@
           ]
         }
       },
-      "slug": "nine-of-wands"
+      "slug": "nine-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "resilience",
+            "persistence",
+            "guardedness",
+            "endurance"
+          ],
+          "summary": "Resilience holds after repeated strain.",
+          "detailed": "Stay alert, protect what matters, and endure the final stretch."
+        },
+        "reversed": {
+          "keywords": [
+            "Paranoia",
+            "fatigue",
+            "guardedness",
+            "inability to trust after past struggle."
+          ],
+          "summary": "Paranoia, fatigue, guardedness, or inability to trust after past struggle.",
+          "detailed": "Paranoia, fatigue, guardedness, or inability to trust after past struggle."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Moon in Sagittarius"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "wounded guard",
+          "palisade of wands",
+          "bandaged head"
+        ],
+        "interpretation": "Moon in Sagittarius decan: Resilience holds after repeated strain."
+      }
     },
     {
       "name": "Ten of Wands",
@@ -2038,7 +3130,40 @@
           ]
         }
       },
-      "slug": "ten-of-wands"
+      "slug": "ten-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "burden",
+            "responsibility",
+            "overload",
+            "completion"
+          ],
+          "summary": "Success becomes load, duty, and overextension.",
+          "detailed": "Carry responsibility, finish the push, and confront what has become too much."
+        },
+        "reversed": {
+          "keywords": [
+            "Collapse under burden",
+            "martyrdom",
+            "refusal to delegate",
+            "delayed release of pressure."
+          ],
+          "summary": "Collapse under burden, martyrdom, refusal to delegate, or delayed release of pressure.",
+          "detailed": "Collapse under burden, martyrdom, refusal to delegate, or delayed release of pressure."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Saturn in Sagittarius"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "bent figure",
+          "bundle of ten wands",
+          "destination ahead"
+        ],
+        "interpretation": "Saturn in Sagittarius decan: Success becomes load, duty, and overextension."
+      }
     },
     {
       "name": "Page of Wands",
@@ -2094,7 +3219,40 @@
           ]
         }
       },
-      "slug": "page-of-wands"
+      "slug": "page-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "message",
+            "curiosity",
+            "enthusiasm",
+            "venture"
+          ],
+          "summary": "A new call to action arrives as message or enthusiasm.",
+          "detailed": "Curiosity, news, experiment, and youthful creative daring."
+        },
+        "reversed": {
+          "keywords": [
+            "False start",
+            "scattered enthusiasm",
+            "unreliable news",
+            "immaturity around passion."
+          ],
+          "summary": "False start, scattered enthusiasm, unreliable news, or immaturity around passion.",
+          "detailed": "False start, scattered enthusiasm, unreliable news, or immaturity around passion."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Earth of Fire"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "desert plain",
+          "leaf-sprouting staff",
+          "youthful messenger"
+        ],
+        "interpretation": "Earth of Fire — A new call to action arrives as message or enthusiasm."
+      }
     },
     {
       "name": "Knight of Wands",
@@ -2150,7 +3308,40 @@
           ]
         }
       },
-      "slug": "knight-of-wands"
+      "slug": "knight-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "action",
+            "adventure",
+            "passion",
+            "risk"
+          ],
+          "summary": "Passion becomes movement, pursuit, and bold risk.",
+          "detailed": "Act decisively, travel, chase the mission, and bring heat to the field."
+        },
+        "reversed": {
+          "keywords": [
+            "Impulsiveness",
+            "arrogance",
+            "burnout",
+            "action that outruns wisdom."
+          ],
+          "summary": "Impulsiveness, arrogance, burnout, or action that outruns wisdom.",
+          "detailed": "Impulsiveness, arrogance, burnout, or action that outruns wisdom."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Air of Fire"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "rearing horse",
+          "flaming tunic",
+          "raised wand"
+        ],
+        "interpretation": "Air of Fire — Passion becomes movement, pursuit, and bold risk."
+      }
     },
     {
       "name": "Queen of Wands",
@@ -2206,7 +3397,39 @@
           ]
         }
       },
-      "slug": "queen-of-wands"
+      "slug": "queen-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "confidence",
+            "charisma",
+            "warmth",
+            "authority"
+          ],
+          "summary": "Charisma and self-possession radiate warm authority.",
+          "detailed": "Lead confidently, attract allies, and embody creative courage."
+        },
+        "reversed": {
+          "keywords": [
+            "Jealousy",
+            "insecurity masked by bravado",
+            "overcontrolling social energy."
+          ],
+          "summary": "Jealousy, insecurity masked by bravado, or overcontrolling social energy.",
+          "detailed": "Jealousy, insecurity masked by bravado, or overcontrolling social energy."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Water of Fire"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "sunflower",
+          "black cat",
+          "wand in hand"
+        ],
+        "interpretation": "Water of Fire — Charisma and self-possession radiate warm authority."
+      }
     },
     {
       "name": "King of Wands",
@@ -2262,7 +3485,40 @@
           ]
         }
       },
-      "slug": "king-of-wands"
+      "slug": "king-of-wands",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "leadership",
+            "vision",
+            "enterprise",
+            "command"
+          ],
+          "summary": "Vision becomes command, enterprise, and mature leadership.",
+          "detailed": "Direct energy strategically, inspire others, and lead from conviction."
+        },
+        "reversed": {
+          "keywords": [
+            "Domineering leadership",
+            "impatience",
+            "arrogance",
+            "vision without listening."
+          ],
+          "summary": "Domineering leadership, impatience, arrogance, or vision without listening.",
+          "detailed": "Domineering leadership, impatience, arrogance, or vision without listening."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Fire of Fire"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "salamanders",
+          "lion throne",
+          "flowering wand"
+        ],
+        "interpretation": "Fire of Fire — Vision becomes command, enterprise, and mature leadership."
+      }
     },
     {
       "name": "Ace of Cups",
@@ -2318,7 +3574,40 @@
           ]
         }
       },
-      "slug": "ace-of-cups"
+      "slug": "ace-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "love",
+            "openness",
+            "grace",
+            "feeling"
+          ],
+          "summary": "Feeling opens as grace, love, and receptivity.",
+          "detailed": "Emotional renewal, intimacy, compassion, and spiritual openness."
+        },
+        "reversed": {
+          "keywords": [
+            "Emotional blockage",
+            "withheld affection",
+            "numbness",
+            "overwhelmed feeling."
+          ],
+          "summary": "Emotional blockage, withheld affection, numbness, or overwhelmed feeling.",
+          "detailed": "Emotional blockage, withheld affection, numbness, or overwhelmed feeling."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Root of Water — beginning of love, joy, and spiritual communion."
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "overflowing cup",
+          "dove",
+          "lotus-filled water"
+        ],
+        "interpretation": "Root of Water — beginning of love, joy, and spiritual communion."
+      }
     },
     {
       "name": "Two of Cups",
@@ -2374,7 +3663,40 @@
           ]
         }
       },
-      "slug": "two-of-cups"
+      "slug": "two-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "union",
+            "partnership",
+            "reciprocity",
+            "attraction"
+          ],
+          "summary": "Emotion becomes mutual exchange and chosen bond.",
+          "detailed": "Reciprocity, attraction, partnership, and emotional accord."
+        },
+        "reversed": {
+          "keywords": [
+            "Imbalance",
+            "misattunement",
+            "shallow agreement",
+            "relational blockage."
+          ],
+          "summary": "Imbalance, misattunement, shallow agreement, or relational blockage.",
+          "detailed": "Imbalance, misattunement, shallow agreement, or relational blockage."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Venus in Cancer"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "joined cups",
+          "caduceus",
+          "lion's head"
+        ],
+        "interpretation": "Venus in Cancer decan: Emotion becomes mutual exchange and chosen bond."
+      }
     },
     {
       "name": "Three of Cups",
@@ -2430,7 +3752,40 @@
           ]
         }
       },
-      "slug": "three-of-cups"
+      "slug": "three-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "friendship",
+            "celebration",
+            "community",
+            "support"
+          ],
+          "summary": "Shared feeling grows into friendship and celebration.",
+          "detailed": "Community joy, reunion, creative fellowship, and emotional support."
+        },
+        "reversed": {
+          "keywords": [
+            "Excess",
+            "gossip",
+            "exclusion",
+            "strained social harmony."
+          ],
+          "summary": "Excess, gossip, exclusion, or strained social harmony.",
+          "detailed": "Excess, gossip, exclusion, or strained social harmony."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mercury in Cancer"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "three dancers",
+          "raised cups",
+          "fruit underfoot"
+        ],
+        "interpretation": "Mercury in Cancer decan: Shared feeling grows into friendship and celebration."
+      }
     },
     {
       "name": "Four of Cups",
@@ -2486,7 +3841,40 @@
           ]
         }
       },
-      "slug": "four-of-cups"
+      "slug": "four-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "apathy",
+            "contemplation",
+            "withdrawal",
+            "reassessment"
+          ],
+          "summary": "Emotion turns inward and disengages from what is offered.",
+          "detailed": "Contemplate, reassess desire, and notice what apathy is hiding."
+        },
+        "reversed": {
+          "keywords": [
+            "Re-engagement",
+            "emotional restlessness",
+            "self-absorption",
+            "missed opportunity."
+          ],
+          "summary": "Re-engagement, emotional restlessness, self-absorption, or missed opportunity.",
+          "detailed": "Re-engagement, emotional restlessness, self-absorption, or missed opportunity."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Moon in Cancer"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "seated figure",
+          "three grounded cups",
+          "offered cup from cloud"
+        ],
+        "interpretation": "Moon in Cancer decan: Emotion turns inward and disengages from what is offered."
+      }
     },
     {
       "name": "Five of Cups",
@@ -2542,7 +3930,40 @@
           ]
         }
       },
-      "slug": "five-of-cups"
+      "slug": "five-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "loss",
+            "grief",
+            "regret",
+            "mourning"
+          ],
+          "summary": "Loss narrows vision toward what has gone.",
+          "detailed": "Grieve honestly, acknowledge disappointment, and face emotional fact."
+        },
+        "reversed": {
+          "keywords": [
+            "Stuck grief",
+            "refusal to mourn",
+            "bitterness",
+            "delayed recovery."
+          ],
+          "summary": "Stuck grief, refusal to mourn, bitterness, or delayed recovery.",
+          "detailed": "Stuck grief, refusal to mourn, bitterness, or delayed recovery."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mars in Scorpio"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "cloaked mourner",
+          "spilled cups",
+          "bridge and standing cups"
+        ],
+        "interpretation": "Mars in Scorpio decan: Loss narrows vision toward what has gone."
+      }
     },
     {
       "name": "Six of Cups",
@@ -2598,7 +4019,40 @@
           ]
         }
       },
-      "slug": "six-of-cups"
+      "slug": "six-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "nostalgia",
+            "kindness",
+            "memory",
+            "innocence"
+          ],
+          "summary": "The heart restores itself through innocence, memory, and kindness.",
+          "detailed": "Nostalgia, tenderness, generosity, and restorative connection."
+        },
+        "reversed": {
+          "keywords": [
+            "Living in the past",
+            "sentimental distortion",
+            "immaturity",
+            "unable to receive sweetness now."
+          ],
+          "summary": "Living in the past, sentimental distortion, immaturity, or unable to receive sweetness now.",
+          "detailed": "Living in the past, sentimental distortion, immaturity, or unable to receive sweetness now."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sun in Scorpio"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "children exchanging flowers",
+          "six flowered cups",
+          "courtyard"
+        ],
+        "interpretation": "Sun in Scorpio decan: The heart restores itself through innocence, memory, and kindness."
+      }
     },
     {
       "name": "Seven of Cups",
@@ -2654,7 +4108,40 @@
           ]
         }
       },
-      "slug": "seven-of-cups"
+      "slug": "seven-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "fantasy",
+            "choice",
+            "projection",
+            "temptation"
+          ],
+          "summary": "Feeling and desire multiply into fantasy and projection.",
+          "detailed": "Imagine widely, but choose carefully among alluring possibilities."
+        },
+        "reversed": {
+          "keywords": [
+            "Confusion clearing",
+            "fantasy trap",
+            "wishful thinking",
+            "inability to commit."
+          ],
+          "summary": "Confusion clearing, fantasy trap, wishful thinking, or inability to commit.",
+          "detailed": "Confusion clearing, fantasy trap, wishful thinking, or inability to commit."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Venus in Scorpio"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "cloud of cups",
+          "strange visions",
+          "single observer"
+        ],
+        "interpretation": "Venus in Scorpio decan: Feeling and desire multiply into fantasy and projection."
+      }
     },
     {
       "name": "Eight of Cups",
@@ -2710,7 +4197,39 @@
           ]
         }
       },
-      "slug": "eight-of-cups"
+      "slug": "eight-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "departure",
+            "search",
+            "disillusionment",
+            "meaning"
+          ],
+          "summary": "Emotional truth requires leaving what no longer satisfies.",
+          "detailed": "Walk away, seek deeper meaning, and refuse hollow fulfillment."
+        },
+        "reversed": {
+          "keywords": [
+            "Avoidance of necessary departure",
+            "drifting return",
+            "private longing without action."
+          ],
+          "summary": "Avoidance of necessary departure, drifting return, or private longing without action.",
+          "detailed": "Avoidance of necessary departure, drifting return, or private longing without action."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Saturn in Pisces"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "figure leaving",
+          "stacked cups",
+          "moonlit mountains"
+        ],
+        "interpretation": "Saturn in Pisces decan: Emotional truth requires leaving what no longer satisfies."
+      }
     },
     {
       "name": "Nine of Cups",
@@ -2766,7 +4285,40 @@
           ]
         }
       },
-      "slug": "nine-of-cups"
+      "slug": "nine-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "satisfaction",
+            "pleasure",
+            "contentment",
+            "wish"
+          ],
+          "summary": "Desire reaches satisfaction and personal pleasure.",
+          "detailed": "Enjoy fulfillment, gratitude, comfort, and earned emotional abundance."
+        },
+        "reversed": {
+          "keywords": [
+            "Overindulgence",
+            "smugness",
+            "dissatisfaction beneath comfort",
+            "pleasure that does not nourish."
+          ],
+          "summary": "Overindulgence, smugness, dissatisfaction beneath comfort, or pleasure that does not nourish.",
+          "detailed": "Overindulgence, smugness, dissatisfaction beneath comfort, or pleasure that does not nourish."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Jupiter in Pisces"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "seated host",
+          "nine arranged cups",
+          "curtain backdrop"
+        ],
+        "interpretation": "Jupiter in Pisces decan: Desire reaches satisfaction and personal pleasure."
+      }
     },
     {
       "name": "Ten of Cups",
@@ -2822,7 +4374,39 @@
           ]
         }
       },
-      "slug": "ten-of-cups"
+      "slug": "ten-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "harmony",
+            "family",
+            "blessing",
+            "fulfillment"
+          ],
+          "summary": "Feeling completes as harmony, belonging, and shared blessing.",
+          "detailed": "Domestic happiness, aligned relationship, and emotional completion in community."
+        },
+        "reversed": {
+          "keywords": [
+            "Idealization cracking",
+            "family strain",
+            "longing for harmony not yet fully lived."
+          ],
+          "summary": "Idealization cracking, family strain, or longing for harmony not yet fully lived.",
+          "detailed": "Idealization cracking, family strain, or longing for harmony not yet fully lived."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mars in Pisces"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "rainbow",
+          "couple and children",
+          "ten cups in sky"
+        ],
+        "interpretation": "Mars in Pisces decan: Feeling completes as harmony, belonging, and shared blessing."
+      }
     },
     {
       "name": "Page of Cups",
@@ -2878,7 +4462,40 @@
           ]
         }
       },
-      "slug": "page-of-cups"
+      "slug": "page-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "message",
+            "sensitivity",
+            "intuition",
+            "openness"
+          ],
+          "summary": "Feeling appears as invitation, imagination, and tender message.",
+          "detailed": "Open to emotional news, intuition, apology, or creative sensitivity."
+        },
+        "reversed": {
+          "keywords": [
+            "Emotional immaturity",
+            "mixed signals",
+            "fantasy",
+            "avoiding direct feeling."
+          ],
+          "summary": "Emotional immaturity, mixed signals, fantasy, or avoiding direct feeling.",
+          "detailed": "Emotional immaturity, mixed signals, fantasy, or avoiding direct feeling."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Earth of Water"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "fish in cup",
+          "blue tunic",
+          "shoreline"
+        ],
+        "interpretation": "Earth of Water — Feeling appears as invitation, imagination, and tender message."
+      }
     },
     {
       "name": "Knight of Cups",
@@ -2934,7 +4551,40 @@
           ]
         }
       },
-      "slug": "knight-of-cups"
+      "slug": "knight-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "romance",
+            "invitation",
+            "idealism",
+            "quest"
+          ],
+          "summary": "Emotion pursues connection, beauty, and meaningful offering.",
+          "detailed": "Romance, invitation, idealism, and movement guided by feeling."
+        },
+        "reversed": {
+          "keywords": [
+            "Moodiness",
+            "seduction without depth",
+            "disappointment",
+            "drifting on ideals."
+          ],
+          "summary": "Moodiness, seduction without depth, disappointment, or drifting on ideals.",
+          "detailed": "Moodiness, seduction without depth, disappointment, or drifting on ideals."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Air of Water"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "white horse",
+          "offered cup",
+          "flowing river"
+        ],
+        "interpretation": "Air of Water — Emotion pursues connection, beauty, and meaningful offering."
+      }
     },
     {
       "name": "Queen of Cups",
@@ -2990,7 +4640,40 @@
           ]
         }
       },
-      "slug": "queen-of-cups"
+      "slug": "queen-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "empathy",
+            "intuition",
+            "compassion",
+            "depth"
+          ],
+          "summary": "Empathy and intuition become mature emotional wisdom.",
+          "detailed": "Listen deeply, care wisely, and trust refined emotional perception."
+        },
+        "reversed": {
+          "keywords": [
+            "Emotional enmeshment",
+            "self-pity",
+            "manipulation through sensitivity",
+            "porous boundaries."
+          ],
+          "summary": "Emotional enmeshment, self-pity, manipulation through sensitivity, or porous boundaries.",
+          "detailed": "Emotional enmeshment, self-pity, manipulation through sensitivity, or porous boundaries."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Water of Water"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "lidded cup",
+          "sea throne",
+          "water all around"
+        ],
+        "interpretation": "Water of Water — Empathy and intuition become mature emotional wisdom."
+      }
     },
     {
       "name": "King of Cups",
@@ -3046,7 +4729,39 @@
           ]
         }
       },
-      "slug": "king-of-cups"
+      "slug": "king-of-cups",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "composure",
+            "diplomacy",
+            "compassion",
+            "stability"
+          ],
+          "summary": "Feeling becomes stable stewardship and calm authority.",
+          "detailed": "Remain composed, compassionate, and emotionally responsible under pressure."
+        },
+        "reversed": {
+          "keywords": [
+            "Emotional distance",
+            "hidden volatility",
+            "using calmness to control others."
+          ],
+          "summary": "Emotional distance, hidden volatility, or using calmness to control others.",
+          "detailed": "Emotional distance, hidden volatility, or using calmness to control others."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Fire of Water"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "stone throne at sea",
+          "cup and scepter",
+          "ship and fish"
+        ],
+        "interpretation": "Fire of Water — Feeling becomes stable stewardship and calm authority."
+      }
     },
     {
       "name": "Ace of Swords",
@@ -3102,7 +4817,40 @@
           ]
         }
       },
-      "slug": "ace-of-swords"
+      "slug": "ace-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "clarity",
+            "truth",
+            "decision",
+            "breakthrough"
+          ],
+          "summary": "Truth cuts through confusion with decisive clarity.",
+          "detailed": "Insight, decision, clear communication, and intellectual breakthrough."
+        },
+        "reversed": {
+          "keywords": [
+            "Clouded thinking",
+            "harshness",
+            "indecision",
+            "truth used as a weapon."
+          ],
+          "summary": "Clouded thinking, harshness, indecision, or truth used as a weapon.",
+          "detailed": "Clouded thinking, harshness, indecision, or truth used as a weapon."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Root of Air — mental clarity, breakthrough, and the triumph of truth."
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "crowned sword",
+          "hand from cloud",
+          "mountain peaks"
+        ],
+        "interpretation": "Root of Air — mental clarity, breakthrough, and the triumph of truth."
+      }
     },
     {
       "name": "Two of Swords",
@@ -3158,7 +4906,40 @@
           ]
         }
       },
-      "slug": "two-of-swords"
+      "slug": "two-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "stalemate",
+            "balance",
+            "decision",
+            "truce"
+          ],
+          "summary": "The mind suspends action to maintain balance.",
+          "detailed": "Pause, weigh, and hold tension until a real decision becomes possible."
+        },
+        "reversed": {
+          "keywords": [
+            "Deadlock",
+            "avoidance",
+            "denial",
+            "information kept out to preserve peace."
+          ],
+          "summary": "Deadlock, avoidance, denial, or information kept out to preserve peace.",
+          "detailed": "Deadlock, avoidance, denial, or information kept out to preserve peace."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Moon in Libra"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "blindfolded figure",
+          "crossed swords",
+          "calm sea"
+        ],
+        "interpretation": "Moon in Libra decan: The mind suspends action to maintain balance."
+      }
     },
     {
       "name": "Three of Swords",
@@ -3214,7 +4995,40 @@
           ]
         }
       },
-      "slug": "three-of-swords"
+      "slug": "three-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "sorrow",
+            "heartbreak",
+            "truth",
+            "separation"
+          ],
+          "summary": "Truth wounds when separation becomes undeniable.",
+          "detailed": "Heartbreak, sorrow, rupture, and painful but clarifying reality."
+        },
+        "reversed": {
+          "keywords": [
+            "Lingering pain",
+            "emotional avoidance",
+            "private grief",
+            "slow healing."
+          ],
+          "summary": "Lingering pain, emotional avoidance, private grief, or slow healing.",
+          "detailed": "Lingering pain, emotional avoidance, private grief, or slow healing."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Saturn in Libra"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "pierced heart",
+          "three swords",
+          "storm clouds"
+        ],
+        "interpretation": "Saturn in Libra decan: Truth wounds when separation becomes undeniable."
+      }
     },
     {
       "name": "Four of Swords",
@@ -3270,7 +5084,40 @@
           ]
         }
       },
-      "slug": "four-of-swords"
+      "slug": "four-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "rest",
+            "recovery",
+            "retreat",
+            "stillness"
+          ],
+          "summary": "The mind stabilizes through retreat and recovery.",
+          "detailed": "Rest, recuperate, meditate, and step out of conflict."
+        },
+        "reversed": {
+          "keywords": [
+            "Restlessness",
+            "burnout",
+            "avoidance disguised as rest",
+            "refusal to pause."
+          ],
+          "summary": "Restlessness, burnout, avoidance disguised as rest, or refusal to pause.",
+          "detailed": "Restlessness, burnout, avoidance disguised as rest, or refusal to pause."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Jupiter in Libra"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "recumbent knight",
+          "three swords above",
+          "church setting"
+        ],
+        "interpretation": "Jupiter in Libra decan: The mind stabilizes through retreat and recovery."
+      }
     },
     {
       "name": "Five of Swords",
@@ -3326,7 +5173,40 @@
           ]
         }
       },
-      "slug": "five-of-swords"
+      "slug": "five-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "conflict",
+            "defeat",
+            "ego",
+            "aftermath"
+          ],
+          "summary": "Conflict turns hollow when victory costs too much.",
+          "detailed": "See the real price of domination, ego combat, and scorched-earth thinking."
+        },
+        "reversed": {
+          "keywords": [
+            "Resentment",
+            "shame after conflict",
+            "refused accountability",
+            "lingering hostility."
+          ],
+          "summary": "Resentment, shame after conflict, refused accountability, or lingering hostility.",
+          "detailed": "Resentment, shame after conflict, refused accountability, or lingering hostility."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Venus in Aquarius"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "smirking victor",
+          "fallen swords",
+          "departing figures"
+        ],
+        "interpretation": "Venus in Aquarius decan: Conflict turns hollow when victory costs too much."
+      }
     },
     {
       "name": "Six of Swords",
@@ -3382,7 +5262,39 @@
           ]
         }
       },
-      "slug": "six-of-swords"
+      "slug": "six-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "transition",
+            "recovery",
+            "movement",
+            "passage"
+          ],
+          "summary": "Thought seeks calmer water after strain.",
+          "detailed": "Transition, recovery, relocation, and moving toward mental stability."
+        },
+        "reversed": {
+          "keywords": [
+            "Inability to move on",
+            "dragging the past forward",
+            "delayed transition."
+          ],
+          "summary": "Inability to move on, dragging the past forward, or delayed transition.",
+          "detailed": "Inability to move on, dragging the past forward, or delayed transition."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mercury in Aquarius"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "boat crossing water",
+          "hooded passengers",
+          "six upright swords"
+        ],
+        "interpretation": "Mercury in Aquarius decan: Thought seeks calmer water after strain."
+      }
     },
     {
       "name": "Seven of Swords",
@@ -3438,7 +5350,40 @@
           ]
         }
       },
-      "slug": "seven-of-swords"
+      "slug": "seven-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "strategy",
+            "secrecy",
+            "deception",
+            "tactics"
+          ],
+          "summary": "Mind turns strategic, secretive, or evasive.",
+          "detailed": "Use strategy, tact, and discretion; do not mistake them for clean transparency."
+        },
+        "reversed": {
+          "keywords": [
+            "Self-deception",
+            "exposed deceit",
+            "poor strategy",
+            "avoidance of honest confrontation."
+          ],
+          "summary": "Self-deception, exposed deceit, poor strategy, or avoidance of honest confrontation.",
+          "detailed": "Self-deception, exposed deceit, poor strategy, or avoidance of honest confrontation."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Moon in Aquarius"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "figure stealing swords",
+          "camp behind",
+          "two swords left"
+        ],
+        "interpretation": "Moon in Aquarius decan: Mind turns strategic, secretive, or evasive."
+      }
     },
     {
       "name": "Eight of Swords",
@@ -3494,7 +5439,39 @@
           ]
         }
       },
-      "slug": "eight-of-swords"
+      "slug": "eight-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "restriction",
+            "fear",
+            "limitation",
+            "entrapment"
+          ],
+          "summary": "The mind becomes trapped in its own limiting frame.",
+          "detailed": "Recognize restriction, fear narratives, and the role of perception in confinement."
+        },
+        "reversed": {
+          "keywords": [
+            "Release",
+            "perspective shift",
+            "else deeper paralysis and helplessness."
+          ],
+          "summary": "Release, perspective shift, or else deeper paralysis and helplessness.",
+          "detailed": "Release, perspective shift, or else deeper paralysis and helplessness."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Jupiter in Gemini"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "bound figure",
+          "circle of swords",
+          "marshy ground"
+        ],
+        "interpretation": "Jupiter in Gemini decan: The mind becomes trapped in its own limiting frame."
+      }
     },
     {
       "name": "Nine of Swords",
@@ -3550,7 +5527,40 @@
           ]
         }
       },
-      "slug": "nine-of-swords"
+      "slug": "nine-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "anxiety",
+            "nightmare",
+            "distress",
+            "guilt"
+          ],
+          "summary": "Thought reaches torment, anxiety, and sleepless distress.",
+          "detailed": "Face fear directly and separate real threat from anticipatory suffering."
+        },
+        "reversed": {
+          "keywords": [
+            "Inner crisis",
+            "shame spiral",
+            "hidden despair",
+            "gradual relief after panic peaks."
+          ],
+          "summary": "Inner crisis, shame spiral, hidden despair, or gradual relief after panic peaks.",
+          "detailed": "Inner crisis, shame spiral, hidden despair, or gradual relief after panic peaks."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mars in Gemini"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "figure in bed",
+          "hands to face",
+          "nine swords on wall"
+        ],
+        "interpretation": "Mars in Gemini decan: Thought reaches torment, anxiety, and sleepless distress."
+      }
     },
     {
       "name": "Ten of Swords",
@@ -3606,7 +5616,39 @@
           ]
         }
       },
-      "slug": "ten-of-swords"
+      "slug": "ten-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "ending",
+            "collapse",
+            "finality",
+            "release"
+          ],
+          "summary": "A mental cycle ends in collapse, finality, or total exposure.",
+          "detailed": "Accept the ending, stop resisting what is over, and look for the dawn beyond ruin."
+        },
+        "reversed": {
+          "keywords": [
+            "Recovery beginning",
+            "refusal to admit the end",
+            "repeatedly reenacting collapse."
+          ],
+          "summary": "Recovery beginning, refusal to admit the end, or repeatedly reenacting collapse.",
+          "detailed": "Recovery beginning, refusal to admit the end, or repeatedly reenacting collapse."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sun in Gemini"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "fallen figure",
+          "ten swords",
+          "black sky and dawn"
+        ],
+        "interpretation": "Sun in Gemini decan: A mental cycle ends in collapse, finality, or total exposure."
+      }
     },
     {
       "name": "Page of Swords",
@@ -3662,7 +5704,40 @@
           ]
         }
       },
-      "slug": "page-of-swords"
+      "slug": "page-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "curiosity",
+            "alertness",
+            "inquiry",
+            "watchfulness"
+          ],
+          "summary": "Mind wakes as vigilance, inquiry, and restless observation.",
+          "detailed": "Ask questions, study closely, and stay mentally alert."
+        },
+        "reversed": {
+          "keywords": [
+            "Gossip",
+            "nervousness",
+            "suspicion",
+            "information gathered without wisdom."
+          ],
+          "summary": "Gossip, nervousness, suspicion, or information gathered without wisdom.",
+          "detailed": "Gossip, nervousness, suspicion, or information gathered without wisdom."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Earth of Air"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "raised sword",
+          "windy sky",
+          "uneven ground"
+        ],
+        "interpretation": "Earth of Air — Mind wakes as vigilance, inquiry, and restless observation."
+      }
     },
     {
       "name": "Knight of Swords",
@@ -3718,7 +5793,39 @@
           ]
         }
       },
-      "slug": "knight-of-swords"
+      "slug": "knight-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "drive",
+            "speed",
+            "assertion",
+            "force"
+          ],
+          "summary": "Thought turns into forceful charge and uncompromising action.",
+          "detailed": "Move decisively, speak directly, and cut through delay."
+        },
+        "reversed": {
+          "keywords": [
+            "Reckless aggression",
+            "verbal violence",
+            "acting faster than understanding."
+          ],
+          "summary": "Reckless aggression, verbal violence, or acting faster than understanding.",
+          "detailed": "Reckless aggression, verbal violence, or acting faster than understanding."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Air of Air"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "charging horse",
+          "storm clouds",
+          "leaning sword"
+        ],
+        "interpretation": "Air of Air — Thought turns into forceful charge and uncompromising action."
+      }
     },
     {
       "name": "Queen of Swords",
@@ -3774,7 +5881,40 @@
           ]
         }
       },
-      "slug": "queen-of-swords"
+      "slug": "queen-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "discernment",
+            "clarity",
+            "boundary",
+            "truth"
+          ],
+          "summary": "Discernment becomes clear boundary and honest judgment.",
+          "detailed": "See precisely, speak cleanly, and protect truth with maturity."
+        },
+        "reversed": {
+          "keywords": [
+            "Bitterness",
+            "overcritical distance",
+            "coldness",
+            "pain hardened into intellect."
+          ],
+          "summary": "Bitterness, overcritical distance, coldness, or pain hardened into intellect.",
+          "detailed": "Bitterness, overcritical distance, coldness, or pain hardened into intellect."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Water of Air"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "raised hand",
+          "cloud throne",
+          "single upright sword"
+        ],
+        "interpretation": "Water of Air — Discernment becomes clear boundary and honest judgment."
+      }
     },
     {
       "name": "King of Swords",
@@ -3830,7 +5970,39 @@
           ]
         }
       },
-      "slug": "king-of-swords"
+      "slug": "king-of-swords",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "authority",
+            "reason",
+            "law",
+            "judgment"
+          ],
+          "summary": "Mind reaches principled command and disciplined judgment.",
+          "detailed": "Lead through reason, standards, analysis, and fair structure."
+        },
+        "reversed": {
+          "keywords": [
+            "Tyrannical logic",
+            "detached severity",
+            "intellect divorced from humanity."
+          ],
+          "summary": "Tyrannical logic, detached severity, or intellect divorced from humanity.",
+          "detailed": "Tyrannical logic, detached severity, or intellect divorced from humanity."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Fire of Air"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "butterflies",
+          "clear sky",
+          "upright sword"
+        ],
+        "interpretation": "Fire of Air — Mind reaches principled command and disciplined judgment."
+      }
     },
     {
       "name": "Ace of Pentacles",
@@ -3886,7 +6058,40 @@
           ]
         }
       },
-      "slug": "ace-of-pentacles"
+      "slug": "ace-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "opportunity",
+            "seed",
+            "resources",
+            "grounding"
+          ],
+          "summary": "Material potential enters as seed, offer, and opportunity.",
+          "detailed": "New resources, health, work, and practical openings with real growth potential."
+        },
+        "reversed": {
+          "keywords": [
+            "Missed opportunity",
+            "poor grounding",
+            "delayed material start",
+            "insecurity about investment."
+          ],
+          "summary": "Missed opportunity, poor grounding, delayed material start, or insecurity about investment.",
+          "detailed": "Missed opportunity, poor grounding, delayed material start, or insecurity about investment."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Root of Earth — seed of material success and tangible opportunity."
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "hand from cloud",
+          "single pentacle",
+          "garden path"
+        ],
+        "interpretation": "Root of Earth — seed of material success and tangible opportunity."
+      }
     },
     {
       "name": "Two of Pentacles",
@@ -3942,7 +6147,40 @@
           ]
         }
       },
-      "slug": "two-of-pentacles"
+      "slug": "two-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "balance",
+            "adaptation",
+            "juggling",
+            "timing"
+          ],
+          "summary": "Value must be balanced through adaptation and timing.",
+          "detailed": "Juggle priorities, stay flexible, and keep material systems moving."
+        },
+        "reversed": {
+          "keywords": [
+            "Disorganization",
+            "poor timing",
+            "financial stress",
+            "imbalance from overhandling."
+          ],
+          "summary": "Disorganization, poor timing, financial stress, or imbalance from overhandling.",
+          "detailed": "Disorganization, poor timing, financial stress, or imbalance from overhandling."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Jupiter in Capricorn"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "juggler",
+          "infinity loop",
+          "ships on rough sea"
+        ],
+        "interpretation": "Jupiter in Capricorn decan: Value must be balanced through adaptation and timing."
+      }
     },
     {
       "name": "Three of Pentacles",
@@ -3998,7 +6236,39 @@
           ]
         }
       },
-      "slug": "three-of-pentacles"
+      "slug": "three-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "craft",
+            "teamwork",
+            "skill",
+            "construction"
+          ],
+          "summary": "Skill grows through collaboration and visible craft.",
+          "detailed": "Work well, learn from others, and build something competently."
+        },
+        "reversed": {
+          "keywords": [
+            "Poor teamwork",
+            "shoddy execution",
+            "recognition not matching effort."
+          ],
+          "summary": "Poor teamwork, shoddy execution, or recognition not matching effort.",
+          "detailed": "Poor teamwork, shoddy execution, or recognition not matching effort."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mars in Capricorn"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "artisan at work",
+          "cathedral arch",
+          "three collaborators"
+        ],
+        "interpretation": "Mars in Capricorn decan: Skill grows through collaboration and visible craft."
+      }
     },
     {
       "name": "Four of Pentacles",
@@ -4054,7 +6324,40 @@
           ]
         }
       },
-      "slug": "four-of-pentacles"
+      "slug": "four-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "security",
+            "control",
+            "possession",
+            "conservation"
+          ],
+          "summary": "Security hardens into holding and control.",
+          "detailed": "Protect assets, conserve energy, and define what is worth keeping."
+        },
+        "reversed": {
+          "keywords": [
+            "Greed",
+            "fear-based hoarding",
+            "loosened control",
+            "instability around possession."
+          ],
+          "summary": "Greed, fear-based hoarding, loosened control, or instability around possession.",
+          "detailed": "Greed, fear-based hoarding, loosened control, or instability around possession."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sun in Capricorn"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "figure clutching coin",
+          "two coins under feet",
+          "city behind"
+        ],
+        "interpretation": "Sun in Capricorn decan: Security hardens into holding and control."
+      }
     },
     {
       "name": "Five of Pentacles",
@@ -4110,7 +6413,40 @@
           ]
         }
       },
-      "slug": "five-of-pentacles"
+      "slug": "five-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "hardship",
+            "need",
+            "exclusion",
+            "scarcity"
+          ],
+          "summary": "Material strain exposes need, exclusion, and hardship.",
+          "detailed": "Name lack clearly, seek help, and survive the lean passage."
+        },
+        "reversed": {
+          "keywords": [
+            "Recovery delayed",
+            "refusal of support",
+            "scarcity mindset",
+            "deepening disorder."
+          ],
+          "summary": "Recovery delayed, refusal of support, scarcity mindset, or deepening disorder.",
+          "detailed": "Recovery delayed, refusal of support, scarcity mindset, or deepening disorder."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mercury in Taurus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "snowstorm",
+          "two travelers",
+          "lit church window"
+        ],
+        "interpretation": "Mercury in Taurus decan: Material strain exposes need, exclusion, and hardship."
+      }
     },
     {
       "name": "Six of Pentacles",
@@ -4166,7 +6502,40 @@
           ]
         }
       },
-      "slug": "six-of-pentacles"
+      "slug": "six-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "charity",
+            "exchange",
+            "support",
+            "fairness"
+          ],
+          "summary": "Value rebalances through giving, receiving, and fair exchange.",
+          "detailed": "Practice generosity, equitable support, and realistic reciprocity."
+        },
+        "reversed": {
+          "keywords": [
+            "Strings-attached giving",
+            "dependence",
+            "inequality",
+            "blocked assistance."
+          ],
+          "summary": "Strings-attached giving, dependence, inequality, or blocked assistance.",
+          "detailed": "Strings-attached giving, dependence, inequality, or blocked assistance."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Moon in Taurus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "scales",
+          "wealthy giver",
+          "two recipients"
+        ],
+        "interpretation": "Moon in Taurus decan: Value rebalances through giving, receiving, and fair exchange."
+      }
     },
     {
       "name": "Seven of Pentacles",
@@ -4222,7 +6591,40 @@
           ]
         }
       },
-      "slug": "seven-of-pentacles"
+      "slug": "seven-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "patience",
+            "assessment",
+            "cultivation",
+            "results"
+          ],
+          "summary": "Growth requires patience, assessment, and sustained labor.",
+          "detailed": "Review progress, tend the process, and accept delayed harvest."
+        },
+        "reversed": {
+          "keywords": [
+            "Impatience",
+            "poor return",
+            "neglected cultivation",
+            "frustration with slow growth."
+          ],
+          "summary": "Impatience, poor return, neglected cultivation, or frustration with slow growth.",
+          "detailed": "Impatience, poor return, neglected cultivation, or frustration with slow growth."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Saturn in Taurus"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "gardener leaning on tool",
+          "pentacles on vine",
+          "pause in field"
+        ],
+        "interpretation": "Saturn in Taurus decan: Growth requires patience, assessment, and sustained labor."
+      }
     },
     {
       "name": "Eight of Pentacles",
@@ -4278,7 +6680,40 @@
           ]
         }
       },
-      "slug": "eight-of-pentacles"
+      "slug": "eight-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "diligence",
+            "apprenticeship",
+            "mastery",
+            "focus"
+          ],
+          "summary": "Mastery comes through repetition, focus, and honest workmanship.",
+          "detailed": "Apprenticeship, diligence, skill-building, and practical concentration."
+        },
+        "reversed": {
+          "keywords": [
+            "Perfectionism",
+            "drudgery",
+            "sloppy work",
+            "going through motions without mastery."
+          ],
+          "summary": "Perfectionism, drudgery, sloppy work, or going through motions without mastery.",
+          "detailed": "Perfectionism, drudgery, sloppy work, or going through motions without mastery."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Sun in Virgo"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "artisan carving coins",
+          "bench and tools",
+          "repeated pentacles"
+        ],
+        "interpretation": "Sun in Virgo decan: Mastery comes through repetition, focus, and honest workmanship."
+      }
     },
     {
       "name": "Nine of Pentacles",
@@ -4334,7 +6769,39 @@
           ]
         }
       },
-      "slug": "nine-of-pentacles"
+      "slug": "nine-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "abundance",
+            "independence",
+            "refinement",
+            "self-sufficiency"
+          ],
+          "summary": "Self-sufficiency culminates in cultivated abundance.",
+          "detailed": "Enjoy earned stability, refined independence, and material confidence."
+        },
+        "reversed": {
+          "keywords": [
+            "Isolation behind comfort",
+            "overcontrol",
+            "insecurity hidden by polish."
+          ],
+          "summary": "Isolation behind comfort, overcontrol, or insecurity hidden by polish.",
+          "detailed": "Isolation behind comfort, overcontrol, or insecurity hidden by polish."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Venus in Virgo"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "woman in vineyard",
+          "falcon",
+          "lush garden"
+        ],
+        "interpretation": "Venus in Virgo decan: Self-sufficiency culminates in cultivated abundance."
+      }
     },
     {
       "name": "Ten of Pentacles",
@@ -4390,7 +6857,40 @@
           ]
         }
       },
-      "slug": "ten-of-pentacles"
+      "slug": "ten-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "legacy",
+            "wealth",
+            "lineage",
+            "stability"
+          ],
+          "summary": "Material life completes as legacy, lineage, and durable wealth.",
+          "detailed": "Long-term security, inheritance, family systems, and established continuity."
+        },
+        "reversed": {
+          "keywords": [
+            "Unstable legacy",
+            "family fracture",
+            "empty status",
+            "resources without cohesion."
+          ],
+          "summary": "Unstable legacy, family fracture, empty status, or resources without cohesion.",
+          "detailed": "Unstable legacy, family fracture, empty status, or resources without cohesion."
+        }
+      },
+      "knowledge_metadata": {
+        "astrology": "Mercury in Virgo"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "archway scene",
+          "elder with dogs",
+          "family beneath ten coins"
+        ],
+        "interpretation": "Mercury in Virgo decan: Material life completes as legacy, lineage, and durable wealth."
+      }
     },
     {
       "name": "Page of Pentacles",
@@ -4446,7 +6946,39 @@
           ]
         }
       },
-      "slug": "page-of-pentacles"
+      "slug": "page-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "study",
+            "opportunity",
+            "focus",
+            "application"
+          ],
+          "summary": "Practical opportunity appears as study, application, and real potential.",
+          "detailed": "Learn, plan carefully, and invest attention in what can grow."
+        },
+        "reversed": {
+          "keywords": [
+            "Laziness",
+            "poor follow-through",
+            "potential left unrealized."
+          ],
+          "summary": "Laziness, poor follow-through, or potential left unrealized.",
+          "detailed": "Laziness, poor follow-through, or potential left unrealized."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Earth of Earth"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "figure gazing at pentacle",
+          "green field",
+          "mountains"
+        ],
+        "interpretation": "Earth of Earth — Practical opportunity appears as study, application, and real potential."
+      }
     },
     {
       "name": "Knight of Pentacles",
@@ -4502,7 +7034,40 @@
           ]
         }
       },
-      "slug": "knight-of-pentacles"
+      "slug": "knight-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "diligence",
+            "routine",
+            "reliability",
+            "persistence"
+          ],
+          "summary": "Work becomes steady duty, persistence, and reliability.",
+          "detailed": "Proceed methodically, honor routine, and build through consistency."
+        },
+        "reversed": {
+          "keywords": [
+            "Stagnation",
+            "rigidity",
+            "workaholism",
+            "motion so slow it becomes avoidance."
+          ],
+          "summary": "Stagnation, rigidity, workaholism, or motion so slow it becomes avoidance.",
+          "detailed": "Stagnation, rigidity, workaholism, or motion so slow it becomes avoidance."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Air of Earth"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "still horse",
+          "held pentacle",
+          "ploughed field"
+        ],
+        "interpretation": "Air of Earth — Work becomes steady duty, persistence, and reliability."
+      }
     },
     {
       "name": "Queen of Pentacles",
@@ -4558,7 +7123,40 @@
           ]
         }
       },
-      "slug": "queen-of-pentacles"
+      "slug": "queen-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "resourcefulness",
+            "nurture",
+            "comfort",
+            "stability"
+          ],
+          "summary": "Care becomes practical nurture, resourcefulness, and embodied comfort.",
+          "detailed": "Manage well, protect what matters, and create grounded abundance."
+        },
+        "reversed": {
+          "keywords": [
+            "Overcontrol",
+            "smothering practicality",
+            "insecurity about resources",
+            "neglect of self-worth."
+          ],
+          "summary": "Overcontrol, smothering practicality, insecurity about resources, or neglect of self-worth.",
+          "detailed": "Overcontrol, smothering practicality, insecurity about resources, or neglect of self-worth."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Water of Earth"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "rabbit",
+          "carved throne",
+          "pentacle in lap"
+        ],
+        "interpretation": "Water of Earth — Care becomes practical nurture, resourcefulness, and embodied comfort."
+      }
     },
     {
       "name": "King of Pentacles",
@@ -4614,7 +7212,40 @@
           ]
         }
       },
-      "slug": "king-of-pentacles"
+      "slug": "king-of-pentacles",
+      "meanings": {
+        "upright": {
+          "keywords": [
+            "stewardship",
+            "security",
+            "prosperity",
+            "responsibility"
+          ],
+          "summary": "Material life reaches mature stewardship, stability, and responsibility.",
+          "detailed": "Lead through reliability, long-term thinking, and sound provision."
+        },
+        "reversed": {
+          "keywords": [
+            "Greed",
+            "stagnation",
+            "possessiveness",
+            "authority built only on wealth."
+          ],
+          "summary": "Greed, stagnation, possessiveness, or authority built only on wealth.",
+          "detailed": "Greed, stagnation, possessiveness, or authority built only on wealth."
+        }
+      },
+      "knowledge_metadata": {
+        "elemental_composite": "Fire of Earth"
+      },
+      "symbolism_semantics": {
+        "imagery": [
+          "bull motifs",
+          "vine-covered throne",
+          "large pentacle"
+        ],
+        "interpretation": "Fire of Earth — Material life reaches mature stewardship, stability, and responsibility."
+      }
     }
   ]
 }

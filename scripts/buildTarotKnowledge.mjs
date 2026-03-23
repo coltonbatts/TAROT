@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { enrichTarotCard } from "./esotericData.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -570,10 +571,12 @@ const minorCards = Object.entries(pipRows).flatMap(([suit, rows]) => {
   return [...pips, ...courts];
 });
 
-const cards = [...majorCards, ...minorCards].map((card) => ({
-  ...card,
-  slug: slugify(card.name)
-}));
+const cards = [...majorCards, ...minorCards].map((card) =>
+  enrichTarotCard({
+    ...card,
+    slug: slugify(card.name),
+  }),
+);
 
 if (cards.length !== 78) {
   throw new Error(`Expected 78 cards, got ${cards.length}`);

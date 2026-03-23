@@ -12,12 +12,28 @@ export type {
   TarotInterpretationPatterns,
   TarotRelationshipGroups,
   TarotSymbolismDetail,
+  TarotStructuredMeanings,
+  TarotMeaningOrientationBlock,
+  TarotKnowledgeMetadata,
+  TarotSymbolismSemantics,
+  TarotOrientation,
   RawTarotCard,
   RawTarotDataset,
   RawTarotInterpretationPatterns,
   RawTarotRelationshipGroups,
   RawTarotRelationship,
 } from "./types";
+
+export type {
+  FidelityArchetypeEntry,
+  FidelityMajorCard,
+  FidelityMeaningEntry,
+  FidelitySourceRef,
+  FidelitySystemFile,
+  FidelitySymbolismMotif,
+} from "./fidelityTypes";
+
+export { fidelitySourceTitle, getFidelityPrimarySources } from "./sourceCatalog";
 
 export { TAROT_CARD_IMAGE_FALLBACK } from "./constants";
 
@@ -28,6 +44,8 @@ export {
   getCardBySlug,
   getCardById,
   getCardByName,
+  getMeaning,
+  getMajorArcanaCardByNumber,
   getCardsByArcana,
   getCardsBySuit,
   getRelatedCards,

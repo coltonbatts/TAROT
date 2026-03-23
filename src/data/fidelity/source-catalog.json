@@ -1,0 +1,60 @@
+{
+  "sources": [
+    {
+      "id": "waite_1910",
+      "title": "The Pictorial Key to the Tarot",
+      "author": "A.E. Waite",
+      "year": 1910,
+      "type": "primary"
+    },
+    {
+      "id": "pollack_1980",
+      "title": "Seventy-Eight Degrees of Wisdom",
+      "author": "Rachel Pollack",
+      "year": 1980,
+      "type": "primary"
+    },
+    {
+      "id": "gray_1970",
+      "title": "A Complete Guide to the Tarot",
+      "author": "Eden Gray",
+      "year": 1970,
+      "type": "primary"
+    },
+    {
+      "id": "golden_dawn",
+      "title": "Golden Dawn System (via Regardie, Mathers, Westcott)",
+      "author": "Hermetic Order of the Golden Dawn",
+      "year": 1888,
+      "type": "primary"
+    },
+    {
+      "id": "case_1947",
+      "title": "The Tarot: A Key to the Wisdom of the Ages",
+      "author": "Paul Foster Case",
+      "year": 1947,
+      "type": "secondary"
+    },
+    {
+      "id": "greer_2006",
+      "title": "Mary K. Greer's 21 Ways to Read a Tarot Card",
+      "author": "Mary K. Greer",
+      "year": 2006,
+      "type": "secondary"
+    },
+    {
+      "id": "place_2005",
+      "title": "The Tarot: History, Symbolism, and Divination",
+      "author": "Robert M. Place",
+      "year": 2005,
+      "type": "secondary"
+    },
+    {
+      "id": "jodorowsky_2004",
+      "title": "The Way of Tarot",
+      "author": "Alejandro Jodorowsky",
+      "year": 2004,
+      "type": "secondary"
+    }
+  ]
+}

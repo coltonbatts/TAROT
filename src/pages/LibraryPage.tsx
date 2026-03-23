@@ -140,7 +140,13 @@ export function LibraryPage() {
               <h1 className="text-center font-display text-[clamp(2.75rem,12vw,5.5rem)] font-medium leading-none tracking-tight lg:justify-self-center">
                 Tarot
               </h1>
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex items-center justify-center gap-5 lg:justify-end">
+                <Link
+                  to="/system"
+                  className="shrink-0 font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+                >
+                  System
+                </Link>
                 <LibraryViewToggle view={view} onChange={setView} />
               </div>
             </div>

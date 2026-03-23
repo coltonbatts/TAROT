@@ -45,13 +45,21 @@ export function CardDetailPage() {
   return (
     <article className="mx-auto w-full max-w-[1200px] px-4 pb-24 pt-6 sm:px-6 lg:px-8 lg:pt-10">
       <header className="mb-12 space-y-8 border-b border-line pb-10 lg:mb-16 lg:pb-12">
-        <Link
-          to={backToLibrary}
-          aria-label="Back"
-          className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
-        >
-          ←
-        </Link>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <Link
+            to={backToLibrary}
+            aria-label="Back"
+            className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+          >
+            ←
+          </Link>
+          <Link
+            to="/system"
+            className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+          >
+            System
+          </Link>
+        </div>
 
         <div className="space-y-3">
           <p className="font-display text-sm font-normal italic tracking-wide text-muted/90">
@@ -63,7 +71,7 @@ export function CardDetailPage() {
         </div>
       </header>
 
-      <CardReferenceBody card={card} backSearch={librarySearch} />
+      <CardReferenceBody card={card} backSearch={librarySearch} syncOrientationInUrl />
     </article>
   );
 }
