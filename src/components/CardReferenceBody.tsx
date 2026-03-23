@@ -283,7 +283,7 @@ export function CardReferenceBody({
                 <p className="font-mono text-[10px] uppercase tracking-label text-muted">Reading</p>
                 <p className="font-body text-sm leading-relaxed text-bone/55">
                   {activeOrientation === "upright"
-                    ? "Face of the card toward the reader."
+                    ? "Direct axis — conscious emphasis and outward flow."
                     : "Inverted axis — shadow emphasis and internal pressure."}
                 </p>
               </div>
