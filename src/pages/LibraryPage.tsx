@@ -1,17 +1,7 @@
-import {
-  lazy,
-  startTransition,
-  Suspense,
-  useDeferredValue,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { startTransition, useDeferredValue, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { DeckSurface } from "../components/DeckSurface";
 import { FilterTabs } from "../components/FilterTabs";
-import { LibraryViewToggle } from "../components/LibraryViewToggle";
-import { ViewportChamber } from "../components/ViewportChamber";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 import {
   filterCards,
@@ -24,12 +14,6 @@ import {
   getLibraryWordmarkPresetIndex,
   LIBRARY_WORDMARK_PRESETS,
 } from "../lib/ui/libraryWordmark";
-
-const TarotCanvasLazy = lazy(() =>
-  import("../scene/TarotCanvas").then((module) => ({ default: module.TarotCanvas })),
-);
-
-type LibraryView = "deck" | "spatial";
 
 const MAX_COMPARE = 6;
 
@@ -52,7 +36,6 @@ export function LibraryPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const queryParam = searchParams.get("q") ?? "";
   const activeCategory = (searchParams.get("category") ?? "all") as TarotCategory;
-  const view: LibraryView = searchParams.get("view") === "spatial" ? "spatial" : "deck";
   const [searchInput, setSearchInput] = useState(queryParam);
   const deferredQuery = useDeferredValue(searchInput);
   const reducedMotion = usePrefersReducedMotion();
@@ -66,6 +49,13 @@ export function LibraryPage() {
   useEffect(() => {
     document.title = "Tarot";
   }, []);
+
+  useEffect(() => {
+    if (searchParams.get("view") !== "spatial") return;
+    const next = new URLSearchParams(searchParams);
+    next.delete("view");
+    setSearchParams(next, { replace: true });
+  }, [searchParams, setSearchParams]);
 
   useEffect(() => {
     if (!compareMode) setSelectedSlugs([]);
@@ -113,18 +103,6 @@ export function LibraryPage() {
   const openCard = (card: TarotCard) => {
     const qs = listSearch ? `?${listSearch}` : "";
     navigate(`/cards/${card.slug}${qs}`);
-  };
-
-  const setView = (next: LibraryView) => {
-    startTransition(() => {
-      const nextParams = new URLSearchParams(searchParams);
-      if (next === "spatial") {
-        nextParams.set("view", "spatial");
-      } else {
-        nextParams.delete("view");
-      }
-      setSearchParams(nextParams, { replace: true });
-    });
   };
 
   const onQueryChange = (value: string) => {
@@ -228,13 +206,7 @@ export function LibraryPage() {
   );
 
   return (
-    <div
-      className={[
-        "flex flex-col bg-void text-bone",
-        /* Deck view: pin layout to the viewport so flex + overflow-y-auto on DeckSurface forms one reliable scroll container (avoids split/window vs. pane scroll on trackpads). */
-        view === "deck" ? "h-dvh max-h-dvh min-h-0 overflow-hidden" : "min-h-screen",
-      ].join(" ")}
-    >
+    <div className="flex h-dvh max-h-dvh min-h-0 flex-col overflow-hidden bg-void text-bone">
       <div className="relative z-10 flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 border-b border-line bg-void/95 px-4 backdrop-blur-[2px] sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-[1920px]">
@@ -257,76 +229,32 @@ export function LibraryPage() {
               >
                 Study
               </Link>
-              <LibraryViewToggle view={view} onChange={setView} />
             </nav>
           </div>
         </header>
 
-        {view === "deck" ? (
-          <section aria-label="Cards" className="flex min-h-0 flex-1 flex-col overflow-hidden">
-            <div className="shrink-0 px-4 py-6 sm:px-6 lg:px-8">{toolbar}</div>
-            {compareMode ? (
-              <p className="px-4 pb-2 font-mono text-[10px] text-muted sm:px-6 lg:px-8">
-                Tap cards to select (max {MAX_COMPARE}). Open entry pages when this mode is off.
-              </p>
-            ) : null}
-            {filteredCards.length ? (
-              <DeckSurface
-                groups={deckGroups}
-                listSearch={listSearch}
-                reducedMotion={reducedMotion}
-                compareMode={compareMode}
-                selectedSlugs={selectedSlugs}
-                onToggleCompare={toggleCompareSelect}
-              />
-            ) : (
-              <div className="flex flex-1 items-center justify-center px-6 py-24 text-sm text-muted">
-                No matches.
-              </div>
-            )}
-          </section>
-        ) : (
-          <div className="mx-auto flex min-h-0 w-full max-w-[1920px] flex-1 flex-col px-3 pb-8 pt-2 sm:px-5 lg:px-8">
-            <div className="shrink-0 border-b border-line/50 pb-6 pt-2">
-              <div className="mx-auto max-w-2xl">{toolbar}</div>
+        <section aria-label="Cards" className="flex min-h-0 flex-1 flex-col overflow-hidden">
+          <div className="shrink-0 px-4 py-6 sm:px-6 lg:px-8">{toolbar}</div>
+          {compareMode ? (
+            <p className="px-4 pb-2 font-mono text-[10px] text-muted sm:px-6 lg:px-8">
+              Tap cards to select (max {MAX_COMPARE}). Open entry pages when this mode is off.
+            </p>
+          ) : null}
+          {filteredCards.length ? (
+            <DeckSurface
+              groups={deckGroups}
+              listSearch={listSearch}
+              reducedMotion={reducedMotion}
+              compareMode={compareMode}
+              selectedSlugs={selectedSlugs}
+              onToggleCompare={toggleCompareSelect}
+            />
+          ) : (
+            <div className="flex flex-1 items-center justify-center px-6 py-24 text-sm text-muted">
+              No matches.
             </div>
-            <div className="flex min-h-[min(72vh,680px)] flex-1 flex-col lg:min-h-[560px]">
-              {filteredCards.length ? (
-                <ViewportChamber
-                  footer={
-                    <p className="text-center font-mono text-[10px] tabular-nums tracking-wider text-muted">
-                      {filteredCards.length} / {tarotCards.length}
-                    </p>
-                  }
-                >
-                  <Suspense
-                    fallback={
-                      <div className="flex h-64 w-full items-center justify-center font-mono text-[10px] text-muted lg:h-full">
-                        …
-                      </div>
-                    }
-                  >
-                    <TarotCanvasLazy
-                      cards={filteredCards}
-                      onSelectCard={openCard}
-                      reducedMotion={reducedMotion}
-                    />
-                  </Suspense>
-                </ViewportChamber>
-              ) : (
-                <div className="flex flex-1 flex-col items-center justify-center gap-4 border border-line bg-inset px-6 py-20 text-sm text-muted">
-                  <p>No matches.</p>
-                  <Link
-                    to="/"
-                    className="font-mono text-[10px] uppercase tracking-archive text-muted underline-offset-4 hover:text-bone hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
-                  >
-                    Grid
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
+          )}
+        </section>
       </div>
 
       {compareMode && selectedSlugs.length > 0 ? (
