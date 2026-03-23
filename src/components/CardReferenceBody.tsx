@@ -641,7 +641,7 @@ export function CardReferenceBody({
               </p>
             ) : null}
             {fidelityMajor ? (
-              <StudyDisclosure title="Sources & fidelity" subtitle="Attributed major arcana">
+              <StudyDisclosure title="Sources" subtitle="Attributed major arcana">
                 <Suspense
                   fallback={
                     <p className="font-mono text-[10px] text-faint" aria-busy="true">
