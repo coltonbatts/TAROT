@@ -1,22 +1,28 @@
 /**
- * Tarot data: loaded from `src/data/cards.json`, normalized in `normalize.ts`.
- * UI reads `TarotCard` only. Optional `tarot_dataset_simple.json` at the repo root is a schema stub, not the runtime source.
+ * Tarot data: loaded from the full knowledge-system dataset in `src/data/cards.json`,
+ * normalized in `normalize.ts`. UI reads normalized `TarotCard` records and `tarotSystem`.
  */
 export type {
   TarotArcana,
   TarotCard,
   TarotCategory,
   TarotSuit,
+  TarotSystemData,
+  TarotSuitPhilosophy,
+  TarotInterpretationPatterns,
+  TarotRelationshipGroups,
   TarotSymbolismDetail,
   RawTarotCard,
   RawTarotDataset,
+  RawTarotInterpretationPatterns,
+  RawTarotRelationshipGroups,
   RawTarotRelationship,
 } from "./types";
 
 export { TAROT_CARD_IMAGE_FALLBACK } from "./constants";
 
 export { slugify } from "./slugify";
-export { tarotCards, cardsBySlug, normalizeRawCard } from "./normalize";
+export { tarotCards, cardsBySlug, normalizeRawCard, tarotSystem } from "./normalize";
 export {
   getAllCards,
   getCardBySlug,
@@ -25,6 +31,7 @@ export {
   getCardsByArcana,
   getCardsBySuit,
   getRelatedCards,
+  getResolvedRelationshipGroups,
   searchCards,
 } from "./selectors";
 export { matchesSearch, filterCards, getCardCategory } from "./search";

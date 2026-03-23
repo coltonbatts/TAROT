@@ -31,7 +31,15 @@ export function formatReferenceMetaLine(card: TarotCard): string {
   const parts = [
     card.arcana === "major" ? "Major arcana" : "Minor arcana",
     card.suit ? capitalizeWord(card.suit) : null,
-    card.number != null ? `No. ${card.number}` : card.rank ? capitalizeWord(card.rank) : null,
+    card.arcana === "major"
+      ? card.number != null
+        ? `No. ${card.number}`
+        : null
+      : card.rank
+        ? capitalizeWord(card.rank)
+        : card.number != null
+          ? `No. ${card.number}`
+          : null,
   ].filter(Boolean);
   return parts.join(" · ");
 }

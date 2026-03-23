@@ -1,12 +1,18 @@
-import rawCards from "../../data/cards.json";
+import rawDataset from "../../data/cards.json";
 import { slugify } from "./slugify";
 import type {
   RawTarotCard,
   RawTarotDataset,
+  RawTarotInterpretationPatterns,
+  RawTarotRelationshipGroups,
   RawTarotSymbolism,
   TarotCard,
   TarotArcana,
+  TarotInterpretationPatterns,
+  TarotRelationshipGroups,
   TarotSuit,
+  TarotSuitPhilosophy,
+  TarotSystemData,
   TarotSymbolismDetail,
 } from "./types";
 
@@ -59,6 +65,14 @@ function parseSymbolism(raw: unknown): { detail?: TarotSymbolismDetail; prose?: 
     const prose = raw.trim();
     return prose ? { prose } : {};
   }
+  if (Array.isArray(raw)) {
+    const objects = raw.map((item) => asTrimmedString(item)).filter(Boolean);
+    if (!objects.length) return {};
+    return {
+      detail: { objects, colors: [], direction: "" },
+      prose: symbolismDetailToProse({ objects, colors: [], direction: "" }),
+    };
+  }
   const s = raw as RawTarotSymbolism;
   const objects = (s.objects ?? []).map((x) => asTrimmedString(x)).filter(Boolean);
   const colors = (s.colors ?? []).map((x) => asTrimmedString(x)).filter(Boolean);
@@ -97,6 +111,122 @@ function minorRankAndNumber(rawNumber: unknown): { rank?: string; number?: numbe
   }
   return { rank: word };
 }
+
+function stringArray(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.map((item) => asTrimmedString(item)).filter(Boolean);
+}
+
+function parseInterpretationPatterns(raw: RawTarotInterpretationPatterns | null | undefined): TarotInterpretationPatterns {
+  if (Array.isArray(raw)) {
+    return {
+      developmentalRole: undefined,
+      systemLinks: raw.map((item) => asTrimmedString(item)).filter(Boolean),
+      reversalModes: [],
+    };
+  }
+
+  const obj = raw && typeof raw === "object" ? raw : undefined;
+  return {
+    developmentalRole: obj ? asTrimmedString(obj.developmental_role) || undefined : undefined,
+    systemLinks: stringArray(obj?.system_links),
+    reversalModes: stringArray(obj?.reversal_modes),
+  };
+}
+
+function asRelationshipArray(value: unknown): unknown[] {
+  return Array.isArray(value) ? value.filter((entry) => entry != null) : [];
+}
+
+function parseRelationships(raw: unknown): TarotRelationshipGroups {
+  if (Array.isArray(raw)) {
+    return {
+      similar: raw.filter((entry) => entry != null),
+      contrasting: [],
+      previous: [],
+      next: [],
+    };
+  }
+
+  if (raw && typeof raw === "object") {
+    const groups = raw as RawTarotRelationshipGroups;
+    const transitional =
+      groups.transitional_cards && typeof groups.transitional_cards === "object"
+        ? groups.transitional_cards
+        : undefined;
+    return {
+      similar: asRelationshipArray(groups.similar_cards),
+      contrasting: asRelationshipArray(groups.contrasting_cards),
+      previous: asRelationshipArray(transitional?.previous),
+      next: asRelationshipArray(transitional?.next),
+    };
+  }
+
+  return {
+    similar: [],
+    contrasting: [],
+    previous: [],
+    next: [],
+  };
+}
+
+function normalizeSuitPhilosophyEntry(raw: unknown): TarotSuitPhilosophy | null {
+  if (!raw || typeof raw !== "object") return null;
+  const value = raw as Record<string, unknown>;
+  const element = asTrimmedString(value.element);
+  const domain = asTrimmedString(value.domain);
+  const shadow = asTrimmedString(value.shadow);
+  const logic = asTrimmedString(value.logic);
+  const progression = stringArray(value.progression);
+  if (!element && !domain && !shadow && !logic && progression.length === 0) return null;
+  return { element, domain, shadow, logic, progression };
+}
+
+function formatSuitMeaning(suit: TarotSuit | undefined, philosophy: TarotSuitPhilosophy | null | undefined): string | null {
+  if (!suit || !philosophy) return null;
+  const parts = [
+    philosophy.element ? `Element: ${philosophy.element}.` : "",
+    philosophy.domain ? `Domain: ${philosophy.domain}.` : "",
+    philosophy.logic ? philosophy.logic : "",
+  ].filter(Boolean);
+  return parts.length ? parts.join(" ") : null;
+}
+
+const datasetObject: RawTarotDataset = Array.isArray(rawDataset)
+  ? { cards: rawDataset as RawTarotCard[] }
+  : (rawDataset as RawTarotDataset);
+
+function loadSystemData(dataset: RawTarotDataset): TarotSystemData {
+  const rawSuits = dataset.suit_philosophy ?? {};
+  return {
+    metadata: dataset.metadata ?? {},
+    systemLevelRules: stringArray(dataset.system_level_rules),
+    suitPhilosophy: {
+      cups: normalizeSuitPhilosophyEntry(rawSuits.cups) ?? undefined,
+      swords: normalizeSuitPhilosophyEntry(rawSuits.swords) ?? undefined,
+      wands: normalizeSuitPhilosophyEntry(rawSuits.wands) ?? undefined,
+      pentacles: normalizeSuitPhilosophyEntry(rawSuits.pentacles) ?? undefined,
+    },
+    numberMeanings:
+      dataset.number_meanings && typeof dataset.number_meanings === "object"
+        ? dataset.number_meanings
+        : {},
+    reversalLogic:
+      dataset.reversal_logic && typeof dataset.reversal_logic === "object"
+        ? dataset.reversal_logic
+        : {},
+    relationshipRules:
+      dataset.relationship_rules && typeof dataset.relationship_rules === "object"
+        ? dataset.relationship_rules
+        : {},
+    progressionSystems:
+      dataset.progression_systems && typeof dataset.progression_systems === "object"
+        ? dataset.progression_systems
+        : {},
+  };
+}
+
+export const tarotSystem: TarotSystemData = loadSystemData(datasetObject);
 
 export function normalizeRawCard(raw: RawTarotCard, index: number): TarotCard {
   const name = asTrimmedString(raw.name) || `Card ${index + 1}`;
@@ -148,19 +278,15 @@ export function normalizeRawCard(raw: RawTarotCard, index: number): TarotCard {
   const symbolism = sym.prose;
 
   const archetype = asTrimmedString(raw.archetype) || undefined;
-  const numerology =
-    raw.numerology != null && Number.isFinite(Number(raw.numerology))
-      ? Number(raw.numerology)
-      : null;
-  const suitMeaning = raw.suit_meaning != null ? asTrimmedString(raw.suit_meaning) : null;
-  const suitMeaningNorm = suitMeaning || null;
+  const numerology = asTrimmedString(raw.numerology) || null;
+  const suitPhilosophy = suit ? tarotSystem.suitPhilosophy[suit] ?? null : null;
+  const suitMeaning =
+    (raw.suit_meaning != null ? asTrimmedString(raw.suit_meaning) : "") ||
+    formatSuitMeaning(suit, suitPhilosophy) ||
+    null;
 
-  const interpretationPatterns = (raw.interpretation_patterns ?? [])
-    .map((p) => asTrimmedString(p))
-    .filter(Boolean);
-
-  const rel = raw.relationships;
-  const relationships = Array.isArray(rel) ? rel : [];
+  const interpretationPatterns = parseInterpretationPatterns(raw.interpretation_patterns);
+  const relationships = parseRelationships(raw.relationships);
 
   const imagePath = defaultImagePath(
     slug,
@@ -185,7 +311,8 @@ export function normalizeRawCard(raw: RawTarotCard, index: number): TarotCard {
     symbolismDetail: sym.detail,
     archetype,
     numerology,
-    suitMeaning: suitMeaningNorm,
+    suitMeaning,
+    suitPhilosophy,
     interpretationPatterns,
     relationships,
   };
@@ -204,7 +331,7 @@ function loadAndNormalize(dataset: RawTarotDataset | RawTarotCard[]): TarotCard[
   });
 }
 
-export const tarotCards: TarotCard[] = loadAndNormalize(rawCards as RawTarotCard[]);
+export const tarotCards: TarotCard[] = loadAndNormalize(datasetObject);
 
 export const cardsBySlug = new Map(tarotCards.map((c) => [c.slug, c]));
 export const cardsByNameLower = new Map(

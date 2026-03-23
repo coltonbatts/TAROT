@@ -1,6 +1,10 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { formatReferenceMetaLine, getRelatedCards, type TarotCard } from "../lib/tarot";
+import {
+  formatReferenceMetaLine,
+  getResolvedRelationshipGroups,
+  type TarotCard,
+} from "../lib/tarot";
 import { TarotCardImage } from "./TarotCardImage";
 
 function hasText(value: string | undefined | null): boolean {
@@ -29,6 +33,32 @@ function Section({ title, titleClassName, children }: SectionProps) {
   );
 }
 
+type CardLinkListProps = {
+  cards: TarotCard[];
+  backSearch?: string;
+};
+
+function CardLinkList({ cards, backSearch }: CardLinkListProps) {
+  if (!cards.length) return null;
+  return (
+    <ul className="max-w-prose space-y-2 text-sm leading-relaxed">
+      {cards.map((r) => (
+        <li key={r.slug}>
+          <Link
+            to={{
+              pathname: `/cards/${r.slug}`,
+              search: backSearch ? `?${backSearch}` : "",
+            }}
+            className="text-bone/90 transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
+          >
+            {r.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 type CardReferenceBodyProps = {
   card: TarotCard;
   /** Library query string (no leading `?`) to preserve when linking to related cards. */
@@ -36,12 +66,29 @@ type CardReferenceBodyProps = {
 };
 
 export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) {
-  const related = getRelatedCards(card);
+  const relationships = getResolvedRelationshipGroups(card);
   const sym = card.symbolismDetail;
   const hasSymbolismStructure =
     sym &&
     (sym.objects.length > 0 || sym.colors.length > 0 || hasText(sym.direction));
   const hasSymbolismProse = hasText(card.symbolism) && !hasSymbolismStructure;
+  const hasSuitPhilosophy = Boolean(
+    card.suitPhilosophy &&
+      (hasText(card.suitPhilosophy.element) ||
+        hasText(card.suitPhilosophy.domain) ||
+        hasText(card.suitPhilosophy.shadow) ||
+        hasText(card.suitPhilosophy.logic) ||
+        card.suitPhilosophy.progression.length > 0),
+  );
+  const hasPatterns =
+    hasText(card.interpretationPatterns.developmentalRole) ||
+    card.interpretationPatterns.systemLinks.length > 0 ||
+    card.interpretationPatterns.reversalModes.length > 0;
+  const hasRelationshipGroups =
+    relationships.similar.length > 0 ||
+    relationships.contrasting.length > 0 ||
+    relationships.previous.length > 0 ||
+    relationships.next.length > 0;
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(220px,320px)_1fr] lg:gap-14 lg:items-start">
@@ -99,15 +146,39 @@ export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) 
           </Section>
         ) : null}
 
-        {typeof card.numerology === "number" ? (
+        {hasText(card.numerology) ? (
           <Section title="Numerology">
-            <p className="font-mono text-sm tabular-nums text-bone/90">{card.numerology}</p>
+            <p className="max-w-prose whitespace-pre-line font-mono text-sm text-bone/90">
+              {card.numerology}
+            </p>
           </Section>
         ) : null}
 
-        {hasText(card.suitMeaning) ? (
-          <Section title="Suit meaning">
-            <p className="max-w-prose text-sm leading-relaxed text-muted">{card.suitMeaning}</p>
+        {hasText(card.suitMeaning) || hasSuitPhilosophy ? (
+          <Section title="Suit Logic">
+            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
+              {hasText(card.suitMeaning) ? <p>{card.suitMeaning}</p> : null}
+              {hasSuitPhilosophy && card.suitPhilosophy ? (
+                <>
+                  {hasText(card.suitPhilosophy.shadow) ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Shadow</h3>
+                      <p>{card.suitPhilosophy.shadow}</p>
+                    </div>
+                  ) : null}
+                  {card.suitPhilosophy.progression.length > 0 ? (
+                    <div>
+                      <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Progression</h3>
+                      <ul className="list-inside list-disc space-y-1">
+                        {card.suitPhilosophy.progression.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </>
+              ) : null}
+            </div>
           </Section>
         ) : null}
 
@@ -150,33 +221,67 @@ export function CardReferenceBody({ card, backSearch }: CardReferenceBodyProps) 
           </Section>
         ) : null}
 
-        {card.interpretationPatterns.length > 0 ? (
+        {hasPatterns ? (
           <Section title="Interpretation patterns">
-            <ul className="max-w-prose list-inside list-disc space-y-1 text-sm leading-relaxed text-muted">
-              {card.interpretationPatterns.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
+            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
+              {hasText(card.interpretationPatterns.developmentalRole) ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Development</h3>
+                  <p>{card.interpretationPatterns.developmentalRole}</p>
+                </div>
+              ) : null}
+              {card.interpretationPatterns.systemLinks.length > 0 ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">System Links</h3>
+                  <ul className="list-inside list-disc space-y-1">
+                    {card.interpretationPatterns.systemLinks.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {card.interpretationPatterns.reversalModes.length > 0 ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Reversal Modes</h3>
+                  <ul className="list-inside list-disc space-y-1">
+                    {card.interpretationPatterns.reversalModes.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
           </Section>
         ) : null}
 
-        {related.length > 0 ? (
-          <Section title="Related">
-            <ul className="max-w-prose space-y-2 text-sm leading-relaxed">
-              {related.map((r) => (
-                <li key={r.slug}>
-                  <Link
-                    to={{
-                      pathname: `/cards/${r.slug}`,
-                      search: backSearch ? `?${backSearch}` : "",
-                    }}
-                    className="text-bone/90 transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
-                  >
-                    {r.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        {hasRelationshipGroups ? (
+          <Section title="Relationships">
+            <div className="max-w-prose space-y-6 text-sm leading-relaxed text-muted">
+              {relationships.similar.length > 0 ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Similar</h3>
+                  <CardLinkList cards={relationships.similar} backSearch={backSearch} />
+                </div>
+              ) : null}
+              {relationships.contrasting.length > 0 ? (
+                <div>
+                  <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Contrasting</h3>
+                  <CardLinkList cards={relationships.contrasting} backSearch={backSearch} />
+                </div>
+              ) : null}
+              {relationships.previous.length > 0 || relationships.next.length > 0 ? (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Previous</h3>
+                    <CardLinkList cards={relationships.previous} backSearch={backSearch} />
+                  </div>
+                  <div>
+                    <h3 className="mb-2 font-mono text-[10px] uppercase tracking-label text-muted">Next</h3>
+                    <CardLinkList cards={relationships.next} backSearch={backSearch} />
+                  </div>
+                </div>
+              ) : null}
+            </div>
           </Section>
         ) : null}
       </div>

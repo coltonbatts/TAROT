@@ -21,6 +21,8 @@ function resolveRelationshipEntry(entry: unknown, selfSlug: string): TarotCard |
     if (!s) return undefined;
     const bySlug = getCardBySlug(s);
     if (bySlug && bySlug.slug !== selfSlug) return bySlug;
+    const byName = getCardByName(s);
+    if (byName && byName.slug !== selfSlug) return byName;
     return undefined;
   }
 
@@ -36,25 +38,53 @@ function resolveRelationshipEntry(entry: unknown, selfSlug: string): TarotCard |
       const c = getCardById(id);
       if (c && c.slug !== selfSlug) return c;
     }
+    const name = asTrimmedString(o.name);
+    if (name) {
+      const c = getCardByName(name);
+      if (c && c.slug !== selfSlug) return c;
+    }
   }
 
   return undefined;
 }
 
-/** Resolves `card.relationships` to other deck cards (slug strings or `{ slug?, id? }`). Preserves order, dedupes by slug. */
-export function getRelatedCards(card: TarotCard): TarotCard[] {
-  const rel = card.relationships;
-  if (!Array.isArray(rel) || rel.length === 0) return [];
-
+function resolveRelationshipList(entries: unknown[], selfSlug: string): TarotCard[] {
   const seen = new Set<string>();
   const out: TarotCard[] = [];
-  for (const entry of rel) {
-    const resolved = resolveRelationshipEntry(entry, card.slug);
+  for (const entry of entries) {
+    const resolved = resolveRelationshipEntry(entry, selfSlug);
     if (!resolved || seen.has(resolved.slug)) continue;
     seen.add(resolved.slug);
     out.push(resolved);
   }
   return out;
+}
+
+export function getResolvedRelationshipGroups(card: TarotCard): {
+  similar: TarotCard[];
+  contrasting: TarotCard[];
+  previous: TarotCard[];
+  next: TarotCard[];
+} {
+  return {
+    similar: resolveRelationshipList(card.relationships.similar, card.slug),
+    contrasting: resolveRelationshipList(card.relationships.contrasting, card.slug),
+    previous: resolveRelationshipList(card.relationships.previous, card.slug),
+    next: resolveRelationshipList(card.relationships.next, card.slug),
+  };
+}
+
+/** Resolves all relationship groups into a flat, ordered related-card list. */
+export function getRelatedCards(card: TarotCard): TarotCard[] {
+  const groups = getResolvedRelationshipGroups(card);
+  const seen = new Set<string>();
+  const merged: TarotCard[] = [];
+  for (const item of [...groups.similar, ...groups.contrasting, ...groups.previous, ...groups.next]) {
+    if (seen.has(item.slug)) continue;
+    seen.add(item.slug);
+    merged.push(item);
+  }
+  return merged;
 }
 
 export function getAllCards(): readonly TarotCard[] {

@@ -5,6 +5,33 @@ function searchHaystack(card: TarotCard): string {
   const symbolismExtra = sym
     ? [sym.objects.join(" "), sym.colors.join(" "), sym.direction].filter(Boolean).join(" ")
     : "";
+  const relationshipText = [
+    ...card.relationships.similar,
+    ...card.relationships.contrasting,
+    ...card.relationships.previous,
+    ...card.relationships.next,
+  ]
+    .map((item) => (typeof item === "string" ? item : ""))
+    .filter(Boolean)
+    .join(" ");
+  const suitPhilosophyText = card.suitPhilosophy
+    ? [
+        card.suitPhilosophy.element,
+        card.suitPhilosophy.domain,
+        card.suitPhilosophy.shadow,
+        card.suitPhilosophy.logic,
+        card.suitPhilosophy.progression.join(" "),
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : "";
+  const interpretationText = [
+    card.interpretationPatterns.developmentalRole,
+    card.interpretationPatterns.systemLinks.join(" "),
+    card.interpretationPatterns.reversalModes.join(" "),
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return [
     card.name,
@@ -20,8 +47,11 @@ function searchHaystack(card: TarotCard): string {
     card.symbolism,
     card.coreMeaning,
     card.archetype,
+    card.numerology,
     card.suitMeaning,
-    card.interpretationPatterns.join(" "),
+    suitPhilosophyText,
+    interpretationText,
+    relationshipText,
     symbolismExtra,
   ]
     .filter((x) => x != null && x !== "")
