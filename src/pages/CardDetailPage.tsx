@@ -58,13 +58,13 @@ export function CardDetailPage() {
           aria-label="Back to library"
           className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
         >
-          ← Library
+          ← Index
         </Link>
         <Link
           to="/system"
           className="inline-flex font-mono text-sm text-muted transition duration-300 hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-line-strong"
         >
-          System
+          Study
         </Link>
       </nav>
 

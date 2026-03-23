@@ -19,6 +19,14 @@ function hasText(value: string | undefined | null): boolean {
   return Boolean(value && value.trim());
 }
 
+/** Split dataset `detailed` text on blank lines into paragraphs for reading. */
+function meaningParagraphs(text: string): string[] {
+  return text
+    .split(/\n\s*\n/)
+    .map((p) => p.trim().replace(/\n/g, " "))
+    .filter(Boolean);
+}
+
 type StudyDisclosureProps = {
   title: string;
   subtitle?: string;
@@ -307,14 +315,22 @@ export function CardReferenceBody({
                       </span>
                     </span>
                   </summary>
-                  <p className="px-4 pb-4 pt-4 whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/88">
-                    {activeMeaning.detailed}
-                  </p>
+                  <div className="space-y-4 px-4 pb-5 pt-4">
+                    {meaningParagraphs(activeMeaning.detailed).map((para, i) => (
+                      <p key={i} className="font-body text-[0.9375rem] leading-[1.8] text-bone/88">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
                 </details>
               ) : hasText(activeMeaning.detailed) ? (
-                <p className="max-w-prose whitespace-pre-line font-body text-[0.9375rem] leading-[1.75] text-bone/90">
-                  {activeMeaning.detailed}
-                </p>
+                <div className="max-w-prose space-y-4">
+                  {meaningParagraphs(activeMeaning.detailed).map((para, i) => (
+                    <p key={i} className="font-body text-[0.9375rem] leading-[1.8] text-bone/90">
+                      {para}
+                    </p>
+                  ))}
+                </div>
               ) : null}
             </div>
           </div>

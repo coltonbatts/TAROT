@@ -11,9 +11,20 @@ type DeckSurfaceProps = {
   groups: DeckGroup[];
   listSearch: string;
   reducedMotion: boolean;
+  compareMode?: boolean;
+  selectedSlugs?: string[];
+  onToggleCompare?: (slug: string) => void;
 };
 
-export function DeckSurface({ groups, listSearch, reducedMotion }: DeckSurfaceProps) {
+export function DeckSurface({
+  groups,
+  listSearch,
+  reducedMotion,
+  compareMode = false,
+  selectedSlugs = [],
+  onToggleCompare,
+}: DeckSurfaceProps) {
+  const selected = new Set(selectedSlugs);
   let globalIndex = 0;
 
   return (
@@ -48,6 +59,9 @@ export function DeckSurface({ groups, listSearch, reducedMotion }: DeckSurfacePr
                     index={i}
                     search={listSearch}
                     reducedMotionPref={reducedMotion}
+                    compareMode={compareMode}
+                    selected={selected.has(card.slug)}
+                    onToggleCompare={onToggleCompare}
                   />
                 );
               })}

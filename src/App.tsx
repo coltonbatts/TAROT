@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { CardDetailPage } from "./pages/CardDetailPage";
+import { ComparePage } from "./pages/ComparePage";
 import { LibraryPage } from "./pages/LibraryPage";
 
 const FidelitySystemPage = lazy(() =>
@@ -38,6 +39,7 @@ function AppMain() {
             </Suspense>
           }
         />
+        <Route path="/compare" element={<ComparePage />} />
         <Route path="/cards/:slug" element={<CardDetailPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

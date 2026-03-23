@@ -103,7 +103,7 @@ const TOC = [
 
 export function FidelitySystemPage() {
   useEffect(() => {
-    document.title = "System · Tarot";
+    document.title = "Study · Tarot";
   }, []);
 
   const meta = fidelitySystem.meta ?? {};
@@ -158,7 +158,7 @@ export function FidelitySystemPage() {
         <div className="space-y-3">
           <p className="font-mono text-[10px] uppercase tracking-label text-muted">Fidelity dataset</p>
           <h1 className="font-display text-[clamp(2rem,6vw,3.25rem)] font-medium leading-tight tracking-tight">
-            System reference
+            Study reference
           </h1>
           {description ? (
             <p className="max-w-prose text-sm leading-relaxed text-muted">{description}</p>

@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
 import * as THREE from "three";
 import { TAROT_CARD_IMAGE_FALLBACK, tarotCards } from "../lib/tarot";
+import { tarotCardThumbnailPath } from "../lib/tarot/thumbnailPath";
 
-function loadTexture(
-  loader: THREE.TextureLoader,
-  url: string,
-  fallbackUrl: string,
-): Promise<THREE.Texture> {
+function loadTextureChain(loader: THREE.TextureLoader, urls: string[]): Promise<THREE.Texture> {
   return new Promise((resolve, reject) => {
     const apply = (tex: THREE.Texture) => {
       tex.colorSpace = THREE.SRGBColorSpace;
       resolve(tex);
     };
-    loader.load(url, apply, undefined, () => {
-      loader.load(fallbackUrl, apply, undefined, reject);
-    });
+    let i = 0;
+    const tryNext = () => {
+      const url = urls[i];
+      if (url == null) {
+        reject(new Error("No texture URLs"));
+        return;
+      }
+      i += 1;
+      loader.load(url, apply, undefined, tryNext);
+    };
+    tryNext();
   });
 }
 
@@ -30,12 +35,11 @@ export function useDeckTextures(): Record<string, THREE.Texture> | null {
     const loader = new THREE.TextureLoader();
 
     Promise.all(
-      tarotCards.map((card) =>
-        loadTexture(loader, card.imagePath, TAROT_CARD_IMAGE_FALLBACK).then((tex) => [
-          card.id,
-          tex,
-        ] as const),
-      ),
+      tarotCards.map((card) => {
+        const thumb = tarotCardThumbnailPath(card.imagePath);
+        const urls = thumb === card.imagePath ? [card.imagePath, TAROT_CARD_IMAGE_FALLBACK] : [thumb, card.imagePath, TAROT_CARD_IMAGE_FALLBACK];
+        return loadTextureChain(loader, urls).then((tex) => [card.id, tex] as const);
+      }),
     ).then((pairs) => {
       if (cancelled) {
         pairs.forEach(([, t]) => t.dispose());

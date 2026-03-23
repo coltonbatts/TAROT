@@ -3,18 +3,22 @@ import { TAROT_CARD_IMAGE_FALLBACK } from "../lib/tarot";
 
 type TarotCardImageProps = {
   src: string;
+  /** If `src` fails (e.g. missing thumbnail), try this URL before the global fallback. */
+  highResSrc?: string;
   alt: string;
   className?: string;
   loading?: "lazy" | "eager";
 };
 
-export function TarotCardImage({ src, alt, className, loading }: TarotCardImageProps) {
+export function TarotCardImage({ src, highResSrc, alt, className, loading }: TarotCardImageProps) {
   const [resolved, setResolved] = useState(src);
-  const usedFallback = useRef(false);
+  const triedHighRes = useRef(false);
+  const usedGlobalFallback = useRef(false);
 
   useEffect(() => {
     setResolved(src);
-    usedFallback.current = false;
+    triedHighRes.current = false;
+    usedGlobalFallback.current = false;
   }, [src]);
 
   return (
@@ -23,9 +27,15 @@ export function TarotCardImage({ src, alt, className, loading }: TarotCardImageP
       alt={alt}
       className={className}
       loading={loading}
+      decoding="async"
       onError={() => {
-        if (!usedFallback.current && resolved !== TAROT_CARD_IMAGE_FALLBACK) {
-          usedFallback.current = true;
+        if (highResSrc && !triedHighRes.current && resolved !== highResSrc) {
+          triedHighRes.current = true;
+          setResolved(highResSrc);
+          return;
+        }
+        if (!usedGlobalFallback.current && resolved !== TAROT_CARD_IMAGE_FALLBACK) {
+          usedGlobalFallback.current = true;
           setResolved(TAROT_CARD_IMAGE_FALLBACK);
         }
       }}

@@ -31,12 +31,12 @@ const btn =
 
 export function LibraryViewToggle({ view, onChange }: Props) {
   return (
-    <nav className="flex overflow-hidden rounded-md border border-line" aria-label="Library view">
+    <nav className="flex overflow-hidden rounded-md border border-line" aria-label="Layout">
       <button
         type="button"
-        aria-label="Deck view"
+        aria-label="Grid"
         aria-pressed={view === "deck"}
-        title="Deck"
+        title="Grid"
         onClick={() => onChange("deck")}
         className={[
           btn,
@@ -47,9 +47,9 @@ export function LibraryViewToggle({ view, onChange }: Props) {
       </button>
       <button
         type="button"
-        aria-label="Orbit view"
+        aria-label="Sphere"
         aria-pressed={view === "spatial"}
-        title="Orbit"
+        title="Sphere"
         onClick={() => onChange("spatial")}
         className={[
           btn,

@@ -36,6 +36,10 @@ export default {
         },
       },
       fontFamily: {
+        /** All-caps wordmark — sharp editorial serif */
+        wordmark: ["Cinzel", "Georgia", "serif"],
+        "wordmark-playfair": ["Playfair Display", "Georgia", "serif"],
+        "wordmark-cormorant": ["Cormorant", "Georgia", "serif"],
         /** Soft, variable-heritage serif — titles, card names */
         display: ["Fraunces", "Georgia", "serif"],
         /** Transcript / longform — newsprint séance */
